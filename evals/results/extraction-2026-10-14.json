@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-14",
+  "notifications": 2,
+  "overall": 0.969,
+  "per_field": {
+    "title": 1.0,
+    "advt_no": 1.0,
+    "apply_start": 1.0,
+    "apply_end": 0.5,
+    "total_vacancies": 1.0,
+    "fee_by_category": 1.0,
+    "post_names": 1.0,
+    "post.vacancies": 1.0,
+    "post.pay_level": 1.0,
+    "post.min_qualification": 1.0,
+    "post.required_streams": 1.0,
+    "post.gender_restriction": 1.0,
+    "post.states": 1.0,
+    "post.age.min_age": 1.0,
+    "post.age.max_age": 0.8,
+    "post.age.as_on": 1.0,
+    "post.age.relaxation_years": 1.0
+  },
+  "misses": 2
+}

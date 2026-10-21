@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Job alerts · {{ site }}{% endblock %}
+{% block desc %}Get an email the day a new government job notification you are eligible for is published.{% endblock %}
+{% block head %}<script src="https://checkout.razorpay.com/v1/checkout.js"></script>{% endblock %}
+{% block body %}
+<h1>Never miss a job you can apply for</h1>
+<p class="lead">We check every new official notification against your age, category, qualification and state, and email you only the ones you are eligible for. ₹{{ price }} for {{ days }} days, no spam, stop any time.</p>
+
+<form class="match" id="alerts-form">
+  <label>Email <input type="email" name="email" required placeholder="you@example.com" value="{{ prefill.email or '' }}"></label>
+  <label>Age <input type="number" name="age" min="15" max="70" required value="{{ prefill.age or '' }}"></label>
+  <label>Highest qualification <select name="qualification">{% for q in quals %}<option value="{{ q }}" {% if prefill.qualification == q %}selected{% endif %}>{{ qual_labels[q] }}</option>{% endfor %}</select></label>
+  <label>Category <select name="category">{% for c in categories %}<option {% if prefill.category == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select></label>
+  <label>Gender <select name="gender"><option value="">Prefer not to say</option><option value="male" {% if prefill.gender == 'male' %}selected{% endif %}>Male</option><option value="female" {% if prefill.gender == 'female' %}selected{% endif %}>Female</option></select></label>
+  <label>State of domicile <input name="state" placeholder="e.g. Uttar Pradesh" value="{{ prefill.state or '' }}"></label>
+  <label>Degree stream (if any) <select name="streams" multiple size="3">{% for s in streams %}<option value="{{ s }}" {% if s in prefill.streams %}selected{% endif %}>{{ s.replace('_',' ') }}</option>{% endfor %}</select></label>
+  <label class="check"><input type="checkbox" name="pwd" value="true" {% if prefill.pwd %}checked{% endif %}> Person with disability</label>
+  <label class="check"><input type="checkbox" name="ex_serviceman" value="true" {% if prefill.ex_serviceman %}checked{% endif %}> Ex-serviceman</label>
+  <button type="submit" id="pay-btn">{% if demo %}Start alerts (demo, free){% else %}Pay ₹{{ price }} and start alerts{% endif %}</button>
+</form>
+<p class="meta" id="alerts-msg"></p>
+<p class="meta">We store your email and the profile above so we can match notifications against it. <a href="/alerts/manage">Already subscribed? Manage alerts</a>.</p>
+
+<script>
+const form = document.getElementById('alerts-form'), msg = document.getElementById('alerts-msg'), btn = document.getElementById('pay-btn');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); btn.disabled = true; msg.textContent = 'Setting up…';
+  try {
+    const fd = new FormData(form);
+    const res = await fetch('/api/alerts/order', { method: 'POST', body: fd });
+    const o = await res.json();
+    if (!res.ok || o.error) throw new Error(o.error || res.statusText);
+    if (o.mode === 'demo') { location.href = o.manage_url; return; }
+    const rzp = new Razorpay({
+      key: o.key_id, amount: o.amount, currency: o.currency, order_id: o.order_id,
+      name: {{ site | tojson }}, description: 'Government job alerts', prefill: { email: fd.get('email') }, theme: { color: '#1a56db' },
+      handler: async (r) => {
+        const v = await (await fetch('/api/alerts/verify', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...r, sub_id: o.sub_id }) })).json();
+        if (v.error) { msg.textContent = v.error; btn.disabled = false; return; }
+        location.href = v.manage_url;
+      },
+      modal: { ondismiss: () => { msg.textContent = 'Payment cancelled.'; btn.disabled = false; } },
+    });
+    rzp.open();
+  } catch (err) { msg.textContent = err.message; btn.disabled = false; }
+});
+</script>
+{% endblock %}

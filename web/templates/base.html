@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}{{ site }}{% endblock %}</title>
+<meta name="description" content="{% block desc %}Find every open Indian government job you are eligible for, from official notifications only.{% endblock %}">
+<link rel="canonical" href="{{ site_url }}{{ request.url.path }}">
+<link rel="stylesheet" href="/static/style.css">
+{% block head %}{% endblock %}
+</head>
+<body>
+<header><div class="wrap"><a href="/">{{ site }}</a>
+<nav style="display:inline">
+<a href="/qualification/10th">10th pass</a><a href="/qualification/12th">12th pass</a><a href="/qualification/graduate">Graduate</a><a href="/board/SSC">SSC</a><a href="/board/UPSC">UPSC</a><a href="/alerts">Alerts</a>
+</nav></div></header>
+<main class="wrap">
+{% if has_samples %}<div class="banner">This instance is running on hand-written sample notifications so the product can be demonstrated. Run the refresh pipeline with a Gemini key to replace them with real extractions.</div>{% endif %}
+{% block body %}{% endblock %}
+</main>
+<footer><div class="wrap">Data is extracted from official notification PDFs and validated before publishing. Always confirm details on the official notification before applying. Not affiliated with any government body.</div></footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "slug": "sample-ssc-chsl-2026",
+  "board": "SSC",
+  "title": "Combined Higher Secondary Level Examination 2026 (SAMPLE DATA)",
+  "advt_no": "SAMPLE/CHSL/2026",
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": null,
+  "published_on": "2026-09-20",
+  "apply_start": "2026-09-21",
+  "apply_end": "2026-10-25",
+  "fee_by_category": {
+    "UR": 100,
+    "OBC": 100,
+    "EWS": 100,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0,
+    "WOMEN": 0
+  },
+  "posts": [
+    {
+      "post_name": "Lower Division Clerk",
+      "vacancies": 2000,
+      "vacancies_by_category": {},
+      "pay_level": "Level 2",
+      "min_qualification": "12th",
+      "required_streams": [],
+      "qualification_text": "Passed 12th standard or equivalent",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Data Entry Operator",
+      "vacancies": 1000,
+      "vacancies_by_category": {},
+      "pay_level": "Level 4",
+      "min_qualification": "12th",
+      "required_streams": [],
+      "qualification_text": "Passed 12th standard in Science stream with Mathematics",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 3000,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 1.0,
+    "fee_by_category": 1.0
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-10-14",
+  "is_sample": true
+}

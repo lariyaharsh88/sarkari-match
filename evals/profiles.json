@@ -1,0 +1,92 @@
+[
+  {
+    "id": "p1",
+    "note": "24 year old UR graduate, arts",
+    "profile": {
+      "age": 24,
+      "qualification": "graduate",
+      "streams": [
+        "arts"
+      ],
+      "category": "UR"
+    },
+    "expected": [
+      "sample-ssc-cgl-2026::Assistant Section Officer",
+      "sample-ssc-cgl-2026::Auditor",
+      "sample-ssc-chsl-2026::Lower Division Clerk",
+      "sample-ssc-chsl-2026::Data Entry Operator",
+      "sample-rrb-ntpc-2026::Station Master",
+      "sample-rrb-ntpc-2026::Commercial cum Ticket Clerk",
+      "sample-ibps-po-2026::Probationary Officer"
+    ]
+  },
+  {
+    "id": "p2",
+    "note": "29 year old SC 12th pass",
+    "profile": {
+      "age": 29,
+      "qualification": "12th",
+      "category": "SC"
+    },
+    "expected": [
+      "sample-ssc-chsl-2026::Lower Division Clerk",
+      "sample-ssc-chsl-2026::Data Entry Operator",
+      "sample-rrb-ntpc-2026::Commercial cum Ticket Clerk"
+    ]
+  },
+  {
+    "id": "p3",
+    "note": "31 year old UR B.Tech; over CGL ASO cap, wrong stream for JSO, ESE closed",
+    "profile": {
+      "age": 31,
+      "qualification": "graduate",
+      "streams": [
+        "engineering"
+      ],
+      "category": "UR"
+    },
+    "expected": [
+      "sample-rrb-ntpc-2026::Station Master",
+      "sample-rrb-ntpc-2026::Commercial cum Ticket Clerk"
+    ]
+  },
+  {
+    "id": "p4",
+    "note": "25 year old female nursing diploma from UP",
+    "profile": {
+      "age": 25,
+      "qualification": "diploma",
+      "streams": [
+        "nursing"
+      ],
+      "category": "OBC",
+      "gender": "female",
+      "state": "Uttar Pradesh"
+    },
+    "expected": [
+      "sample-ssc-chsl-2026::Lower Division Clerk",
+      "sample-ssc-chsl-2026::Data Entry Operator",
+      "sample-rrb-ntpc-2026::Commercial cum Ticket Clerk",
+      "sample-uppsc-staff-nurse-2026::Staff Nurse (Female)"
+    ]
+  },
+  {
+    "id": "p5",
+    "note": "25 year old male nursing diploma from UP, blocked by gender",
+    "profile": {
+      "age": 25,
+      "qualification": "diploma",
+      "streams": [
+        "nursing"
+      ],
+      "category": "UR",
+      "gender": "male",
+      "state": "Uttar Pradesh"
+    },
+    "expected": [
+      "sample-ssc-chsl-2026::Lower Division Clerk",
+      "sample-ssc-chsl-2026::Data Entry Operator",
+      "sample-rrb-ntpc-2026::Commercial cum Ticket Clerk"
+    ]
+  }
+]

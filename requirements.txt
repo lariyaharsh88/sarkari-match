@@ -1,0 +1,10 @@
+pdfplumber
+pydantic>=2
+google-genai
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+requests
+python-dotenv
+pytest

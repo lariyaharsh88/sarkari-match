@@ -1,0 +1,109 @@
+{
+  "slug": "sample-ssc-cgl-2026",
+  "board": "SSC",
+  "title": "Combined Graduate Level Examination 2026 (SAMPLE DATA)",
+  "advt_no": "SAMPLE/CGL/2026",
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": null,
+  "published_on": "2026-09-15",
+  "apply_start": "2026-09-16",
+  "apply_end": "2026-11-06",
+  "fee_by_category": {
+    "UR": 100,
+    "OBC": 100,
+    "EWS": 100,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0,
+    "WOMEN": 0
+  },
+  "posts": [
+    {
+      "post_name": "Assistant Section Officer",
+      "vacancies": 1200,
+      "vacancies_by_category": {
+        "UR": 500,
+        "OBC": 320,
+        "EWS": 120,
+        "SC": 180,
+        "ST": 80
+      },
+      "pay_level": "Level 7",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree from a recognised university",
+      "age": {
+        "min_age": 20,
+        "max_age": 30,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Auditor",
+      "vacancies": 800,
+      "vacancies_by_category": {},
+      "pay_level": "Level 5",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree from a recognised university",
+      "age": {
+        "min_age": 18,
+        "max_age": 30,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Junior Statistical Officer",
+      "vacancies": 150,
+      "vacancies_by_category": {},
+      "pay_level": "Level 6",
+      "min_qualification": "graduate",
+      "required_streams": [
+        "statistics",
+        "mathematics",
+        "economics"
+      ],
+      "qualification_text": "Bachelor's degree with Statistics as a subject",
+      "age": {
+        "min_age": 18,
+        "max_age": 32,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 2150,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 1.0,
+    "fee_by_category": 1.0
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-10-14",
+  "is_sample": true
+}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Which government jobs can you actually apply for?</h1>
+<p class="lead">Enter your details once. We check age limits, category relaxations, qualifications, gender and domicile rules against every open official notification, and show the exact rule behind every answer.</p>
+<form class="match" method="post" action="/match">
+  <label>Age <input type="number" name="age" min="15" max="70" required value="{{ profile.age if profile else '' }}"></label>
+  <label>Highest qualification <select name="qualification">{% for q in quals %}<option value="{{ q }}" {% if profile and profile.qualification == q %}selected{% endif %}>{{ qual_labels[q] }}</option>{% endfor %}</select></label>
+  <label>Category <select name="category">{% for c in categories %}<option {% if profile and profile.category == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select></label>
+  <label>Gender <select name="gender"><option value="">Prefer not to say</option><option value="male" {% if profile and profile.gender == 'male' %}selected{% endif %}>Male</option><option value="female" {% if profile and profile.gender == 'female' %}selected{% endif %}>Female</option></select></label>
+  <label>State of domicile <input name="state" placeholder="e.g. Uttar Pradesh" value="{{ profile.state or '' if profile else '' }}"></label>
+  <label>Degree stream (if any) <select name="streams" multiple size="3">{% for s in streams %}<option value="{{ s }}" {% if profile and s in profile.streams %}selected{% endif %}>{{ s.replace('_',' ') }}</option>{% endfor %}</select></label>
+  <label class="check"><input type="checkbox" name="pwd" value="true" {% if profile and profile.pwd %}checked{% endif %}> Person with disability</label>
+  <label class="check"><input type="checkbox" name="ex_serviceman" value="true" {% if profile and profile.ex_serviceman %}checked{% endif %}> Ex-serviceman</label>
+  <button type="submit">Show my eligible jobs</button>
+</form>
+
+{% if matches is not none %}
+  {% set eligible = matches | selectattr('eligible') | list %}
+  <h2>{{ eligible | length }} eligible post{{ '' if eligible|length == 1 else 's' }} out of {{ matches | length }} open</h2>
+  <div class="card"><strong>Get emailed when a new one opens.</strong> <span class="meta">We'll keep checking every new notification against this profile.</span> <a href="/alerts?age={{ profile.age }}&qualification={{ profile.qualification }}&category={{ profile.category }}&gender={{ profile.gender or '' }}&state={{ profile.state or '' }}{% for s in profile.streams %}&streams={{ s }}{% endfor %}{% if profile.pwd %}&pwd=true{% endif %}{% if profile.ex_serviceman %}&ex_serviceman=true{% endif %}" class="pill">Set up alerts →</a></div>
+  {% for m in matches %}
+  <div class="card">
+    <h3><a href="/jobs/{{ m.notification_slug }}">{{ m.post_name }}</a> <span class="pill">{{ m.board }}</span></h3>
+    <div class="meta">{{ m.title }}{% if m.apply_end %} · last date {{ m.apply_end }}{% endif %}</div>
+    <div class="{{ 'ok' if m.eligible else 'bad' }}">{{ 'Eligible' if m.eligible else 'Not eligible' }}</div>
+    <ul class="reasons">{% for r in m.reasons %}<li class="{{ '' if r.passed else 'bad' }}">{{ r.detail }}</li>{% endfor %}</ul>
+  </div>
+  {% endfor %}
+{% endif %}
+
+<h2>Open notifications</h2>
+{% for n in open_items %}
+<div class="card"><h3><a href="/jobs/{{ n.slug }}">{{ n.title }}</a> <span class="pill">{{ n.board }}</span></h3>
+<div class="meta">{{ n.total_vacancies or '?' }} vacancies · {{ n.posts|length }} post type{{ '' if n.posts|length == 1 else 's' }}{% if n.apply_end %} · apply by {{ n.apply_end }}{% endif %}</div></div>
+{% endfor %}
+<p class="meta">Boards covered: {% for b in boards %}<a href="/board/{{ b }}">{{ b }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>
+{% endblock %}

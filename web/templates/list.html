@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }} · {{ site }}{% endblock %}
+{% block desc %}{{ intro }}{% endblock %}
+{% block body %}
+<h1>{{ heading }}</h1><p class="lead">{{ intro }}</p>
+{% for n in items %}
+<div class="card"><h3><a href="/jobs/{{ n.slug }}">{{ n.title }}</a> <span class="pill">{{ n.board }}</span></h3>
+<div class="meta">{{ n.total_vacancies or '?' }} vacancies · {% for p in n.posts %}{{ p.post_name }}{{ ', ' if not loop.last }}{% endfor %}{% if n.apply_end %} · apply by {{ n.apply_end }}{% endif %}</div></div>
+{% else %}<p>No open notifications right now.</p>{% endfor %}
+{% endblock %}

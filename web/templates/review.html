@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Review queue · {{ site }}{% endblock %}
+{% block body %}
+<h1>Review queue</h1><p class="lead">{{ items|length }} notification{{ '' if items|length == 1 else 's' }} held back by the validation gate. Fix the JSON in data/notifications.json, set needs_review to false, and restart.</p>
+{% for n in items %}<div class="card"><h3>{{ n.title }} <span class="pill">{{ n.board }}</span></h3><ul class="reasons">{% for r in n.review_reasons %}<li class="bad">{{ r }}</li>{% endfor %}</ul><div class="meta"><a href="{{ n.pdf_url or n.source_url }}">source</a></div></div>{% endfor %}
+{% endblock %}
