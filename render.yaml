@@ -1,0 +1,16 @@
+# One-click deploy on Render (free web service). Import this repo at https://dashboard.render.com/select-repo
+services:
+  - type: web
+    name: sarkari-match
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn web.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
+      - key: GEMINI_API_KEY
+        sync: false          # paste in the Render dashboard; sample data works without it
+      - key: SITE_URL
+        sync: false          # set to the Render URL after first deploy
