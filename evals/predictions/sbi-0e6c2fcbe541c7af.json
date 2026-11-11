@@ -1,0 +1,158 @@
+{
+  "slug": "sbi-specialist-cadre-officers-contract-2026",
+  "board": "SBI",
+  "title": "ENGAGEMENT OF SPECIALIST CADRE OFFICERS ON CONTRACT BASIS",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/03092026_1_Advt+_Wealth+MGMT_04.09.2026.pdf/d2fd7bab-0791-b62b-61d3-8f46c2cb3ec6?t=1788439145915",
+  "published_on": null,
+  "apply_start": "2026-09-04",
+  "apply_end": "2026-09-25",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Zonal Head (Retail)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 35,
+        "max_age": 50,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Regional Head (RH)",
+      "vacancies": 5,
+      "vacancies_by_category": {
+        "UR": 5
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 35,
+        "max_age": 50,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Relationship Manager-Team Lead",
+      "vacancies": 24,
+      "vacancies_by_category": {
+        "UR": 24
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 28,
+        "max_age": 42,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Investment Specialist (IS)",
+      "vacancies": 9,
+      "vacancies_by_category": {
+        "UR": 9
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 28,
+        "max_age": 42,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Investment Officer (IO)",
+      "vacancies": 4,
+      "vacancies_by_category": {
+        "UR": 4
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 28,
+        "max_age": 40,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "VP Wealth",
+      "vacancies": 91,
+      "vacancies_by_category": {
+        "UR": 91
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 26,
+        "max_age": 42,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "AVP Wealth",
+      "vacancies": 73,
+      "vacancies_by_category": {
+        "UR": 73
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 23,
+        "max_age": 35,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 0.8,
+    "fee_by_category": 0.5
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

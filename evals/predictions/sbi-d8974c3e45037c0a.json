@@ -1,0 +1,69 @@
+{
+  "slug": "sbi-specialist-cadre-officers-contract-basis-2026",
+  "board": "SBI",
+  "title": "ENGAGEMENT OF SPECIALIST CADRE OFFICERS ON CONTRACT BASIS",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/16092026_ADV_CRPD_SCO_2026_27_22.pdf/6285a84d-5171-c301-5817-fe41b4a83cad?t=1789538056721",
+  "published_on": null,
+  "apply_start": "2026-09-16",
+  "apply_end": "2026-10-06",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "DEPUTY VICE PRESIDENT (IT RISK)",
+      "vacancies": null,
+      "vacancies_by_category": {
+        "UR": 2,
+        "PWD": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science"
+      ],
+      "qualification_text": "Basic Qualifications: BE / BTech (Computer Science / Electronics & Communications / Information Technology/ Cybersecurity) from recognized university (Minimum percentage of Marks: 50%) OR MCA/ MSc (Computer Science)/ MSc (IT) from recognized university (Minimum percentage of Marks: 50%) OR MTech in Computer Science/ Cyber Security / Information Security from recognized university. ( Minimum percentage of Marks: 50%)",
+      "age": {
+        "min_age": 36,
+        "max_age": 45,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "ASSISTANT VICE PRESIDENT (IT RISK)",
+      "vacancies": null,
+      "vacancies_by_category": {
+        "UR": 2,
+        "PWD": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science"
+      ],
+      "qualification_text": "Basic Qualifications: BE / BTech (Computer Science / Electronics & Communications / Information Technology/ Cybersecurity) from recognized university (Minimum percentage of Marks: 50%) OR MCA/ MSc (Computer Science)/ MSc (IT) from recognized university (Minimum percentage of Marks: 50%) OR MTech in Computer Science/ Cyber Security / Information Security from recognized university. ( Minimum percentage of Marks: 50%)",
+      "age": {
+        "min_age": 32,
+        "max_age": 42,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 1.0,
+    "fee_by_category": 0.0
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

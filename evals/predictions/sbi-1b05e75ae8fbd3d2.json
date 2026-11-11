@@ -1,0 +1,76 @@
+{
+  "slug": "sbi-specialist-cadre-officer-2026-27",
+  "board": "SBI",
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis (2026-27)",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+CRPD+_SCO_2026-27_26_GMU.pdf/ade1acc4-609b-5c9a-ed89-670e70d0a82c?t=1793600742622",
+  "published_on": null,
+  "apply_start": "2026-11-02",
+  "apply_end": "2026-11-23",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Chief Manager (Product & Research – Forex & Rupee Derivatives)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "MBA/PGDBM/PGDM/PGDBA or equivalent degree from recognized institute",
+      "age": {
+        "min_age": 30,
+        "max_age": 40,
+        "as_on": "2026-09-30",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Manager (Product & Research Analyst)",
+      "vacancies": 6,
+      "vacancies_by_category": {
+        "SC": 1,
+        "OBC": 2,
+        "UR": 3,
+        "PwBD": 1
+      },
+      "pay_level": null,
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "MBA/PGDM/PGDBM/PGDBA or equivalent degree from recognized institute",
+      "age": {
+        "min_age": 24,
+        "max_age": 36,
+        "as_on": "2026-09-30",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 7,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 1.0,
+    "fee_by_category": 0.0
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

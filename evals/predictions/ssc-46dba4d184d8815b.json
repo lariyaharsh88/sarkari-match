@@ -1,0 +1,117 @@
+{
+  "slug": "ssc-combined-higher-secondary-10-2-level-examination-2026",
+  "board": "SSC",
+  "title": "Combined Higher Secondary (10+2) Level Examination, 2026",
+  "advt_no": null,
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf",
+  "published_on": null,
+  "apply_start": "2026-09-07",
+  "apply_end": "2026-10-07",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Lower Division Clerk (LDC)",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Pay Level-2 (Rs. 19,900-63,200)",
+      "min_qualification": "12th",
+      "required_streams": [],
+      "qualification_text": "Higher Secondary (10+2) qualification required",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PwBD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Junior Secretariat Assistant (JSA)",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Pay Level-2 (Rs. 19,900-63,200)",
+      "min_qualification": "12th",
+      "required_streams": [],
+      "qualification_text": "Higher Secondary (10+2) qualification required",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PwBD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Data Entry Operator (DEO)",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Pay Level-4 (Rs. 25,500-81,100) and Level-5 (Rs. 29,200-92,300)",
+      "min_qualification": "12th",
+      "required_streams": [],
+      "qualification_text": "Higher Secondary (10+2) qualification required",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PwBD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Data Entry Operator, Grade A",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Pay Level-4 (Rs. 25,500-81,100)",
+      "min_qualification": "12th",
+      "required_streams": [],
+      "qualification_text": "Higher Secondary (10+2) qualification required",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PwBD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 0.8,
+    "fee_by_category": 0.0
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}
