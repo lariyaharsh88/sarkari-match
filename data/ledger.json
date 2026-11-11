@@ -53,5 +53,41 @@
       "source_url": "https://sbi.co.in/web/careers/current-openings",
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/eb473422822a08aa.pdf"
     }
+  },
+  "1b05e75ae8fbd3d2": {
+    "status": "stored",
+    "note": "sbi-specialist-cadre-officers-2026",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+CRPD+_SCO_2026-27_26_GMU.pdf/ade1acc4-609b-5c9a-ed89-670e70d0a82c?t=1793600742622",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/1b05e75ae8fbd3d2.pdf"
+    },
+    "needs_review": false
+  },
+  "9febcb6d0c46bfa3": {
+    "status": "stored",
+    "note": "sbi-specialist-cadre-officers-fte-2026",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/17102026_Detail_ADV_CRPD_SCO_2026-27_30.pdf/226b6572-e6bd-2b73-f266-dc7db9b282bd?t=1792240760461",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/9febcb6d0c46bfa3.pdf"
+    },
+    "needs_review": false
+  },
+  "dc2601eab58cef86": {
+    "status": "stored",
+    "note": "sbi-specialist-cadre-officers-security-2026",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/03112026_1_ADV_Security+Officer.pdf/69e017fe-5e1c-6312-c285-8855f9882102?t=1793713497818",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/dc2601eab58cef86.pdf"
+    },
+    "needs_review": false
   }
 }

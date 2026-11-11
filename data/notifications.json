@@ -356,6 +356,169 @@
     "is_sample": true
   },
   {
+    "slug": "sbi-specialist-cadre-officers-fte-2026",
+    "board": "SBI",
+    "title": "Engagement of Specialist Cadre Officers on Fixed Term Employment Basis",
+    "advt_no": "CRPD/SCO/2026-27/30",
+    "source_url": "https://sbi.co.in/web/careers/current-openings",
+    "pdf_url": "https://sbi.co.in/documents/77530/57941334/17102026_Detail_ADV_CRPD_SCO_2026-27_30.pdf/226b6572-e6bd-2b73-f266-dc7db9b282bd?t=1792240760461",
+    "published_on": null,
+    "apply_start": "2026-10-19",
+    "apply_end": "2026-11-09",
+    "fee_by_category": {
+      "UR": 750,
+      "EWS": 750,
+      "OBC": 750,
+      "SC": 0,
+      "ST": 0,
+      "PWD": 0
+    },
+    "posts": [
+      {
+        "post_name": "GM & Chief AI Officer",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": "Upper range - Rs. 160.00 Lacs CTC",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+        "age": {
+          "min_age": 40,
+          "max_age": 55,
+          "as_on": "2026-09-30",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "DGM (Risk and Operational Analytics)",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": "Upper range - Rs. 120.00 Lacs CTC",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+        "age": {
+          "min_age": 35,
+          "max_age": 50,
+          "as_on": "2026-09-30",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "DGM (AI Governance and Compliance)",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": "Upper range - Rs. 120.00 Lacs CTC",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+        "age": {
+          "min_age": 35,
+          "max_age": 50,
+          "as_on": "2026-09-30",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "DGM (Data Engineering, Model Application Dev and AI Ops)",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": "Upper range - Rs. 120.00 Lacs CTC",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+        "age": {
+          "min_age": 35,
+          "max_age": 50,
+          "as_on": "2026-09-30",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "AI Solution Architect",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": "Upper range - Rs. 90.00 Lacs CTC",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "computer_science"
+        ],
+        "qualification_text": "Bachelor's / Master’s degree in computer science, Information Technology, Data Science, AI, Business Administration, Management or a related discipline from a recognized university/institution.",
+        "age": {
+          "min_age": 30,
+          "max_age": 45,
+          "as_on": "2026-09-30",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Enterprise AI Architect",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": "Upper range - Rs. 90.00 Lacs CTC",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "Bachelor's / Master's degree in Computer Science, Information Technology, Engineering, Data Science, AI or equivalent discipline from a recognized university/institution.",
+        "age": {
+          "min_age": 30,
+          "max_age": 45,
+          "as_on": "2026-09-30",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 6,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 1.0,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-11",
+    "is_sample": false
+  },
+  {
     "slug": "sample-rrb-ntpc-2026",
     "board": "RRB",
     "title": "Non-Technical Popular Categories Graduate and Undergraduate Posts 2026 (SAMPLE DATA)",
@@ -431,5 +594,141 @@
     "review_reasons": [],
     "extracted_at": "2026-10-14",
     "is_sample": true
+  },
+  {
+    "slug": "sbi-specialist-cadre-officers-2026",
+    "board": "SBI",
+    "title": "Recruitment of Specialist Cadre Officer on Regular Basis",
+    "advt_no": "CRPD/SCO/2026-27/26",
+    "source_url": "https://sbi.co.in/web/careers/current-openings",
+    "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+CRPD+_SCO_2026-27_26_GMU.pdf/ade1acc4-609b-5c9a-ed89-670e70d0a82c?t=1793600742622",
+    "published_on": "2026-11-02",
+    "apply_start": "2026-11-02",
+    "apply_end": "2026-11-23",
+    "fee_by_category": {
+      "UR": 750,
+      "EWS": 750,
+      "OBC": 750,
+      "SC": 0,
+      "ST": 0,
+      "PWD": 0
+    },
+    "posts": [
+      {
+        "post_name": "Chief Manager (Product & Research - Forex & Rupee Derivatives)",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": "102300-2980/4-114220-3360/2-120940",
+        "min_qualification": "postgraduate",
+        "required_streams": [],
+        "qualification_text": "Mandatory: MBA/ PGDM /PGDBM/PGDBA or its equivalent degree from institutions recognised by Government Bodies/ AICTE/ UGC. Preference will be given to candidates With specialization in Finance. Preferred: CFA/FRM/CA/Cost Accountants (CMA erstwhile ICWA)",
+        "age": {
+          "min_age": 30,
+          "max_age": 40,
+          "as_on": "2026-09-30",
+          "relaxation_years": {
+            "OBC": 3,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 10
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Manager (Product & Research Analyst)",
+        "vacancies": 6,
+        "vacancies_by_category": {
+          "UR": 3,
+          "OBC": 2,
+          "SC": 1
+        },
+        "pay_level": "85920-2680/5-99320-2980/2-105280",
+        "min_qualification": "postgraduate",
+        "required_streams": [],
+        "qualification_text": "Mandatory: MBA/ PGDM /PGDBM/PGDBA or its equivalent degree from institutions recognised by Government Bodies/ AICTE/ UGC. Preference will be given to candidates With specialization in Finance. Preferred: CFA/FRM/CA/Cost Accountants (CMA erstwhile ICWA)",
+        "age": {
+          "min_age": 24,
+          "max_age": 36,
+          "as_on": "2026-09-30",
+          "relaxation_years": {
+            "OBC": 3,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 10
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 7,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 1.0,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-11",
+    "is_sample": false
+  },
+  {
+    "slug": "sbi-specialist-cadre-officers-security-2026",
+    "board": "SBI",
+    "title": "Recruitment of Specialist Cadre Officer on Regular Basis (Manager / Deputy Manager Security)",
+    "advt_no": "CRPD/SCO/2026-27/28",
+    "source_url": "https://sbi.co.in/web/careers/current-openings",
+    "pdf_url": "https://sbi.co.in/documents/77530/57941334/03112026_1_ADV_Security+Officer.pdf/69e017fe-5e1c-6312-c285-8855f9882102?t=1793713497818",
+    "published_on": "2026-11-04",
+    "apply_start": "2026-11-04",
+    "apply_end": "2026-11-25",
+    "fee_by_category": {
+      "UR": 750,
+      "EWS": 750,
+      "OBC": 750,
+      "SC": 0,
+      "ST": 0
+    },
+    "posts": [
+      {
+        "post_name": "Manager (Security) / Deputy Manager (Security)",
+        "vacancies": 60,
+        "vacancies_by_category": {
+          "SC": 9,
+          "ST": 4,
+          "OBC": 16,
+          "EWS": 6,
+          "UR": 25
+        },
+        "pay_level": "MMGS-II: 64820-93960 / MMGS-III: 85920-105820",
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "Graduate (any discipline from Government recognized University or Institution.)",
+        "age": {
+          "min_age": 25,
+          "max_age": 40,
+          "as_on": "2026-10-31",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 60,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 0.95,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-11",
+    "is_sample": false
   }
 ]
