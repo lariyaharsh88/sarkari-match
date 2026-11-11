@@ -5,6 +5,7 @@ Needs GEMINI_API_KEY in the environment or .env. Model is configurable with GEMI
 """
 import argparse
 import json
+import time
 import os
 import re
 from datetime import date
@@ -63,11 +64,18 @@ def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = Non
     # response_json_schema takes standard JSON Schema ($defs, additionalProperties),
     # so the pydantic schema goes in unmodified.
     schema = Notification.model_json_schema()
-    resp = client.models.generate_content(
-        model=model,
-        contents=f"{PROMPT}\nboard: {board}\nsource_url: {source_url}\npdf_url: {pdf_url or ''}\n\n{text}",
-        config={"response_mime_type": "application/json", "response_json_schema": schema, "temperature": 0},
-    )
+    for attempt in range(4):  # 503 "high demand" is common and clears within a minute or two
+        try:
+            resp = client.models.generate_content(
+                model=model,
+                contents=f"{PROMPT}\nboard: {board}\nsource_url: {source_url}\npdf_url: {pdf_url or ''}\n\n{text}",
+                config={"response_mime_type": "application/json", "response_json_schema": schema, "temperature": 0},
+            )
+            break
+        except Exception as e:  # noqa: BLE001
+            if attempt == 3 or not any(c in str(e) for c in ("503", "UNAVAILABLE", "500 ")):
+                raise
+            time.sleep(15 * (attempt + 1))
     data = json.loads(resp.text)
     data["board"] = board
     data["source_url"] = source_url
