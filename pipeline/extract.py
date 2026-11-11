@@ -58,7 +58,9 @@ def slugify(s: str) -> str:
 
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MAX_CHARS = 24000  # free-tier tokens-per-minute caps are low; eligibility is near the top anyway
+GROQ_MAX_CHARS = 16000  # free-tier tokens-per-minute caps are low; eligibility is near the top anyway
+# Tried in order; a model that is missing (404) or whose per-minute cap is smaller than the request (413) is skipped.
+GROQ_MODELS = ["meta-llama/llama-4-scout-17b-16e-instruct", "llama-3.3-70b-versatile", "openai/gpt-oss-120b"]
 
 
 def is_quota_error(e: Exception) -> bool:
@@ -69,19 +71,26 @@ def is_quota_error(e: Exception) -> bool:
 def _groq_json(prompt: str, schema: dict) -> str:
     """Fallback for text PDFs when Gemini's free quota is used up. Groq is OpenAI-compatible."""
     import httpx
-    body = {
-        "model": os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b"),
-        "temperature": 0,
-        "response_format": {"type": "json_object"},
-        "messages": [
-            {"role": "system", "content": "Reply with one JSON object that validates against this JSON Schema:\n" + json.dumps(schema)},
-            {"role": "user", "content": prompt},
-        ],
-    }
-    r = httpx.post(GROQ_URL, json=body, timeout=120, headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"})
-    if r.status_code >= 300:
-        raise RuntimeError(f"Groq {r.status_code}: {r.text[:300]}")
-    return r.json()["choices"][0]["message"]["content"]
+    models = [os.environ["GROQ_MODEL"]] if os.environ.get("GROQ_MODEL") else GROQ_MODELS
+    messages = [
+        {"role": "system", "content": "Reply with one JSON object that validates against this JSON Schema:\n" + json.dumps(schema, separators=(",", ":"))},
+        {"role": "user", "content": prompt},
+    ]
+    last = ""
+    for model in models:
+        for attempt in range(3):
+            r = httpx.post(GROQ_URL, timeout=120, headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}"},
+                           json={"model": model, "temperature": 0, "response_format": {"type": "json_object"}, "messages": messages})
+            if r.status_code < 300:
+                return r.json()["choices"][0]["message"]["content"]
+            last = f"Groq {model} {r.status_code}: {r.text[:200]}"
+            if r.status_code == 429 and "per day" not in r.text and attempt < 2:
+                time.sleep(65)  # per-minute token window
+                continue
+            break
+        if r.status_code not in (400, 404, 413):  # only move on for model-specific problems
+            break
+    raise RuntimeError(last)
 
 
 def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = None,
