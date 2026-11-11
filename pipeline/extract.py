@@ -59,7 +59,7 @@ def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = Non
     from google import genai  # imported lazily so the web app never needs the SDK
 
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-    model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    model = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
     # response_json_schema takes standard JSON Schema ($defs, additionalProperties),
     # so the pydantic schema goes in unmodified.
     schema = Notification.model_json_schema()

@@ -76,6 +76,9 @@ def main(limit: int, dry_run: bool) -> int:
             if "quota" in msg.lower() or "429" in msg or "RESOURCE_EXHAUSTED" in msg:
                 print(f"[extract] Gemini quota hit, stopping; {path.name} will be retried next run")
                 break
+            if "validation" not in msg.lower():  # API/config errors are ours, not the PDF's: retry next run
+                print(f"[extract] error on {path.name}, will retry next run: {msg[:200]}")
+                continue
             ledger.record(book, key, "rejected", msg[:300], meta=meta)
             print(f"[extract] rejected {path.name}: {msg[:200]}")
     store.upsert(accepted)
