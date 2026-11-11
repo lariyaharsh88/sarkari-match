@@ -1,0 +1,7 @@
+{% extends "_legal.html" %}
+{% block prose %}
+<p>Questions, corrections to a notification, refunds or data requests:</p>
+{% if contact_email %}<p style="font:800 clamp(1.4rem,4vw,2.4rem)/1.1 var(--display);letter-spacing:-.03em"><a href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
+<p class="meta">We reply within 2 working days.</p>{% else %}<p class="meta">A support email address will be listed here shortly.</p>{% endif %}
+<p>Spotted a wrong date, age limit or vacancy count? Tell us the page link and we'll fix it the same day.</p>
+{% endblock %}

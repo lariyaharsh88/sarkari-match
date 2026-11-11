@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ heading }} · {{ site }}{% endblock %}
+{% block body %}
+<section class="hero" style="padding-bottom:0">
+  <div class="eyebrow"><b>legal</b> last updated {{ updated }}</div>
+  <h1 class="h1">{{ heading }}</h1>
+</section>
+<article class="prose">{% block prose %}{% endblock %}</article>
+{% endblock %}

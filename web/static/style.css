@@ -181,3 +181,7 @@ footer{margin-top:110px;border-top:1.5px solid var(--ink);padding:40px 0 34px}
 .msg{margin-top:12px;font-weight:600}
 .mega .hl{display:inline-block;line-height:.9;padding:.02em .1em .06em;margin-top:.08em;transform:rotate(-1.5deg)}
 section[id]{scroll-margin-top:90px}
+.prose{max-width:70ch;margin-top:36px;font-size:1.02rem}
+.prose h2{font-size:1.5rem;margin:36px 0 10px}
+.prose ul{padding-left:20px;display:grid;gap:8px}
+.prose a{font-weight:600}

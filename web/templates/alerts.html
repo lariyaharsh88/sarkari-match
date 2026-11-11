@@ -2,7 +2,7 @@
 {% from "_form.html" import profile_fields %}
 {% block title %}Job alerts · {{ site }}{% endblock %}
 {% block desc %}Get an email the day a new government job notification you are eligible for is published.{% endblock %}
-{% block head %}<script src="https://checkout.razorpay.com/v1/checkout.js"></script>{% endblock %}
+{% block head %}<script src="https://checkout.razorpay.com/v1/checkout.js"></script>{% if turnstile_site_key %}<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>{% endif %}{% endblock %}
 {% block body %}
 <section class="hero" style="padding-bottom:0">
   <div class="eyebrow"><b>₹{{ price }}</b> for {{ days }} days · stop anytime</div>
@@ -21,11 +21,16 @@
       <input class="inp" type="email" name="email" required placeholder="you@gmail.com" value="{{ prefill.email or '' }}">
     </div>
     {{ profile_fields(prefill, quals, categories, streams, qual_labels) }}
+    <div class="field full">
+      <label class="chip"><input type="checkbox" name="consent" value="true" required><span>I agree to the <a class="inline-link" href="/privacy" target="_blank">privacy policy</a> &amp; <a class="inline-link" href="/terms" target="_blank">terms</a></span></label>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+      {% if turnstile_site_key %}<div class="cf-turnstile" data-sitekey="{{ turnstile_site_key }}" data-theme="auto" style="margin-top:14px"></div>{% endif %}
+    </div>
     <div class="full"><button class="btn block" type="submit" id="pay-btn">{% if demo %}Start alerts (demo, free) ⚡{% else %}Pay ₹{{ price }} &amp; start alerts ⚡{% endif %}</button>
     <p class="msg" id="alerts-msg" role="status"></p></div>
   </div>
 </form>
-<p class="meta" style="margin-top:18px">We store your email and the profile above only to match notifications. <a class="inline-link" href="/alerts/manage">Already subscribed? Manage alerts</a></p>
+<p class="meta" style="margin-top:18px">Refunds: see our <a class="inline-link" href="/refunds">refund policy</a>. We store your email and the profile above only to match notifications. <a class="inline-link" href="/alerts/manage">Already subscribed? Manage alerts</a></p>
 
 <script>
 const form = document.getElementById('alerts-form'), msg = document.getElementById('alerts-msg'), btn = document.getElementById('pay-btn');
@@ -35,7 +40,7 @@ form.addEventListener('submit', async (e) => {
     const fd = new FormData(form);
     const res = await fetch('/api/alerts/order', { method: 'POST', body: fd });
     const o = await res.json();
-    if (!res.ok || o.error) throw new Error(o.error || res.statusText);
+    if (!res.ok || o.error) { if (window.turnstile) turnstile.reset(); throw new Error(o.error || res.statusText); }
     if (o.mode === 'demo') { location.href = o.manage_url; return; }
     const rzp = new Razorpay({
       key: o.key_id, amount: o.amount, currency: o.currency, order_id: o.order_id,

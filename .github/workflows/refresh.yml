@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,3 +27,9 @@ jobs:
           git add data/notifications.json data/ledger.json docs/metrics-log.csv evals/results
           git diff --cached --quiet || git commit -m "data: daily refresh $(date -u +%F)"
           git push
+      - name: open an issue on failure (GitHub emails you)
+        if: ${{ failure() }}
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$GITHUB_WORKFLOW failed $(date -u +%F)" \
+            --body "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" --assignee "$GITHUB_REPOSITORY_OWNER" || true

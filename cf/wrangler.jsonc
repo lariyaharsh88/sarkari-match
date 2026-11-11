@@ -5,5 +5,7 @@
   "compatibility_flags": ["python_workers"],
   "assets": { "directory": "./public" },
   "vars": { "SITE_NAME": "Sarkari Match", "SITE_URL": "https://sarkari-match.epicindiatrips.workers.dev" },
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "ratelimits": [{ "name": "SIGNUP_LIMITER", "namespace_id": "1001", "simple": { "limit": 5, "period": 60 } }],
   "kv_namespaces": [{ "binding": "SUBSCRIBERS", "id": "b964e415fce54aa6a5aeac573deacb31" }]
 }

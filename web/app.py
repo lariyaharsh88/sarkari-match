@@ -4,6 +4,8 @@ Run:  .venv/bin/uvicorn web.app:app --reload --port 8010
 Deploy: any free Python host (Render, Fly, Vercel python runtime). Data is read from
 data/notifications.json at startup; the daily workflow commits a fresh file.
 """
+import base64
+import hmac
 import json
 import os
 from collections import defaultdict
@@ -11,6 +13,7 @@ from datetime import date
 from pathlib import Path
 from typing import Dict, List, Optional
 
+import httpx
 from fastapi import FastAPI, Form, Header, Request
 from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
@@ -25,6 +28,10 @@ ROOT = Path(__file__).resolve().parent
 SITE_URL = os.environ.get("SITE_URL", "http://localhost:8010")
 SITE_NAME = os.environ.get("SITE_NAME", "Sarkari Match")
 ALERTS_CRON_SECRET = os.environ.get("ALERTS_CRON_SECRET", "")
+ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "")
+CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "")
+TURNSTILE_SITE_KEY = os.environ.get("TURNSTILE_SITE_KEY", "")
+TURNSTILE_SECRET = os.environ.get("TURNSTILE_SECRET", "")
 
 app = FastAPI(title=SITE_NAME)
 # On Cloudflare the static/ folder is served by the ASSETS binding before requests reach the app.
@@ -61,7 +68,8 @@ Data.refresh()
 
 def ctx(request: Request, **kw) -> Dict:
     base = {"request": request, "site": SITE_NAME, "site_url": SITE_URL, "today": date.today(),
-            "qual_labels": QUAL_LABELS, "has_samples": any(n.is_sample for n in Data.items)}
+            "qual_labels": QUAL_LABELS, "has_samples": any(n.is_sample for n in Data.items),
+            "contact_email": CONTACT_EMAIL, "turnstile_site_key": TURNSTILE_SITE_KEY}
     base.update(kw)
     return base
 
@@ -128,8 +136,23 @@ async def qualification(request: Request, qual: str):
                                                        items=items))
 
 
+def _admin_ok(authorization: Optional[str]) -> bool:
+    """HTTP basic auth, any username, password = ADMIN_PASSWORD. No password set means no admin pages."""
+    if not ADMIN_PASSWORD or not authorization or not authorization.startswith("Basic "):
+        return False
+    try:
+        _, _, pw = base64.b64decode(authorization[6:]).decode().partition(":")
+    except Exception:  # noqa: BLE001
+        return False
+    return hmac.compare_digest(pw, ADMIN_PASSWORD)
+
+
 @app.get("/admin/review", response_class=HTMLResponse)
-async def review(request: Request):
+async def review(request: Request, authorization: Optional[str] = Header(None)):
+    if not ADMIN_PASSWORD:
+        return HTMLResponse("Not found", status_code=404)
+    if not _admin_ok(authorization):
+        return HTMLResponse("Login required", status_code=401, headers={"WWW-Authenticate": 'Basic realm="admin"'})
     pending = [n for n in store.load() if n.needs_review]
     return templates.TemplateResponse(request, "review.html", ctx(request, items=pending))
 
@@ -153,24 +176,53 @@ async def alerts_page(request: Request):
                                                          demo=not alerts.payments_enabled()))
 
 
+async def _too_many(request: Request) -> bool:
+    """Cloudflare rate-limit binding (5 sign-ups/min per IP). Absent locally, so never limits there."""
+    limiter = getattr(request.scope.get("env"), "SIGNUP_LIMITER", None)
+    if limiter is None:
+        return False
+    res = await limiter.limit({"key": request.headers.get("cf-connecting-ip", "unknown")})
+    return not res["success"]
+
+
+async def _turnstile_ok(token: str, ip: str) -> bool:
+    if not TURNSTILE_SECRET:
+        return True
+    async with httpx.AsyncClient(timeout=10) as client:
+        r = await client.post("https://challenges.cloudflare.com/turnstile/v0/siteverify",
+                              data={"secret": TURNSTILE_SECRET, "response": token, "remoteip": ip})
+    return bool(r.json().get("success"))
+
+
 @app.post("/api/alerts/order")
-async def alerts_order(email: str = Form(...), age: int = Form(...), qualification: str = Form(...), category: str = Form("UR"),
+async def alerts_order(request: Request, email: str = Form(...), age: int = Form(...), qualification: str = Form(...), category: str = Form("UR"),
                  gender: str = Form(""), state: str = Form(""), streams: List[str] = Form([]),
-                 pwd: bool = Form(False), ex_serviceman: bool = Form(False)):
+                 pwd: bool = Form(False), ex_serviceman: bool = Form(False), consent: bool = Form(False),
+                 website: str = Form(""), turnstile: str = Form("", alias="cf-turnstile-response")):
     """Saves the profile, then either creates a Razorpay order or (no keys) activates a free demo pass."""
+    if website:  # honeypot: humans never see this field
+        return JSONResponse({"error": "Invalid request"}, status_code=400)
+    if not consent:
+        return JSONResponse({"error": "Please agree to the privacy policy to continue"}, status_code=400)
+    if await _too_many(request):
+        return JSONResponse({"error": "Too many attempts. Try again in a minute."}, status_code=429)
+    if not await _turnstile_ok(turnstile, request.headers.get("cf-connecting-ip", "")):
+        return JSONResponse({"error": "Couldn't verify you're human. Refresh and try again."}, status_code=400)
+    if "@" not in email or len(email) > 254:
+        return JSONResponse({"error": "Enter a valid email"}, status_code=400)
     if qualification not in QUALIFICATION_LEVELS or category not in CATEGORIES:
         return JSONResponse({"error": "Invalid profile"}, status_code=400)
-    sub = alerts.create(email, _profile_from_form(age, qualification, category, gender, state, streams, pwd, ex_serviceman))
+    sub = await alerts.create(email, _profile_from_form(age, qualification, category, gender, state, streams, pwd, ex_serviceman))
     manage_url = f"/alerts/manage/{alerts.manage_token(sub.id)}"
     if not alerts.payments_enabled():
-        alerts.activate(sub, "demo")
+        await alerts.activate(sub, "demo")
         return {"mode": "demo", "sub_id": sub.id, "manage_url": manage_url}
     try:
         order = await alerts.create_order(receipt=f"alerts_{sub.id}")
     except Exception as e:  # noqa: BLE001
         return JSONResponse({"error": str(e)}, status_code=502)
     sub.order_id = order["id"]
-    alerts.put(sub)
+    await alerts.put(sub)
     return {"mode": "razorpay", "sub_id": sub.id, "key_id": alerts.RAZORPAY_KEY_ID, "order_id": order["id"],
             "amount": order["amount"], "currency": order["currency"], "manage_url": manage_url}
 
@@ -178,13 +230,13 @@ async def alerts_order(email: str = Form(...), age: int = Form(...), qualificati
 @app.post("/api/alerts/verify")
 async def alerts_verify(request: Request):
     body = await request.json()
-    sub = alerts.get(str(body.get("sub_id", "")))
+    sub = await alerts.get(str(body.get("sub_id", "")))
     order_id, payment_id, sig = (str(body.get(k, "")) for k in ("razorpay_order_id", "razorpay_payment_id", "razorpay_signature"))
     if sub is None or sub.order_id != order_id:
         return JSONResponse({"error": "Unknown order"}, status_code=400)
     if not alerts.verify_signature(order_id, payment_id, sig):
         return JSONResponse({"error": "Signature mismatch"}, status_code=400)
-    alerts.activate(sub, payment_id)
+    await alerts.activate(sub, payment_id)
     return {"manage_url": f"/alerts/manage/{alerts.manage_token(sub.id)}"}
 
 
@@ -196,7 +248,7 @@ async def alerts_manage_help(request: Request):
 @app.get("/alerts/manage/{token}", response_class=HTMLResponse)
 async def alerts_manage(request: Request, token: str):
     sub_id = alerts.parse_manage_token(token)
-    sub = alerts.get(sub_id) if sub_id else None
+    sub = await alerts.get(sub_id) if sub_id else None
     if sub is None:
         return HTMLResponse("Not found", status_code=404)
     matches = [m for m in match_all(Data.open_items(), sub.profile) if m.eligible]
@@ -206,11 +258,11 @@ async def alerts_manage(request: Request, token: str):
 @app.post("/alerts/manage/{token}/{action}")
 async def alerts_toggle(token: str, action: str):
     sub_id = alerts.parse_manage_token(token)
-    sub = alerts.get(sub_id) if sub_id else None
+    sub = await alerts.get(sub_id) if sub_id else None
     if sub is None or action not in ("stop", "resume"):
         return HTMLResponse("Not found", status_code=404)
     sub.unsubscribed = action == "stop"
-    alerts.put(sub)
+    await alerts.put(sub)
     return RedirectResponse(f"/alerts/manage/{token}", status_code=303)
 
 
@@ -227,7 +279,7 @@ async def alerts_dispatch(authorization: Optional[str] = Header(None)):
 async def sitemap():
     urls = [f"{SITE_URL}/"] + [f"{SITE_URL}/jobs/{n.slug}" for n in Data.items]
     urls += [f"{SITE_URL}/board/{b}" for b in sorted({n.board for n in Data.items})]
-    urls += [f"{SITE_URL}/qualification/{q}" for q in QUALIFICATION_LEVELS] + [f"{SITE_URL}/alerts"]
+    urls += [f"{SITE_URL}/qualification/{q}" for q in QUALIFICATION_LEVELS] + [f"{SITE_URL}/alerts"] + [f"{SITE_URL}/{p}" for p in ("privacy", "terms", "refunds", "contact")]
     body = "".join(f"<url><loc>{u}</loc></url>" for u in urls)
     return Response(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{body}</urlset>',
                     media_type="application/xml")
@@ -248,3 +300,15 @@ async def stats():
             "posts": sum(len(n.posts) for n in Data.items),
             "vacancies": sum(n.total_vacancies or 0 for n in Data.items),
             "boards": dict(by_board), "samples": sum(1 for n in Data.items if n.is_sample)}
+
+
+# Registered last so the catch-all path cannot shadow /sitemap.xml, /robots.txt etc.
+LEGAL_PAGES = {"privacy": "Privacy policy", "terms": "Terms of use", "refunds": "Refund & cancellation policy", "contact": "Contact us"}
+
+
+@app.get("/{page}", response_class=HTMLResponse)
+async def legal(request: Request, page: str):
+    if page not in LEGAL_PAGES:
+        return HTMLResponse("Not found", status_code=404)
+    return templates.TemplateResponse(request, f"legal_{page}.html", ctx(request, heading=LEGAL_PAGES[page], price=alerts.ALERT_PRICE_INR,
+                                                                     days=alerts.ALERT_PASS_DAYS, updated="11 November 2026"))

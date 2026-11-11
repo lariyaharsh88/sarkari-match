@@ -1,0 +1,14 @@
+{% extends "_legal.html" %}
+{% block prose %}
+<p>By using {{ site }} you agree to these terms.</p>
+<h2>What the service is</h2>
+<p>We read official recruitment notifications and check them against the profile you enter. Our results are guidance, not a guarantee of eligibility. Notifications can be extracted incorrectly, amended or withdrawn. <b>Always read the official notification before applying.</b> We are not affiliated with any government body or recruitment board.</p>
+<h2>Job alerts</h2>
+<p>The alerts pass costs ₹{{ price }} and lasts {{ days }} days from activation. It entitles you to email alerts for new notifications that match your profile. It does not guarantee a minimum number of alerts, since that depends on what boards publish.</p>
+<h2>Acceptable use</h2>
+<p>Don't scrape the site at high volume, submit other people's emails, or try to disrupt the service.</p>
+<h2>Liability</h2>
+<p>To the extent allowed by law, we are not liable for missed deadlines, rejected applications or decisions made on the basis of our results. Our total liability is limited to the amount you paid us.</p>
+<h2>Changes and contact</h2>
+<p>We may update these terms; the date above shows the latest version. Questions: {% if contact_email %}<a class="inline-link" href="mailto:{{ contact_email }}">{{ contact_email }}</a>{% else %}the contact address on our <a class="inline-link" href="/contact">contact page</a>{% endif %}. These terms are governed by the laws of India.</p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "_legal.html" %}
+{% block prose %}
+<h2>Alerts pass</h2>
+<p>The ₹{{ price }} alerts pass is a digital service that starts immediately after payment.</p>
+<ul>
+<li><b>Full refund within 7 days</b> of payment if you haven't received any alert yet. Just ask.</li>
+<li><b>Duplicate or failed payments</b> (charged but the pass didn't activate) are always refunded in full.</li>
+<li>After an alert has been delivered, the pass is non-refundable.</li>
+</ul>
+<h2>Cancellation</h2>
+<p>You can pause alerts any time from the "manage alerts" link in every email. Pausing doesn't extend the pass.</p>
+<h2>How to request a refund</h2>
+<p>Email {% if contact_email %}<a class="inline-link" href="mailto:{{ contact_email }}">{{ contact_email }}</a>{% else %}the contact address on our <a class="inline-link" href="/contact">contact page</a>{% endif %} with the email address you signed up with. Approved refunds go back to the original payment method through Razorpay within 5–7 working days.</p>
+{% endblock %}

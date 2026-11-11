@@ -7,6 +7,12 @@
 <meta name="description" content="{% block desc %}Find every open Indian government job you are eligible for, from official notifications only.{% endblock %}">
 <meta name="theme-color" content="#c6f432">
 <link rel="canonical" href="{{ site_url }}{{ request.url.path }}">
+<meta property="og:type" content="website"><meta property="og:site_name" content="{{ site }}">
+<meta property="og:title" content="{{ self.title() }}"><meta property="og:description" content="{{ self.desc() }}">
+<meta property="og:url" content="{{ site_url }}{{ request.url.path }}"><meta property="og:image" content="{{ site_url }}/static/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{{ site_url }}/static/og.png">
+<link rel="icon" href="/static/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400..700&display=swap">
 <link rel="stylesheet" href="/static/style.css?v=2">
@@ -28,7 +34,7 @@
   <div class="foot-big">sarkari match</div>
   <div class="foot-row">
     <p>Read straight from official notification PDFs and checked before publishing. Always confirm on the official notification before applying. Not affiliated with any government body.</p>
-    <div><a class="inline-link" href="/alerts">Alerts</a> · <a class="inline-link" href="/alerts/manage">Manage</a> · <a class="inline-link" href="/sitemap.xml">Sitemap</a></div>
+    <div><a class="inline-link" href="/alerts">Alerts</a> · <a class="inline-link" href="/alerts/manage">Manage</a> · <a class="inline-link" href="/privacy">Privacy</a> · <a class="inline-link" href="/terms">Terms</a> · <a class="inline-link" href="/refunds">Refunds</a> · <a class="inline-link" href="/contact">Contact</a></div>
   </div>
 </div></footer>
 <script>

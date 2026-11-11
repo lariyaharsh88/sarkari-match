@@ -1,0 +1,21 @@
+{% extends "_legal.html" %}
+{% block prose %}
+<p>{{ site }} ("we") helps you find Indian government jobs you are eligible for. This policy explains what personal data we collect, why, and your rights under the Digital Personal Data Protection Act, 2023.</p>
+<h2>What we collect</h2>
+<ul>
+<li><b>Eligibility check (no sign-up):</b> the age, category, qualification, stream, gender, state and relaxation details you enter. These are used only to compute your results for that request and are not stored.</li>
+<li><b>Job alerts:</b> your email address and the same profile details, stored so we can match new notifications against them.</li>
+<li><b>Payments:</b> handled by Razorpay. We receive an order and payment ID; we never see or store your card, UPI or bank details.</li>
+<li><b>Basic logs:</b> our hosting provider (Cloudflare) processes IP addresses and request logs for security and rate limiting.</li>
+</ul>
+<h2>Why we use it</h2>
+<p>Only to show your eligibility, send the alerts you asked for, process your payment and keep the service secure. We do not sell your data, share it with advertisers or send marketing email.</p>
+<h2>Who processes it</h2>
+<p>Cloudflare (hosting and storage), Razorpay (payments) and Resend (email delivery), each only to provide this service.</p>
+<h2>How long we keep it</h2>
+<p>Alert data is kept while your pass is active and deleted within 90 days after it ends, unless you ask us to delete it sooner.</p>
+<h2>Your rights</h2>
+<p>You can access, correct or delete your data, or withdraw consent, at any time. Use the "manage alerts" link in any alert email to pause alerts, or write to {% if contact_email %}<a class="inline-link" href="mailto:{{ contact_email }}">{{ contact_email }}</a>{% else %}the contact address on our <a class="inline-link" href="/contact">contact page</a>{% endif %} and we will act within 30 days.</p>
+<h2>Grievances</h2>
+<p>Write to {% if contact_email %}<a class="inline-link" href="mailto:{{ contact_email }}">{{ contact_email }}</a>{% else %}the contact address on our <a class="inline-link" href="/contact">contact page</a>{% endif %}. If you're unhappy with our response you may complain to the Data Protection Board of India.</p>
+{% endblock %}

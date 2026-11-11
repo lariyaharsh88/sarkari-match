@@ -54,53 +54,71 @@ class Subscriber(BaseModel):
 
 
 # ---- store ----------------------------------------------------------------
-# Locally: the JSON file. On Cloudflare Workers there is no writable disk, so
-# cf/worker.py loads the rows from KV into _memory before each request and
-# writes them back afterwards if _dirty.
-_memory: Optional[List[Dict]] = None
-_dirty = False
+# Locally: one JSON file. On Cloudflare Workers there is no writable disk, so
+# cf/worker.py sets KV to the SUBSCRIBERS namespace and each subscriber is its own
+# key ("sub:<id>"), so two sign-ups at the same moment cannot overwrite each other.
+KV = None
+KV_PREFIX = "sub:"
 
 
-def load() -> List[Subscriber]:
-    if _memory is not None:
-        return [Subscriber(**r) for r in _memory]
-    if not SUBSCRIBERS_FILE.exists():
-        return []
-    return [Subscriber(**r) for r in json.loads(SUBSCRIBERS_FILE.read_text())]
+def _file_rows() -> List[Dict]:
+    return json.loads(SUBSCRIBERS_FILE.read_text()) if SUBSCRIBERS_FILE.exists() else []
 
 
-def save(subs: List[Subscriber]) -> None:
-    global _memory, _dirty
-    if _memory is not None:
-        _memory = [json.loads(s.model_dump_json()) for s in subs]
-        _dirty = True
-        return
+def _file_write(rows: List[Dict]) -> None:
     SUBSCRIBERS_FILE.parent.mkdir(parents=True, exist_ok=True)
-    SUBSCRIBERS_FILE.write_text(json.dumps([json.loads(s.model_dump_json()) for s in subs], indent=2, ensure_ascii=False))
+    SUBSCRIBERS_FILE.write_text(json.dumps(rows, indent=2, ensure_ascii=False))
 
 
-def get(sub_id: str) -> Optional[Subscriber]:
-    return next((s for s in load() if s.id == sub_id), None)
+async def _kv_keys() -> List[str]:
+    keys, cursor = [], None  # the Workers SDK converts KV.list results to plain dicts
+    while True:
+        opts = {"prefix": KV_PREFIX, **({"cursor": cursor} if cursor else {})}
+        page = await KV.list(opts)
+        keys += [k["name"] for k in page["keys"]]
+        if page.get("list_complete", True):
+            return keys
+        cursor = page.get("cursor")
 
 
-def put(sub: Subscriber) -> None:
-    subs = [s for s in load() if s.id != sub.id]
-    subs.append(sub)
-    save(subs)
+async def load() -> List[Subscriber]:
+    if KV is None:
+        return [Subscriber(**r) for r in _file_rows()]
+    out = []
+    for k in await _kv_keys():
+        raw = await KV.get(k)
+        if raw:
+            out.append(Subscriber(**json.loads(raw)))
+    return out
 
 
-def create(email: str, profile: CandidateProfile) -> Subscriber:
+async def get(sub_id: str) -> Optional[Subscriber]:
+    if KV is None:
+        return next((s for s in await load() if s.id == sub_id), None)
+    raw = await KV.get(KV_PREFIX + sub_id)
+    return Subscriber(**json.loads(raw)) if raw else None
+
+
+async def put(sub: Subscriber) -> None:
+    row = json.loads(sub.model_dump_json())
+    if KV is None:
+        _file_write([r for r in _file_rows() if r["id"] != sub.id] + [row])
+    else:
+        await KV.put(KV_PREFIX + sub.id, json.dumps(row))
+
+
+async def create(email: str, profile: CandidateProfile) -> Subscriber:
     sub = Subscriber(id=secrets.token_urlsafe(12), email=email.strip().lower(), profile=profile, created_at=datetime.utcnow())
-    put(sub)
+    await put(sub)
     return sub
 
 
-def activate(sub: Subscriber, payment_id: Optional[str] = None) -> Subscriber:
+async def activate(sub: Subscriber, payment_id: Optional[str] = None) -> Subscriber:
     base = sub.paid_until if sub.paid_until and sub.paid_until >= date.today() else date.today()
     sub.paid_until = base + timedelta(days=ALERT_PASS_DAYS)
     sub.payment_id = payment_id
     sub.unsubscribed = False
-    put(sub)
+    await put(sub)
     return sub
 
 
@@ -177,7 +195,7 @@ async def dispatch(notifications: List[Notification], today: Optional[date] = No
     today = today or date.today()
     open_items = [n for n in notifications if not n.needs_review and (n.apply_end is None or n.apply_end >= today)]
     sent = skipped = failed = 0
-    subs = load()
+    subs = await load()
     for sub in subs:
         if not sub.active:
             skipped += 1
@@ -190,8 +208,8 @@ async def dispatch(notifications: List[Notification], today: Optional[date] = No
         ok = await send_email(sub.email, f"{n_notifs} new government job{'s' if n_notifs != 1 else ''} you can apply for", render_email(sub, matches))
         if ok:
             sub.notified_slugs = sorted(set(sub.notified_slugs) | {m.notification_slug for m in matches})
+            await put(sub)
             sent += 1
         else:
             failed += 1
-    save(subs)
     return {"sent": sent, "skipped": skipped, "failed": failed, "subscribers": len(subs)}
