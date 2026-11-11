@@ -1,0 +1,39 @@
+{
+  "slug": "bpsc-e18d20eb5d0e20f6",
+  "board": "BPSC",
+  "title": "",
+  "advt_no": null,
+  "source_url": "https://bpsc.bihar.gov.in/",
+  "pdf_url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Corrigendum-Integrated-72nd-CCE-Pre-Advt.-44-vacancies-of-Sugarcane-Officer-deleted_BPSC-20260506-0jupsy.pdf",
+  "published_on": null,
+  "apply_start": null,
+  "apply_end": null,
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/e18d20eb5d0e20f6.pdf",
+  "_skip_reason": null
+}

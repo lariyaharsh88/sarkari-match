@@ -1,0 +1,39 @@
+{
+  "slug": "sbi-7cc338d485ed9609",
+  "board": "SBI",
+  "title": "",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/06112026_SCO_23_INT_SCH_ZH.pdf/8f9a4e60-78d3-597f-7c20-6c2b09db2142?t=1793962103821",
+  "published_on": null,
+  "apply_start": null,
+  "apply_end": null,
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/7cc338d485ed9609.pdf",
+  "_skip_reason": null
+}

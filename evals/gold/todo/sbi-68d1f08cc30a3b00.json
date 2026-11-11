@@ -1,0 +1,39 @@
+{
+  "slug": "sbi-68d1f08cc30a3b00",
+  "board": "SBI",
+  "title": "",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/21082026_JA+2026+-+Detailed+Ad+-+Hindi.pdf/935be45b-8796-77d0-0701-eecc6ba02abe?t=1787300674572",
+  "published_on": null,
+  "apply_start": null,
+  "apply_end": null,
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/68d1f08cc30a3b00.pdf",
+  "_skip_reason": null
+}

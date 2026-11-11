@@ -1,0 +1,39 @@
+{
+  "slug": "sbi-d8974c3e45037c0a",
+  "board": "SBI",
+  "title": "",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/16092026_ADV_CRPD_SCO_2026_27_22.pdf/6285a84d-5171-c301-5817-fe41b4a83cad?t=1789538056721",
+  "published_on": null,
+  "apply_start": null,
+  "apply_end": null,
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/d8974c3e45037c0a.pdf",
+  "_skip_reason": null
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "sbi-0e6c2fcbe541c7af",
+  "board": "SBI",
+  "title": "",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/03092026_1_Advt+_Wealth+MGMT_04.09.2026.pdf/d2fd7bab-0791-b62b-61d3-8f46c2cb3ec6?t=1788439145915",
+  "published_on": null,
+  "apply_start": null,
+  "apply_end": null,
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/0e6c2fcbe541c7af.pdf",
+  "_skip_reason": null
+}

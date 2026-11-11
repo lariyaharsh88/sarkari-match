@@ -14,3 +14,19 @@ services:
         sync: false          # paste in the Render dashboard; sample data works without it
       - key: SITE_URL
         sync: false          # set to the Render URL after first deploy
+      # Paid alerts (demo mode while Razorpay keys are blank)
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: ALERTS_TOKEN_SECRET
+        generateValue: true
+      - key: ALERTS_CRON_SECRET
+        generateValue: true
+      # The free plan has no persistent disk: subscribers.json is wiped on every deploy.
+      # Before taking real payments, switch to plan: starter, add a disk mounted at /var/data,
+      # and uncomment:
+      # - key: SUBSCRIBERS_FILE
+      #   value: /var/data/subscribers.json

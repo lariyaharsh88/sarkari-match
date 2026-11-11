@@ -15,7 +15,7 @@ for gf in sorted((ROOT / "evals" / "gold").glob("*.json")):
     if g.get("is_sample"):
         print(f"skip sample {gf.name}")
         continue
-    local = ROOT / "data" / "pdfs" / f"{g['slug']}.pdf"
+    local = ROOT / (g.get("_local_pdf") or f"data/pdfs/{g['slug']}.pdf")
     if not local.exists() and g.get("pdf_url"):
         got = download_new(session, [{"board": g["board"], "pdf_url": g["pdf_url"], "source_url": g["source_url"]}], limit=1)
         if got:
