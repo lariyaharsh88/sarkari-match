@@ -1,0 +1,81 @@
+{
+  "slug": "sbi-specialist-cadre-officer-2026",
+  "board": "SBI",
+  "title": "RECRUITMENT OF SPECIALIST CADRE OFFICER ON REGULAR BASIS",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/29082026_FINAL+ADVT+TFO+IBG_SCO+15.pdf/222db64b-91da-cbe8-c439-9af6b1dd06b2?t=1787986916149",
+  "published_on": null,
+  "apply_start": "2026-08-29",
+  "apply_end": "2026-09-19",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Trade Finance Officer -IBG (TFO-IBG)-JMGS-I",
+      "vacancies": null,
+      "vacancies_by_category": {
+        "SC": 2,
+        "ST": 1,
+        "OBC": 3,
+        "EWS": 1,
+        "UR": 7
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate (any discipline) from Government recognized University or Institution & Certification in Forex Operations from IIBF",
+      "age": {
+        "min_age": 21,
+        "max_age": 30,
+        "as_on": "2026-07-31",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Trade Finance Officer -IBG (TFO-IBG)-MMGS-II",
+      "vacancies": null,
+      "vacancies_by_category": {
+        "SC": 3,
+        "ST": 1,
+        "OBC": 5,
+        "EWS": 2,
+        "UR": 10
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate (any discipline) from Government recognized University or Institution & Certification in Forex Operations from IIBF",
+      "age": {
+        "min_age": 23,
+        "max_age": 32,
+        "as_on": "2026-07-31",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {
+    "title": 0.99,
+    "apply_end": 0.99,
+    "posts": 0.98,
+    "fee_by_category": 0.0
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

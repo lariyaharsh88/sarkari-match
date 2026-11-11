@@ -1,25 +1,25 @@
 {
   "date": "2026-11-11",
-  "notifications": 6,
-  "overall": 0.729,
+  "notifications": 15,
+  "overall": 0.448,
   "per_field": {
-    "title": 0.333,
-    "advt_no": 0.333,
+    "title": 0.2,
+    "advt_no": 0.133,
     "apply_start": 1.0,
     "apply_end": 1.0,
-    "total_vacancies": 0.5,
-    "fee_by_category": 0.167,
-    "post_names": 0.5,
-    "post.vacancies": 0.727,
-    "post.pay_level": 0.636,
-    "post.min_qualification": 0.727,
-    "post.required_streams": 0.682,
-    "post.gender_restriction": 0.818,
-    "post.states": 0.818,
-    "post.age.min_age": 0.818,
-    "post.age.max_age": 0.818,
-    "post.age.as_on": 0.818,
-    "post.age.relaxation_years": 0.773
+    "total_vacancies": 0.067,
+    "fee_by_category": 0.0,
+    "post_names": 0.333,
+    "post.vacancies": 0.357,
+    "post.pay_level": 0.429,
+    "post.min_qualification": 0.452,
+    "post.required_streams": 0.381,
+    "post.gender_restriction": 0.548,
+    "post.states": 0.571,
+    "post.age.min_age": 0.452,
+    "post.age.max_age": 0.452,
+    "post.age.as_on": 0.452,
+    "post.age.relaxation_years": 0.524
   },
-  "misses": 71
+  "misses": 290
 }

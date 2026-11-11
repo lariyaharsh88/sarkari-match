@@ -1,0 +1,84 @@
+{
+  "slug": "sbi-specialist-cadre-officers-contract-2026-27",
+  "board": "SBI",
+  "title": "ENGAGEMENT OF SPECIALIST CADRE OFFICERS ON CONTRACT BASIS",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/16092026_ADV_CRPD_SCO_2026-27_20_SBIL.pdf/72f2a326-b338-3ea8-84d9-2fb56c3253a2?t=1789538665520",
+  "published_on": null,
+  "apply_start": "2026-09-16",
+  "apply_end": "2026-10-06",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Dean",
+      "vacancies": null,
+      "vacancies_by_category": {
+        "UR": 1,
+        "SC": 0,
+        "PwBD": 1
+      },
+      "pay_level": null,
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "MBA / Executive MBA / PGDM / PGDBA or equivalent in any discipline with Minimum percentage of 55% marks. Ph. D. / M.Phil. from an Indian university or Indian / International ‘B’ school.",
+      "age": {
+        "min_age": 40,
+        "max_age": 55,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Faculty",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "MBA / Executive MBA / PGDM / PGDBA or equivalent in any discipline with Minimum percentage of 55% marks. Ph. D. / M.Phil. from an Indian university or Indian / International ‘B’ school.",
+      "age": {
+        "min_age": 35,
+        "max_age": 55,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Marketing Executive",
+      "vacancies": null,
+      "vacancies_by_category": {
+        "UR": 1,
+        "SC": 0,
+        "PwBD": 0
+      },
+      "pay_level": null,
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "MBA / Executive MBA / PGDM / PGDBA or equivalent in any discipline with Minimum percentage of 55% marks. Ph. D. / M.Phil. from an Indian university or Indian / International ‘B’ school.",
+      "age": {
+        "min_age": 28,
+        "max_age": 40,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {
+    "title": 0.99,
+    "apply_end": 0.99,
+    "posts": 0.95,
+    "fee_by_category": 0.5
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

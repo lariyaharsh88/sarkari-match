@@ -1,127 +1,122 @@
 {
-  "slug": "sbi-specialist-cadre-officers-wealth-management-2026",
+  "slug": "sbi-specialist-cadre-officers-contract-2026",
   "board": "SBI",
-  "title": "Engagement of Specialist Cadre Officers on Contract Basis for Wealth Management & Premier Banking Department",
-  "advt_no": "CRPD/SCO/2026-27/25",
+  "title": "ENGAGEMENT OF SPECIALIST CADRE OFFICERS ON CONTRACT BASIS",
+  "advt_no": null,
   "source_url": "https://sbi.co.in/web/careers/current-openings",
   "pdf_url": "https://sbi.co.in/documents/77530/57941334/1_Advertisement+_Wealth+MGMT_30.09.2026.pdf/ed836f34-1d3a-408a-f3a5-09005623781a?t=1790692625089",
-  "published_on": "2026-09-30",
+  "published_on": null,
   "apply_start": "2026-09-30",
   "apply_end": "2026-10-21",
-  "fee_by_category": {
-    "UR": 750,
-    "EWS": 750,
-    "OBC": 750,
-    "SC": 0,
-    "ST": 0,
-    "PWD": 0
-  },
+  "fee_by_category": {},
   "posts": [
     {
-      "post_name": "Head Sales",
-      "vacancies": 1,
-      "vacancies_by_category": {
-        "UR": 1
-      },
-      "pay_level": null,
-      "min_qualification": "postgraduate",
-      "required_streams": [],
-      "qualification_text": "Mandatory: MBA/PGDM from reputed Colleges/ universities. Preferred: CFP / CFA / NISM V-A / NISM 21-A",
-      "age": {
-        "min_age": 40,
-        "max_age": 52,
-        "as_on": "2026-08-31",
-        "relaxation_years": {}
-      },
-      "gender_restriction": null,
-      "states": []
-    },
-    {
-      "post_name": "Central Research Team (Product Lead)",
-      "vacancies": 2,
+      "post_name": "HEAD SALES",
+      "vacancies": 52,
       "vacancies_by_category": {
         "SC": 1,
-        "UR": 1
+        "UR": 40
       },
       "pay_level": null,
       "min_qualification": "postgraduate",
       "required_streams": [],
-      "qualification_text": "Mandatory: MBA/PGDM from recognized College/University or CA/CFA. Preferred: NISM Investment Advisor / Research Analyst Certificate/CFP /NISM 21A or 21B.",
+      "qualification_text": "MBA/PGDM from reputed Colleges/ universities.",
       "age": {
-        "min_age": 30,
-        "max_age": 45,
-        "as_on": "2026-08-31",
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
         "relaxation_years": {}
       },
       "gender_restriction": null,
       "states": []
     },
     {
-      "post_name": "Manager (Business Process)",
-      "vacancies": 1,
+      "post_name": "CENTRAL RESEARCH TEAM",
+      "vacancies": 45,
       "vacancies_by_category": {
-        "UR": 1
-      },
-      "pay_level": null,
-      "min_qualification": "postgraduate",
-      "required_streams": [],
-      "qualification_text": "Mandatory: MBA/PGDM from Government recognised University or Institution",
-      "age": {
-        "min_age": 30,
-        "max_age": 40,
-        "as_on": "2026-08-31",
-        "relaxation_years": {}
-      },
-      "gender_restriction": null,
-      "states": []
-    },
-    {
-      "post_name": "Project Development Manager (Technology)",
-      "vacancies": 1,
-      "vacancies_by_category": {
-        "UR": 1
-      },
-      "pay_level": null,
-      "min_qualification": "graduate",
-      "required_streams": [
-        "engineering"
-      ],
-      "qualification_text": "Mandatory: BE / B. Tech / ME /M. Tech / MBA / MMS / PGDM / PGDBM from Government recognized University or Institution.",
-      "age": {
-        "min_age": 25,
-        "max_age": 40,
-        "as_on": "2026-08-31",
-        "relaxation_years": {}
-      },
-      "gender_restriction": null,
-      "states": []
-    },
-    {
-      "post_name": "Central Operations Team (COT) Support",
-      "vacancies": 1,
-      "vacancies_by_category": {
-        "OBC": 1
+        "SC": 1,
+        "UR": 30
       },
       "pay_level": null,
       "min_qualification": "graduate",
       "required_streams": [],
-      "qualification_text": "Mandatory: Graduates from Government recognised University or Institution",
+      "qualification_text": "",
       "age": {
-        "min_age": 30,
-        "max_age": 40,
-        "as_on": "2026-08-31",
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "MANAGER (BUSINESS PROCESS)",
+      "vacancies": 40,
+      "vacancies_by_category": {
+        "SC": 1,
+        "UR": 30
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "PROJECT DEVELOPMENT MANAGER",
+      "vacancies": 40,
+      "vacancies_by_category": {
+        "SC": 1,
+        "UR": 25
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "CENTRAL OPERATIONS TEAM",
+      "vacancies": 40,
+      "vacancies_by_category": {
+        "SC": 1,
+        "UR": 30
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
         "relaxation_years": {}
       },
       "gender_restriction": null,
       "states": []
     }
   ],
-  "total_vacancies": 6,
+  "total_vacancies": null,
   "confidence": {
-    "title": 1.0,
-    "apply_end": 1.0,
-    "posts": 1.0,
-    "fee_by_category": 1.0
+    "title": 0.9,
+    "apply_end": 0.9,
+    "posts": 0.8,
+    "fee_by_category": 0.5
   },
   "needs_review": false,
   "review_reasons": [],

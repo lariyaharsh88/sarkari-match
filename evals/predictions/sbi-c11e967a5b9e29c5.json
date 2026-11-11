@@ -1,0 +1,76 @@
+{
+  "slug": "sbi-specialist-cadre-officer-2026-27",
+  "board": "SBI",
+  "title": "ENGAGEMENT OF SPECIALIST CADRE OFFICER ON CONTRACT BASIS",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+OF+2026-27_24.pdf/9cf5df5f-5ce2-976d-70d1-2dc8d49380cd?t=1790690953073",
+  "published_on": null,
+  "apply_start": "2026-09-30",
+  "apply_end": "2026-10-21",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Deputy Vice President (Analytical Marketing & Campaign)",
+      "vacancies": 1,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Mandatory Qualifications: Bachelor’s degree in Marketing / Business Administration / Statistics / Data Science / Computer Science, or a related field.",
+      "age": {
+        "min_age": 33,
+        "max_age": 45,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Deputy Vice President (Digital Marketing)",
+      "vacancies": 1,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Mandatory Qualifications: Bachelor’s degree in Marketing / Business Administration / Mass Communication / Digital Marketing or related field.",
+      "age": {
+        "min_age": 33,
+        "max_age": 45,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Content Specialist",
+      "vacancies": 1,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Mandatory Qualifications: Bachelor’s degree in Marketing / Communications / Journalism / Advertising or a related field.",
+      "age": {
+        "min_age": 25,
+        "max_age": 40,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 3,
+  "confidence": {
+    "title": 0.99,
+    "apply_end": 0.99,
+    "posts": 0.95,
+    "fee_by_category": 0.5
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

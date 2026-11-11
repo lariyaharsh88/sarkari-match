@@ -1,0 +1,157 @@
+{
+  "slug": "sbi-specialist-cadre-officers-2026",
+  "board": "SBI",
+  "title": "ENGAGEMENT OF SPECIALIST CADRE OFFICERS ON FIXED TERM EMPLOYMENT BASIS",
+  "advt_no": "CRPD/SCO/2026-27/30",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/17102026_Detail_ADV_CRPD_SCO_2026-27_30.pdf/226b6572-e6bd-2b73-f266-dc7db9b282bd?t=1792240760461",
+  "published_on": null,
+  "apply_start": "2026-10-19",
+  "apply_end": "2026-11-09",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "GM & Chief AI Officer",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science",
+        "engineering"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": 40,
+        "max_age": 55,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "DGM (Risk and Operational Analytics)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science",
+        "engineering"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "DGM (AI Governance and Compliance)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science",
+        "engineering"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "DGM (Data Engineering, Model Application Dev and AI Ops)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science",
+        "engineering"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "AI Solution Architect",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science",
+        "engineering"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": 30,
+        "max_age": 45,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Enterprise AI Architect",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer_science",
+        "engineering"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 6,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 0.9,
+    "fee_by_category": 0.8
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

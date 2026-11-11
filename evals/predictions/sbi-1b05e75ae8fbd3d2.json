@@ -1,7 +1,7 @@
 {
-  "slug": "sbi-specialist-cadre-officer-2026-27",
+  "slug": "sbi-specialist-cadre-officer-2026",
   "board": "SBI",
-  "title": "Recruitment of Specialist Cadre Officer on Regular Basis (2026-27)",
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis (Advertisement No: CRPD/SCO/2026-27/26)",
   "advt_no": null,
   "source_url": "https://sbi.co.in/web/careers/current-openings",
   "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+CRPD+_SCO_2026-27_26_GMU.pdf/ade1acc4-609b-5c9a-ed89-670e70d0a82c?t=1793600742622",
@@ -19,7 +19,7 @@
       "pay_level": null,
       "min_qualification": "postgraduate",
       "required_streams": [],
-      "qualification_text": "MBA/PGDBM/PGDM/PGDBA or equivalent degree from recognized institute",
+      "qualification_text": "MBA/PGDBM/PGDM/PGDBA or equivalent degree from recognized institute.",
       "age": {
         "min_age": 30,
         "max_age": 40,
@@ -36,17 +36,16 @@
     },
     {
       "post_name": "Manager (Product & Research Analyst)",
-      "vacancies": 6,
+      "vacancies": 5,
       "vacancies_by_category": {
         "SC": 1,
-        "OBC": 2,
-        "UR": 3,
-        "PwBD": 1
+        "OBC": 1,
+        "UR": 3
       },
       "pay_level": null,
       "min_qualification": "postgraduate",
       "required_streams": [],
-      "qualification_text": "MBA/PGDM/PGDBM/PGDBA or equivalent degree from recognized institute",
+      "qualification_text": "MBA/PGDBM/PGDM/PGDBA or equivalent degree from recognized institute.",
       "age": {
         "min_age": 24,
         "max_age": 36,
@@ -62,11 +61,11 @@
       "states": []
     }
   ],
-  "total_vacancies": 7,
+  "total_vacancies": null,
   "confidence": {
-    "title": 1.0,
-    "apply_end": 1.0,
-    "posts": 1.0,
+    "title": 0.9,
+    "apply_end": 0.9,
+    "posts": 0.95,
     "fee_by_category": 0.0
   },
   "needs_review": false,

@@ -1,26 +1,18 @@
 {
-  "slug": "ssc-sub-inspector-in-delhi-police-and-central-armed-police-forces-examination-2026",
+  "slug": "ssc-sub-inspector-delhi-police-capf-2026",
   "board": "SSC",
   "title": "Sub-Inspector in Delhi Police and Central Armed Police Forces Examination, 2026",
-  "advt_no": "E/37/2026-C-2",
+  "advt_no": null,
   "source_url": "https://ssc.gov.in/home/notice-board",
   "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf",
-  "published_on": "2026-09-10",
+  "published_on": null,
   "apply_start": "2026-09-10",
   "apply_end": "2026-09-30",
-  "fee_by_category": {
-    "UR": 100,
-    "OBC": 100,
-    "EWS": 100,
-    "SC": 0,
-    "ST": 0,
-    "WOMEN": 0,
-    "EX_SERVICEMAN": 0
-  },
+  "fee_by_category": {},
   "posts": [
     {
-      "post_name": "Sub-Inspector (Executive) in Delhi Police - Male",
-      "vacancies": 205,
+      "post_name": "Sub-Inspector (Executive) - Male in Delhi Police",
+      "vacancies": null,
       "vacancies_by_category": {
         "UR": 87,
         "OBC": 54,
@@ -28,10 +20,10 @@
         "ST": 14,
         "EWS": 20
       },
-      "pay_level": "Level-6 (Rs.35,400-Rs.1,12,400/-)",
+      "pay_level": null,
       "min_qualification": "graduate",
       "required_streams": [],
-      "qualification_text": "Bachelor’s degree from a recognized university or equivalent. Male candidates must possess a valid Driving License for LMV (Motorcycle and Car) on the date fixed for Physical Endurance and Measurement Tests (PE&MT)",
+      "qualification_text": "Graduate",
       "age": {
         "min_age": 20,
         "max_age": 25,
@@ -40,15 +32,16 @@
           "SC": 5,
           "ST": 5,
           "OBC": 3,
-          "EX_SERVICEMAN": 3
+          "EX_SERVICEMAN": 3,
+          "WOMEN": 10
         }
       },
       "gender_restriction": "male",
       "states": []
     },
     {
-      "post_name": "Sub-Inspector (Executive) in Delhi Police - Female",
-      "vacancies": 112,
+      "post_name": "Sub-Inspector (Executive) - Female in Delhi Police",
+      "vacancies": null,
       "vacancies_by_category": {
         "UR": 47,
         "OBC": 30,
@@ -56,10 +49,10 @@
         "ST": 8,
         "EWS": 11
       },
-      "pay_level": "Level-6 (Rs.35,400-Rs.1,12,400/-)",
+      "pay_level": null,
       "min_qualification": "graduate",
       "required_streams": [],
-      "qualification_text": "Bachelor’s degree from a recognized university or equivalent.",
+      "qualification_text": "Graduate",
       "age": {
         "min_age": 20,
         "max_age": 25,
@@ -77,18 +70,12 @@
     },
     {
       "post_name": "Sub-Inspector (GD) in CAPFs",
-      "vacancies": 1320,
-      "vacancies_by_category": {
-        "UR": 601,
-        "EWS": 138,
-        "OBC": 319,
-        "SC": 183,
-        "ST": 79
-      },
-      "pay_level": "Level-6 (Rs.35,400-Rs.1,12,400/-)",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
       "min_qualification": "graduate",
       "required_streams": [],
-      "qualification_text": "Bachelor’s degree from a recognized university or equivalent.",
+      "qualification_text": "Graduate",
       "age": {
         "min_age": 20,
         "max_age": 25,
@@ -97,15 +84,16 @@
           "SC": 5,
           "ST": 5,
           "OBC": 3,
-          "EX_SERVICEMAN": 3
+          "EX_SERVICEMAN": 3,
+          "WOMEN": 10
         }
       },
       "gender_restriction": null,
       "states": []
     },
     {
-      "post_name": "Sub Inspector (Fire) in CISF",
-      "vacancies": 234,
+      "post_name": "Sub-Inspector (Fire) in CISF - Male",
+      "vacancies": null,
       "vacancies_by_category": {
         "UR": 74,
         "OBC": 75,
@@ -113,33 +101,26 @@
         "ST": 16,
         "EWS": 17
       },
-      "pay_level": "Level-6 (Rs.35,400-Rs.1,12,400/-)",
-      "min_qualification": "diploma",
-      "required_streams": [
-        "engineering"
-      ],
-      "qualification_text": "Bachelor’s degree in science with physics, Chemistry and Mathematics of a recognized University or equivalent; OR Matriculation or equivalent and three years diploma in Mechanical, Civil, Electrical, Automoblies, Chemical, Mining, Aeronautical, Telecommunication Engineering OR equivalent examination passed from a recognized University or Board or Institutions.",
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate",
       "age": {
         "min_age": 18,
         "max_age": 30,
         "as_on": "2026-08-01",
-        "relaxation_years": {
-          "SC": 5,
-          "ST": 5,
-          "OBC": 3,
-          "EX_SERVICEMAN": 3
-        }
+        "relaxation_years": {}
       },
       "gender_restriction": "male",
       "states": []
     }
   ],
-  "total_vacancies": 1871,
+  "total_vacancies": null,
   "confidence": {
-    "title": 1.0,
-    "apply_end": 1.0,
-    "posts": 1.0,
-    "fee_by_category": 1.0
+    "title": 0.99,
+    "apply_end": 0.99,
+    "posts": 0.95,
+    "fee_by_category": 0.5
   },
   "needs_review": false,
   "review_reasons": [],

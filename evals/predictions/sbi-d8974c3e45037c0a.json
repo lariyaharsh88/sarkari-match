@@ -1,5 +1,5 @@
 {
-  "slug": "sbi-specialist-cadre-officers-contract-basis-2026",
+  "slug": "sbi-specialist-cadre-officers-contract-2026",
   "board": "SBI",
   "title": "ENGAGEMENT OF SPECIALIST CADRE OFFICERS ON CONTRACT BASIS",
   "advt_no": null,
@@ -13,10 +13,7 @@
     {
       "post_name": "DEPUTY VICE PRESIDENT (IT RISK)",
       "vacancies": null,
-      "vacancies_by_category": {
-        "UR": 2,
-        "PWD": 1
-      },
+      "vacancies_by_category": {},
       "pay_level": null,
       "min_qualification": "graduate",
       "required_streams": [
@@ -35,10 +32,7 @@
     {
       "post_name": "ASSISTANT VICE PRESIDENT (IT RISK)",
       "vacancies": null,
-      "vacancies_by_category": {
-        "UR": 2,
-        "PWD": 1
-      },
+      "vacancies_by_category": {},
       "pay_level": null,
       "min_qualification": "graduate",
       "required_streams": [
@@ -57,10 +51,10 @@
   ],
   "total_vacancies": null,
   "confidence": {
-    "title": 1.0,
-    "apply_end": 1.0,
-    "posts": 1.0,
-    "fee_by_category": 0.0
+    "title": 0.99,
+    "apply_end": 0.99,
+    "posts": 0.99,
+    "fee_by_category": 0.99
   },
   "needs_review": false,
   "review_reasons": [],

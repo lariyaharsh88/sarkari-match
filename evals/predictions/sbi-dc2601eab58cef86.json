@@ -1,0 +1,65 @@
+{
+  "slug": "sbi-security-officer-2026",
+  "board": "SBI",
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/03112026_1_ADV_Security+Officer.pdf/69e017fe-5e1c-6312-c285-8855f9882102?t=1793713497818",
+  "published_on": null,
+  "apply_start": "2026-11-04",
+  "apply_end": "2026-11-25",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Manager (Security)",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate (any discipline OR from Government recognized University or Institution.)",
+      "age": {
+        "min_age": 25,
+        "max_age": null,
+        "as_on": "2026-10-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Deputy Manager (Security)",
+      "vacancies": 60,
+      "vacancies_by_category": {
+        "SC": 9,
+        "ST": 4,
+        "OBC": 16,
+        "EWS": 6,
+        "UR": 25
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate (any discipline OR from Government recognized University or Institution.)",
+      "age": {
+        "min_age": null,
+        "max_age": 40,
+        "as_on": "2026-10-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {
+    "title": 1.0,
+    "apply_end": 1.0,
+    "posts": 0.9,
+    "fee_by_category": 0.5
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

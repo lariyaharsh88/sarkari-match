@@ -1,0 +1,67 @@
+{
+  "slug": "sbi-fire-engineer-2026",
+  "board": "SBI",
+  "title": "RECRUITMENT OF SPECIALIST CAD RE OFFICER ON REGULAR BASIS",
+  "advt_no": null,
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/04112026_FINAL+DRAFT+ADVERTISEMENT+CRPD-SCO_29_ENGINEER.pdf/4d1be5a0-727d-61b5-1ea4-85570f437345?t=1793788834905",
+  "published_on": null,
+  "apply_start": "2026-11-04",
+  "apply_end": "2026-11-25",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Assistant Manager JMGS-I (Regular)",
+      "vacancies": 11,
+      "vacancies_by_category": {
+        "SC": 2,
+        "ST": 1,
+        "OBC": 1,
+        "EWS": 1,
+        "UR": 6
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Equivalent 4-year degree in Fire Safety",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Engineer (Fire) (Regular)",
+      "vacancies": 17,
+      "vacancies_by_category": {},
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "engineering"
+      ],
+      "qualification_text": "B.E. (Fire) from National Fire Service College (NFSC) Nagpur or B.E./B.Tech. (Safety & Fire Engineering) or B.E./B.Tech (Fire Technology) or equivalent 4 years degree in Fire Safety from UGC recognized University / AICTE approved institution",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": null,
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 28,
+  "confidence": {
+    "title": 0.99,
+    "apply_end": 0.99,
+    "posts": 0.95,
+    "fee_by_category": 0.0
+  },
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}

@@ -1,0 +1,74 @@
+{
+  "slug": "ssc-coast-guard-enrolled-persons-test-2026",
+  "board": "SSC",
+  "title": "JOIN INDIAN COAST GUARD (MINISTRY OF DEFENCE) RECRUITMENT OF ENROLLED PERSONS IN THE INDIAN COAST GUARD THROUGH COAST GUARD ENROLLED PERSONS TEST (CGEPT) –BATCHES 01/2027 & 02/2027",
+  "advt_no": null,
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/advertisement_06102026.pdf",
+  "published_on": null,
+  "apply_start": "2026-10-06",
+  "apply_end": "2026-10-21",
+  "fee_by_category": {},
+  "posts": [
+    {
+      "post_name": "Navik (General Duty)",
+      "vacancies": 260,
+      "vacancies_by_category": {
+        "UR": 105,
+        "EWS": 24,
+        "OBC": 79,
+        "SC": 31,
+        "ST": 21
+      },
+      "pay_level": null,
+      "min_qualification": "12th",
+      "required_streams": [],
+      "qualification_text": "Class 12th passed with Maths and Physics from an education board recognized by Council of Boards for School Education (COBSE).",
+      "age": {
+        "min_age": 16,
+        "max_age": 20,
+        "as_on": null,
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Navik (Domestic Branch)",
+      "vacancies": 25,
+      "vacancies_by_category": {
+        "UR": 11,
+        "EWS": 2,
+        "OBC": 7,
+        "SC": 5,
+        "ST": 0
+      },
+      "pay_level": null,
+      "min_qualification": "10th",
+      "required_streams": [],
+      "qualification_text": "Class 10th passed from an education board recognized by Council of Boards for School Education (COBSE).",
+      "age": {
+        "min_age": 16,
+        "max_age": 20,
+        "as_on": null,
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": null,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": "2026-11-11",
+  "is_sample": false
+}
