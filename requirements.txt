@@ -6,6 +6,7 @@ uvicorn[standard]
 jinja2
 python-multipart
 requests
+certifi
 httpx
 python-dotenv
 pytest

@@ -65,7 +65,20 @@ def download_new(session: requests.Session, items: List[Dict[str, str]], limit: 
     return out
 
 
+CERTS_DIR = Path(__file__).resolve().parent / "certs"
+
+
+def _ca_bundle() -> str:
+    """certifi's roots plus intermediates that some boards (IBPS, BPSC) forget to send.
+    Browsers fetch missing intermediates themselves; Python on Linux does not."""
+    import certifi
+    out = CERTS_DIR / ".bundle.pem"
+    out.write_text(Path(certifi.where()).read_text() + (CERTS_DIR / "intermediates.pem").read_text())
+    return str(out)
+
+
 def make_session() -> requests.Session:
     s = requests.Session()
+    s.verify = _ca_bundle()
     s.headers["User-Agent"] = USER_AGENT
     return s

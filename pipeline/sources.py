@@ -14,10 +14,11 @@ SOURCES: List[Dict[str, str]] = [
     {"board": "UPSC", "url": "https://upsc.gov.in/recruitment/advertisements", "must_contain": ".pdf"},
     {"board": "IBPS", "url": "https://www.ibps.in/", "must_contain": ".pdf"},
     {"board": "SBI", "url": "https://sbi.co.in/web/careers/current-openings", "must_contain": ".pdf"},
-    {"board": "RRB", "url": "https://www.rrbapply.gov.in/", "must_contain": ".pdf"},
     {"board": "UPPSC", "url": "https://uppsc.up.nic.in/Notifications.aspx", "must_contain": ".pdf"},
     {"board": "BPSC", "url": "https://bpsc.bihar.gov.in/", "must_contain": ".pdf"},
     {"board": "MPSC", "url": "https://mpsc.gov.in/advertisement", "must_contain": ".pdf"},
 ]
+# SSC, UPPSC, MPSC and the RRB sites build their lists in JavaScript, so plain HTTP finds no
+# PDFs there; they need a headless browser. UPSC times out from GitHub's US runners.
 
 USER_AGENT = "sarkari-match/0.1 (+personal research project; polite crawler, 1 req/2s)"
