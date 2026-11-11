@@ -53,5 +53,60 @@
       "source_url": "https://sbi.co.in/web/careers/current-openings",
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/eb473422822a08aa.pdf"
     }
+  },
+  "1b05e75ae8fbd3d2": {
+    "status": "rejected",
+    "note": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/g",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+CRPD+_SCO_2026-27_26_GMU.pdf/ade1acc4-609b-5c9a-ed89-670e70d0a82c?t=1793600742622",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/1b05e75ae8fbd3d2.pdf"
+    }
+  },
+  "97eb544e1773b5a1": {
+    "status": "rejected",
+    "note": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/g",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/DETAILED+ADV_RMD_SCO_2026-27_27.pdf/fff268f5-f55d-3ec8-b1ca-b7a51e705e0e?t=1793599952659",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/97eb544e1773b5a1.pdf"
+    }
+  },
+  "9febcb6d0c46bfa3": {
+    "status": "rejected",
+    "note": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/g",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/17102026_Detail_ADV_CRPD_SCO_2026-27_30.pdf/226b6572-e6bd-2b73-f266-dc7db9b282bd?t=1792240760461",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/9febcb6d0c46bfa3.pdf"
+    }
+  },
+  "dc2601eab58cef86": {
+    "status": "rejected",
+    "note": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/g",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/03112026_1_ADV_Security+Officer.pdf/69e017fe-5e1c-6312-c285-8855f9882102?t=1793713497818",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/dc2601eab58cef86.pdf"
+    }
+  },
+  "ea8efce13f0ef1e7": {
+    "status": "rejected",
+    "note": "404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/g",
+    "date": "2026-11-11",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/04112026_FINAL+DRAFT+ADVERTISEMENT+CRPD-SCO_29_ENGINEER.pdf/4d1be5a0-727d-61b5-1ea4-85570f437345?t=1793788834905",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/ea8efce13f0ef1e7.pdf"
+    }
   }
 }
