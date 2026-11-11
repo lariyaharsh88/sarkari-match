@@ -26,6 +26,7 @@ jobs:
           git config user.email "refresh-bot@users.noreply.github.com"
           git add data/notifications.json data/ledger.json docs/metrics-log.csv evals/results
           git diff --cached --quiet || git commit -m "data: daily refresh $(date -u +%F)"
+          git pull --rebase origin main   # code may have been pushed while the refresh ran
           git push
       - name: open an issue on failure (GitHub emails you)
         if: ${{ failure() }}
