@@ -23,6 +23,10 @@ for gf in sorted((ROOT / "evals" / "gold").glob("*.json")):
     if not local.exists():
         print(f"no PDF for {g['slug']}")
         continue
-    n = extract(pdf_text(local), g["board"], g["source_url"], g.get("pdf_url"))
+    try:
+        n = extract(pdf_text(local), g["board"], g["source_url"], g.get("pdf_url"))
+    except Exception as e:  # noqa: BLE001
+        print(f"failed {g['slug']}: {str(e)[:200]}")
+        continue
     (ROOT / "evals" / "predictions" / gf.name).write_text(n.model_dump_json(indent=2))
     print(f"predicted {g['slug']}")
