@@ -15,7 +15,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional
 
-import requests
+import httpx
 from pydantic import BaseModel, Field
 
 from engine.eligibility import match_all
@@ -54,14 +54,27 @@ class Subscriber(BaseModel):
 
 
 # ---- store ----------------------------------------------------------------
+# Locally: the JSON file. On Cloudflare Workers there is no writable disk, so
+# cf/worker.py loads the rows from KV into _memory before each request and
+# writes them back afterwards if _dirty.
+_memory: Optional[List[Dict]] = None
+_dirty = False
+
 
 def load() -> List[Subscriber]:
+    if _memory is not None:
+        return [Subscriber(**r) for r in _memory]
     if not SUBSCRIBERS_FILE.exists():
         return []
     return [Subscriber(**r) for r in json.loads(SUBSCRIBERS_FILE.read_text())]
 
 
 def save(subs: List[Subscriber]) -> None:
+    global _memory, _dirty
+    if _memory is not None:
+        _memory = [json.loads(s.model_dump_json()) for s in subs]
+        _dirty = True
+        return
     SUBSCRIBERS_FILE.parent.mkdir(parents=True, exist_ok=True)
     SUBSCRIBERS_FILE.write_text(json.dumps([json.loads(s.model_dump_json()) for s in subs], indent=2, ensure_ascii=False))
 
@@ -93,9 +106,10 @@ def activate(sub: Subscriber, payment_id: Optional[str] = None) -> Subscriber:
 
 # ---- razorpay ---------------------------------------------------------------
 
-def create_order(receipt: str) -> Dict:
-    r = requests.post("https://api.razorpay.com/v1/orders", auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET),
-                      json={"amount": ALERT_PRICE_INR * 100, "currency": "INR", "receipt": receipt, "notes": {"product": "alerts"}}, timeout=20)
+async def create_order(receipt: str) -> Dict:
+    async with httpx.AsyncClient(timeout=20) as client:
+        r = await client.post("https://api.razorpay.com/v1/orders", auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET),
+                              json={"amount": ALERT_PRICE_INR * 100, "currency": "INR", "receipt": receipt, "notes": {"product": "alerts"}})
     if r.status_code >= 300:
         raise RuntimeError(f"Razorpay order failed ({r.status_code}): {r.text[:300]}")
     return r.json()
@@ -144,20 +158,21 @@ def render_email(sub: Subscriber, matches: List[PostMatch]) -> str:
             f'<a href="{SITE_URL}/alerts/manage/{manage_token(sub.id)}">Manage or stop alerts</a>.</small></p>')
 
 
-def send_email(to: str, subject: str, html: str) -> bool:
+async def send_email(to: str, subject: str, html: str) -> bool:
     """Resend REST API. Without a key, prints the email and reports success so local runs work."""
     if not RESEND_API_KEY:
         print(f"[alerts] (no RESEND_API_KEY) would email {to}: {subject}")
         return True
-    r = requests.post("https://api.resend.com/emails", headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
-                      json={"from": f"{SITE_NAME} <{ALERT_FROM}>", "to": [to], "subject": subject, "html": html}, timeout=20)
+    async with httpx.AsyncClient(timeout=20) as client:
+        r = await client.post("https://api.resend.com/emails", headers={"Authorization": f"Bearer {RESEND_API_KEY}"},
+                              json={"from": f"{SITE_NAME} <{ALERT_FROM}>", "to": [to], "subject": subject, "html": html})
     if r.status_code >= 300:
         print(f"[alerts] email to {to} failed ({r.status_code}): {r.text[:200]}")
         return False
     return True
 
 
-def dispatch(notifications: List[Notification], today: Optional[date] = None) -> Dict[str, int]:
+async def dispatch(notifications: List[Notification], today: Optional[date] = None) -> Dict[str, int]:
     """Email every active subscriber about newly matching open notifications."""
     today = today or date.today()
     open_items = [n for n in notifications if not n.needs_review and (n.apply_end is None or n.apply_end >= today)]
@@ -172,7 +187,7 @@ def dispatch(notifications: List[Notification], today: Optional[date] = None) ->
             skipped += 1
             continue
         n_notifs = len({m.notification_slug for m in matches})
-        ok = send_email(sub.email, f"{n_notifs} new government job{'s' if n_notifs != 1 else ''} you can apply for", render_email(sub, matches))
+        ok = await send_email(sub.email, f"{n_notifs} new government job{'s' if n_notifs != 1 else ''} you can apply for", render_email(sub, matches))
         if ok:
             sub.notified_slugs = sorted(set(sub.notified_slugs) | {m.notification_slug for m in matches})
             sent += 1

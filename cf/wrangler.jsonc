@@ -1,0 +1,9 @@
+{
+  "name": "sarkari-match",
+  "main": "src/worker.py",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["python_workers"],
+  "assets": { "directory": "./public" },
+  "vars": { "SITE_NAME": "Sarkari Match", "SITE_URL": "https://sarkari-match.epicindiatrips.workers.dev" },
+  "kv_namespaces": [{ "binding": "SUBSCRIBERS", "id": "b964e415fce54aa6a5aeac573deacb31" }]
+}

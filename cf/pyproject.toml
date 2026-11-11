@@ -1,0 +1,8 @@
+[project]
+name = "sarkari-match-worker"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = ["fastapi", "jinja2", "pydantic>=2", "python-multipart", "httpx"]
+
+[dependency-groups]
+dev = ["workers-py", "workers-runtime-sdk"]

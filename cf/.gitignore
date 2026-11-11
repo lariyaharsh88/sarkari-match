@@ -1,0 +1,8 @@
+src/
+public/
+.venv/
+.wrangler/
+.dev.vars
+.venv-workers/
+.prod-secrets
+python_modules/

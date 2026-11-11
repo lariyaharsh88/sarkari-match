@@ -27,7 +27,8 @@ SITE_NAME = os.environ.get("SITE_NAME", "Sarkari Match")
 ALERTS_CRON_SECRET = os.environ.get("ALERTS_CRON_SECRET", "")
 
 app = FastAPI(title=SITE_NAME)
-app.mount("/static", StaticFiles(directory=str(ROOT / "static")), name="static")
+# On Cloudflare the static/ folder is served by the ASSETS binding before requests reach the app.
+app.mount("/static", StaticFiles(directory=str(ROOT / "static"), check_dir=False), name="static")
 templates = Jinja2Templates(directory=str(ROOT / "templates"))
 
 QUAL_LABELS = {"8th": "8th pass", "10th": "10th pass", "12th": "12th pass", "iti": "ITI", "diploma": "Diploma",
@@ -66,16 +67,16 @@ def ctx(request: Request, **kw) -> Dict:
 
 
 @app.get("/", response_class=HTMLResponse)
-def home(request: Request):
+async def home(request: Request):
     open_now = sorted(Data.open_items(), key=lambda n: n.apply_end or date.max)
     boards = sorted({n.board for n in Data.items})
-    return templates.TemplateResponse("index.html", ctx(request, open_items=open_now, boards=boards,
+    return templates.TemplateResponse(request, "index.html", ctx(request, open_items=open_now, boards=boards,
                                                         quals=list(QUALIFICATION_LEVELS), categories=CATEGORIES,
                                                         streams=STREAMS, matches=None, profile=None))
 
 
 @app.post("/match", response_class=HTMLResponse)
-def match(request: Request, age: int = Form(...), qualification: str = Form(...), category: str = Form("UR"),
+async def match(request: Request, age: int = Form(...), qualification: str = Form(...), category: str = Form("UR"),
           gender: str = Form(""), state: str = Form(""), streams: List[str] = Form([]),
           pwd: bool = Form(False), ex_serviceman: bool = Form(False)):
     profile = CandidateProfile(age=age, qualification=qualification, category=category, gender=gender or None,
@@ -83,13 +84,13 @@ def match(request: Request, age: int = Form(...), qualification: str = Form(...)
     matches = match_all(Data.open_items(), profile)
     open_now = sorted(Data.open_items(), key=lambda n: n.apply_end or date.max)
     boards = sorted({n.board for n in Data.items})
-    return templates.TemplateResponse("index.html", ctx(request, open_items=open_now, boards=boards,
+    return templates.TemplateResponse(request, "index.html", ctx(request, open_items=open_now, boards=boards,
                                                         quals=list(QUALIFICATION_LEVELS), categories=CATEGORIES,
                                                         streams=STREAMS, matches=matches, profile=profile))
 
 
 @app.get("/jobs/{slug}", response_class=HTMLResponse)
-def job(request: Request, slug: str):
+async def job(request: Request, slug: str):
     n = Data.by_slug(slug)
     if n is None:
         return HTMLResponse("Not found", status_code=404)
@@ -101,36 +102,36 @@ def job(request: Request, slug: str):
         "jobLocation": {"@type": "Place", "address": {"@type": "PostalAddress", "addressCountry": "IN"}},
         "employmentType": "FULL_TIME", "url": f"{SITE_URL}/jobs/{n.slug}",
     } for p in n.posts]
-    return templates.TemplateResponse("job.html", ctx(request, n=n, jsonld=json.dumps(jsonld)))
+    return templates.TemplateResponse(request, "job.html", ctx(request, n=n, jsonld=json.dumps(jsonld)))
 
 
 @app.get("/board/{board}", response_class=HTMLResponse)
-def board(request: Request, board: str):
+async def board(request: Request, board: str):
     items = sorted([n for n in Data.items if n.board.lower() == board.lower()], key=lambda n: n.apply_end or date.max)
     if not items:
         return HTMLResponse("Not found", status_code=404)
-    return templates.TemplateResponse("list.html", ctx(request, heading=f"{items[0].board} recruitment notifications",
+    return templates.TemplateResponse(request, "list.html", ctx(request, heading=f"{items[0].board} recruitment notifications",
                                                        intro=f"Every open {items[0].board} notification with vacancies, eligibility and the last date to apply.",
                                                        items=items))
 
 
 @app.get("/qualification/{qual}", response_class=HTMLResponse)
-def qualification(request: Request, qual: str):
+async def qualification(request: Request, qual: str):
     if qual not in QUALIFICATION_LEVELS:
         return HTMLResponse("Not found", status_code=404)
     have = QUALIFICATION_LEVELS[qual]
     items = [n for n in Data.open_items() if any(QUALIFICATION_LEVELS.get(p.min_qualification, 99) <= have for p in n.posts)]
     items.sort(key=lambda n: n.apply_end or date.max)
     label = QUAL_LABELS[qual]
-    return templates.TemplateResponse("list.html", ctx(request, heading=f"Government jobs for {label} candidates",
+    return templates.TemplateResponse(request, "list.html", ctx(request, heading=f"Government jobs for {label} candidates",
                                                        intro=f"Open notifications where at least one post accepts {label} as the minimum qualification.",
                                                        items=items))
 
 
 @app.get("/admin/review", response_class=HTMLResponse)
-def review(request: Request):
+async def review(request: Request):
     pending = [n for n in store.load() if n.needs_review]
-    return templates.TemplateResponse("review.html", ctx(request, items=pending))
+    return templates.TemplateResponse(request, "review.html", ctx(request, items=pending))
 
 
 # ---- paid alerts -------------------------------------------------------------
@@ -142,18 +143,18 @@ def _profile_from_form(age: int, qualification: str, category: str, gender: str,
 
 
 @app.get("/alerts", response_class=HTMLResponse)
-def alerts_page(request: Request):
+async def alerts_page(request: Request):
     q = request.query_params
     prefill = {"email": q.get("email"), "age": q.get("age"), "qualification": q.get("qualification"), "category": q.get("category"),
                "gender": q.get("gender"), "state": q.get("state"), "streams": q.getlist("streams"),
                "pwd": q.get("pwd") == "true", "ex_serviceman": q.get("ex_serviceman") == "true"}
-    return templates.TemplateResponse("alerts.html", ctx(request, quals=list(QUALIFICATION_LEVELS), categories=CATEGORIES, streams=STREAMS,
+    return templates.TemplateResponse(request, "alerts.html", ctx(request, quals=list(QUALIFICATION_LEVELS), categories=CATEGORIES, streams=STREAMS,
                                                          prefill=prefill, price=alerts.ALERT_PRICE_INR, days=alerts.ALERT_PASS_DAYS,
                                                          demo=not alerts.payments_enabled()))
 
 
 @app.post("/api/alerts/order")
-def alerts_order(email: str = Form(...), age: int = Form(...), qualification: str = Form(...), category: str = Form("UR"),
+async def alerts_order(email: str = Form(...), age: int = Form(...), qualification: str = Form(...), category: str = Form("UR"),
                  gender: str = Form(""), state: str = Form(""), streams: List[str] = Form([]),
                  pwd: bool = Form(False), ex_serviceman: bool = Form(False)):
     """Saves the profile, then either creates a Razorpay order or (no keys) activates a free demo pass."""
@@ -165,7 +166,7 @@ def alerts_order(email: str = Form(...), age: int = Form(...), qualification: st
         alerts.activate(sub, "demo")
         return {"mode": "demo", "sub_id": sub.id, "manage_url": manage_url}
     try:
-        order = alerts.create_order(receipt=f"alerts_{sub.id}")
+        order = await alerts.create_order(receipt=f"alerts_{sub.id}")
     except Exception as e:  # noqa: BLE001
         return JSONResponse({"error": str(e)}, status_code=502)
     sub.order_id = order["id"]
@@ -188,22 +189,22 @@ async def alerts_verify(request: Request):
 
 
 @app.get("/alerts/manage", response_class=HTMLResponse)
-def alerts_manage_help(request: Request):
-    return templates.TemplateResponse("alerts_manage.html", ctx(request, sub=None))
+async def alerts_manage_help(request: Request):
+    return templates.TemplateResponse(request, "alerts_manage.html", ctx(request, sub=None))
 
 
 @app.get("/alerts/manage/{token}", response_class=HTMLResponse)
-def alerts_manage(request: Request, token: str):
+async def alerts_manage(request: Request, token: str):
     sub_id = alerts.parse_manage_token(token)
     sub = alerts.get(sub_id) if sub_id else None
     if sub is None:
         return HTMLResponse("Not found", status_code=404)
     matches = [m for m in match_all(Data.open_items(), sub.profile) if m.eligible]
-    return templates.TemplateResponse("alerts_manage.html", ctx(request, sub=sub, token=token, matches=matches))
+    return templates.TemplateResponse(request, "alerts_manage.html", ctx(request, sub=sub, token=token, matches=matches))
 
 
 @app.post("/alerts/manage/{token}/{action}")
-def alerts_toggle(token: str, action: str):
+async def alerts_toggle(token: str, action: str):
     sub_id = alerts.parse_manage_token(token)
     sub = alerts.get(sub_id) if sub_id else None
     if sub is None or action not in ("stop", "resume"):
@@ -214,16 +215,16 @@ def alerts_toggle(token: str, action: str):
 
 
 @app.post("/api/alerts/dispatch")
-def alerts_dispatch(authorization: Optional[str] = Header(None)):
+async def alerts_dispatch(authorization: Optional[str] = Header(None)):
     """Cron hook: email subscribers about new matches. Bearer ALERTS_CRON_SECRET required."""
     if not ALERTS_CRON_SECRET or authorization != f"Bearer {ALERTS_CRON_SECRET}":
         return JSONResponse({"error": "Unauthorized"}, status_code=401)
     Data.refresh()
-    return alerts.dispatch(Data.items)
+    return await alerts.dispatch(Data.items)
 
 
 @app.get("/sitemap.xml")
-def sitemap():
+async def sitemap():
     urls = [f"{SITE_URL}/"] + [f"{SITE_URL}/jobs/{n.slug}" for n in Data.items]
     urls += [f"{SITE_URL}/board/{b}" for b in sorted({n.board for n in Data.items})]
     urls += [f"{SITE_URL}/qualification/{q}" for q in QUALIFICATION_LEVELS] + [f"{SITE_URL}/alerts"]
@@ -233,12 +234,12 @@ def sitemap():
 
 
 @app.get("/robots.txt")
-def robots():
+async def robots():
     return PlainTextResponse(f"User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /alerts/manage/\nSitemap: {SITE_URL}/sitemap.xml\n")
 
 
 @app.get("/api/stats")
-def stats():
+async def stats():
     """Numbers for the case study. Snapshot these weekly with scripts/metrics_snapshot.py."""
     by_board = defaultdict(int)
     for n in Data.items:

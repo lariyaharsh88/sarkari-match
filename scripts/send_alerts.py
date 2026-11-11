@@ -5,6 +5,7 @@ Run after scripts/refresh.py, on the same host that holds SUBSCRIBERS_FILE:
 The deployed app exposes the same job at POST /api/alerts/dispatch (bearer ALERTS_CRON_SECRET)
 so a GitHub Actions cron can trigger it without access to the subscriber file.
 """
+import asyncio
 import sys
 from pathlib import Path
 
@@ -17,4 +18,4 @@ from pipeline import store  # noqa: E402
 from web import alerts  # noqa: E402
 
 if __name__ == "__main__":
-    print("[alerts]", alerts.dispatch(store.load()))
+    print("[alerts]", asyncio.run(alerts.dispatch(store.load())))

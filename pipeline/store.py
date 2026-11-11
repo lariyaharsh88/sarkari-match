@@ -10,9 +10,14 @@ DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "notifications.jso
 
 
 def load() -> List[Notification]:
-    if not DATA_FILE.exists():
-        return []
-    raw = json.loads(DATA_FILE.read_text())
+    if DATA_FILE.exists():
+        raw = json.loads(DATA_FILE.read_text())
+    else:
+        try:  # Cloudflare Worker: cf/build.sh bakes the file into a module
+            from pipeline._bundled import NOTIFICATIONS_JSON
+        except ImportError:
+            return []
+        raw = json.loads(NOTIFICATIONS_JSON)
     return [Notification(**r) for r in raw]
 
 

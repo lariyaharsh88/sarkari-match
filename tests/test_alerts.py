@@ -1,3 +1,4 @@
+import asyncio
 from datetime import date, timedelta
 
 import pytest
@@ -32,13 +33,13 @@ def test_create_activate_and_tokens():
 def test_dispatch_only_new_eligible_and_marks_sent():
     sub = alerts.activate(alerts.create("a@example.com", CandidateProfile(age=25, qualification="graduate")))
     items = [notif("ssc-cgl"), notif("ssc-mts", min_q="10th"), notif("old-age", max_age=20)]
-    r = alerts.dispatch(items)
+    r = asyncio.run(alerts.dispatch(items))
     assert r == {"sent": 1, "skipped": 0, "failed": 0, "subscribers": 1}
     assert alerts.get(sub.id).notified_slugs == ["ssc-cgl", "ssc-mts"]
     # second run: nothing new
-    assert alerts.dispatch(items)["sent"] == 0
+    assert asyncio.run(alerts.dispatch(items))["sent"] == 0
     # a new notification arrives
-    assert alerts.dispatch(items + [notif("ssc-chsl")])["sent"] == 1
+    assert asyncio.run(alerts.dispatch(items + [notif("ssc-chsl")]))["sent"] == 1
     assert "ssc-chsl" in alerts.get(sub.id).notified_slugs
 
 
@@ -47,7 +48,7 @@ def test_inactive_or_stopped_subscribers_skipped():
     stopped = alerts.activate(alerts.create("stopped@example.com", CandidateProfile(age=25, qualification="graduate")))
     stopped.unsubscribed = True
     alerts.put(stopped)
-    assert alerts.dispatch([notif("ssc-cgl")]) == {"sent": 0, "skipped": 2, "failed": 0, "subscribers": 2}
+    assert asyncio.run(alerts.dispatch([notif("ssc-cgl")])) == {"sent": 0, "skipped": 2, "failed": 0, "subscribers": 2}
 
 
 def test_razorpay_signature(monkeypatch):
