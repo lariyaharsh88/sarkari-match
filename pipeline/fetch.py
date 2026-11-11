@@ -14,9 +14,36 @@ PDF_DIR = Path(__file__).resolve().parent.parent / "data" / "pdfs"
 HREF_RE = re.compile(r'href=["\']([^"\']+)["\']', re.I)
 
 
+SSC_API = ("https://ssc.gov.in/api/general-website/portal/records?page={page}&limit=10&contentType=notice-boards"
+           "&key=createdAt&order=DESC&isAttachment=true&language=english&attributes=id,headline,createdAt")
+SSC_RECRUITMENT = re.compile(r"^\s*(notice of|notification for recruitment|recruitment of)", re.I)
+
+
+def discover_ssc(session: requests.Session, pages: int = 6) -> List[Dict[str, str]]:
+    """SSC's notice board is an Angular app backed by a JSON API; recruitment notices
+    are the entries whose headline starts with 'Notice of ...'."""
+    out = []
+    for page in range(1, pages + 1):
+        try:
+            rows = session.get(SSC_API.format(page=page), timeout=30).json().get("data", [])
+        except Exception as e:  # noqa: BLE001
+            print(f"[discover] SSC api page {page} failed: {e}")
+            break
+        for row in rows:
+            if not SSC_RECRUITMENT.search(row.get("headline", "")):
+                continue
+            for att in row.get("attachments") or []:
+                if att.get("fileName", "").lower().endswith(".pdf"):
+                    path = att["path"].replace("\\", "/")
+                    out.append({"board": "SSC", "pdf_url": f"https://ssc.gov.in/api/attachment/{path}",
+                                "source_url": "https://ssc.gov.in/home/notice-board"})
+        time.sleep(2)
+    return out
+
+
 def discover(session: requests.Session) -> List[Dict[str, str]]:
-    found: List[Dict[str, str]] = []
-    seen = set()
+    found: List[Dict[str, str]] = discover_ssc(session)
+    seen = {f["pdf_url"] for f in found}
     for src in SOURCES:
         try:
             r = session.get(src["url"], timeout=30)
