@@ -18,7 +18,7 @@ from dotenv import load_dotenv  # noqa: E402
 
 from pipeline import fetch, ledger, store  # noqa: E402
 from pipeline.extract import extract, pdf_text  # noqa: E402
-from pipeline.triage import triage  # noqa: E402
+from pipeline.triage import SCANNED, triage  # noqa: E402
 from pipeline.validate import apply_gate  # noqa: E402
 
 logging.getLogger("pdfminer").setLevel(logging.ERROR)  # silences the "invalid float value" colour warnings
@@ -61,12 +61,18 @@ def main(limit: int, dry_run: bool) -> int:
         try:
             text = pdf_text(path)
             ok, why = triage(meta["pdf_url"], text)
-            if not ok:
+            scanned = why == SCANNED and path.stat().st_size > 150_000  # big image-only PDF, not a one-page form
+            if not ok and not scanned:
                 ledger.record(book, key, "skipped", why, meta=meta)
                 print(f"[triage] skip {path.name}: {why}")
                 continue
             calls += 1
-            n = extract(text, meta["board"], meta["source_url"], meta["pdf_url"])
+            n = extract(text, meta["board"], meta["source_url"], meta["pdf_url"],
+                        pdf_bytes=path.read_bytes() if scanned else None)
+            if scanned and not n.posts:
+                ledger.record(book, key, "skipped", "scanned PDF, not a recruitment notification", meta=meta)
+                print(f"[triage] skip {path.name}: scanned, no posts")
+                continue
             n = apply_gate(n)
             accepted.append(n)
             ledger.record(book, key, "stored", n.slug, meta=meta, needs_review=n.needs_review)

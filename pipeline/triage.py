@@ -22,6 +22,9 @@ FORM_HINTS = re.compile(r"(signature of (the )?candidate|name of (the )?candidat
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 
 
+SCANNED = "too little text, probably a form or a scanned PDF"
+
+
 def triage(pdf_url: str, text: str) -> Tuple[bool, Optional[str]]:
     """Return (should_extract, reason_if_not)."""
     u = pdf_url.lower().replace("%20", " ").replace("+", " ")
@@ -29,7 +32,7 @@ def triage(pdf_url: str, text: str) -> Tuple[bool, Optional[str]]:
         if w.replace("+", " ") in u:
             return False, f"url suggests non-notification document ({w})"
     if len(text) < 3000:
-        return False, "too little text, probably a form or a scanned PDF"
+        return False, SCANNED
     sample = text[:20000]
     dev = len(DEVANAGARI.findall(sample))
     if dev > 0.25 * len(sample):

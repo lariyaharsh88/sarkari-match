@@ -33,7 +33,8 @@ Return ONLY JSON matching the schema. Rules:
 - One Post per distinct post name. Merge category-wise vacancy rows into vacancies_by_category.
 - confidence: for each of title, apply_end, posts, fee_by_category give 0-1 how sure you are.
 - board is given to you; copy it. slug: lowercase-hyphenated from board, exam name and year.
-Text of the notification follows.
+- If the document is not a recruitment notification (corrigendum, result, admit card, schedule, general notice), return posts as an empty list.
+The notification follows (as an attached PDF and/or its extracted text).
 """
 
 
@@ -56,8 +57,11 @@ def slugify(s: str) -> str:
     return s[:80]
 
 
-def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = None) -> Notification:
+def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = None,
+            pdf_bytes: Optional[bytes] = None) -> Notification:
+    """pdf_bytes is for scanned PDFs with no text layer: Gemini reads the pages itself."""
     from google import genai  # imported lazily so the web app never needs the SDK
+    from google.genai import types
 
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     model = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
@@ -68,7 +72,8 @@ def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = Non
         try:
             resp = client.models.generate_content(
                 model=model,
-                contents=f"{PROMPT}\nboard: {board}\nsource_url: {source_url}\npdf_url: {pdf_url or ''}\n\n{text}",
+                contents=([types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf")] if pdf_bytes else [])
+                + [f"{PROMPT}\nboard: {board}\nsource_url: {source_url}\npdf_url: {pdf_url or ''}\n\n{text}"],
                 config={"response_mime_type": "application/json", "response_json_schema": schema, "temperature": 0},
             )
             break
