@@ -41,8 +41,36 @@ def discover_ssc(session: requests.Session, pages: int = 6) -> List[Dict[str, st
     return out
 
 
+UPPSC_LIST = "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx"
+UPPSC_AD = "https://uppsc.up.nic.in/OuterPages/View_Advertisement.aspx?ID={id}&flag=E"
+
+
+def discover_uppsc(session: requests.Session) -> List[Dict[str, str]]:
+    """UPPSC (ASP.NET) only serves an advertisement page, and then its English PDF, to a
+    session that came from the listing, with a Referer. Same session must download it."""
+    out = []
+    try:
+        listing = session.get(UPPSC_LIST, timeout=30).text
+    except Exception as e:  # noqa: BLE001
+        print(f"[discover] UPPSC listing failed: {e}")
+        return out
+    for ad_id in dict.fromkeys(re.findall(r"View_Advertisement\.aspx\?ID=(\d+)", listing)):
+        ad_url = UPPSC_AD.format(id=ad_id)
+        try:
+            page = session.get(ad_url, headers={"Referer": UPPSC_LIST}, timeout=30).text
+        except Exception as e:  # noqa: BLE001
+            print(f"[discover] UPPSC ad {ad_id} failed: {e}")
+            continue
+        m = re.search(r"View_Enclosure\.aspx\?ID=\d+&(?:amp;)?flag=E&(?:amp;)?FID=\d+", page)
+        if m:
+            out.append({"board": "UPPSC", "pdf_url": "https://uppsc.up.nic.in/OuterPages/" + m.group(0).replace("&amp;", "&"),
+                        "source_url": UPPSC_LIST, "referer": ad_url})
+        time.sleep(2)
+    return out
+
+
 def discover(session: requests.Session) -> List[Dict[str, str]]:
-    found: List[Dict[str, str]] = discover_ssc(session)
+    found: List[Dict[str, str]] = discover_ssc(session) + discover_uppsc(session)
     seen = {f["pdf_url"] for f in found}
     for src in SOURCES:
         try:
@@ -90,7 +118,8 @@ def download_new(session: requests.Session, items: List[Dict[str, str]], limit: 
         if path.exists():
             continue
         try:
-            r = session.get(item["pdf_url"], timeout=60)
+            headers = {"Referer": item["referer"]} if item.get("referer") else {}
+            r = session.get(item["pdf_url"], timeout=60, headers=headers)
             r.raise_for_status()
             if not r.content.startswith(b"%PDF"):
                 continue
