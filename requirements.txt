@@ -1,6 +1,6 @@
 pdfplumber
 pydantic>=2
-google-genai
+google-genai>=1.30
 fastapi
 uvicorn[standard]
 jinja2

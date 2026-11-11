@@ -60,13 +60,13 @@ def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = Non
 
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+    # response_json_schema takes standard JSON Schema ($defs, additionalProperties),
+    # so the pydantic schema goes in unmodified.
     schema = Notification.model_json_schema()
-    # Gemini's JSON schema subset rejects some pydantic keywords; strip them.
-    schema = _strip_keys(schema, {"title", "default", "additionalProperties", "$defs_unused"})
     resp = client.models.generate_content(
         model=model,
         contents=f"{PROMPT}\nboard: {board}\nsource_url: {source_url}\npdf_url: {pdf_url or ''}\n\n{text}",
-        config={"response_mime_type": "application/json", "response_schema": schema, "temperature": 0},
+        config={"response_mime_type": "application/json", "response_json_schema": schema, "temperature": 0},
     )
     data = json.loads(resp.text)
     data["board"] = board
@@ -80,14 +80,6 @@ def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = Non
         return Notification(**data)
     except ValidationError as e:
         raise RuntimeError(f"Gemini output failed schema validation: {e}") from e
-
-
-def _strip_keys(obj, keys):
-    if isinstance(obj, dict):
-        return {k: _strip_keys(v, keys) for k, v in obj.items() if k not in keys}
-    if isinstance(obj, list):
-        return [_strip_keys(v, keys) for v in obj]
-    return obj
 
 
 if __name__ == "__main__":
