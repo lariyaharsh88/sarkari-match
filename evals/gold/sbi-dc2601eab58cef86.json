@@ -1,0 +1,51 @@
+{
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis",
+  "advt_no": "CRPD/SCO/2026-27/28",
+  "published_on": null,
+  "apply_start": "2026-11-04",
+  "apply_end": "2026-11-25",
+  "fee_by_category": {
+    "UR": 750,
+    "EWS": 750,
+    "OBC": 750,
+    "SC": 0,
+    "ST": 0
+  },
+  "posts": [
+    {
+      "post_name": "Manager (Security) / Deputy Manager (Security)",
+      "vacancies": 60,
+      "vacancies_by_category": {
+        "SC": 9,
+        "ST": 4,
+        "OBC": 16,
+        "EWS": 6,
+        "UR": 25
+      },
+      "pay_level": "MMGS-III / MMGS-II",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate (any discipline from Government recognized University or Institution.) plus: Manager - Officer not below rank of Major (Army) or equivalent with min 10 years commissioned service, or Deputy Commandant in Para-military forces with min 10 years; Deputy Manager - Officer not below rank of Captain or equivalent with min 5 years commissioned service, or Assistant Commandant in Para-military forces with min 5 years.",
+      "age": {
+        "min_age": 25,
+        "max_age": 40,
+        "as_on": "2026-10-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 60,
+  "slug": "sbi-dc2601eab58cef86",
+  "board": "SBI",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/03112026_1_ADV_Security+Officer.pdf/69e017fe-5e1c-6312-c285-8855f9882102?t=1793713497818",
+  "_local_pdf": "data/pdfs/dc2601eab58cef86.pdf",
+  "is_sample": false,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "_labelled_by": "claude-draft"
+}

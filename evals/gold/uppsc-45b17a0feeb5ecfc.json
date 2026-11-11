@@ -1,0 +1,174 @@
+{
+  "title": "Samiksha Adhikari/Sahayak Samiksha Adhikari Etc. (General / Special Recruitment) Examination-2026",
+  "advt_no": "A-4/E-1/2026",
+  "published_on": "2026-10-26",
+  "apply_start": "2026-10-26",
+  "apply_end": "2026-11-26",
+  "fee_by_category": {
+    "UR": 125,
+    "EWS": 125,
+    "OBC": 125,
+    "SC": 65,
+    "ST": 65,
+    "PWD": 25
+  },
+  "posts": [
+    {
+      "post_name": "Samiksha Adhikari",
+      "vacancies": 131,
+      "vacancies_by_category": {
+        "UR": 45,
+        "SC": 59,
+        "ST": 3,
+        "OBC": 12,
+        "EWS": 12
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree from a University established by law in India or a qualification recognised by the Government as equivalent thereto.",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "OBC": 5,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Sahayak Samiksha Adhikari (General + Special Recruitment)",
+      "vacancies": 335,
+      "vacancies_by_category": {
+        "UR": 186,
+        "SC": 40,
+        "ST": 2,
+        "OBC": 76,
+        "EWS": 31
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree from a University established by law in India or a qualification recognised by the Government as equivalent thereto. 'O' Level certificate (DOEACC/NIELIT) or equivalent (or Diploma in Computer Science for UPPSC). Minimum speed of 25 words per minute in Hindi typewriting.",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "OBC": 5,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Samiksha Adhikari (Account)",
+      "vacancies": 31,
+      "vacancies_by_category": {
+        "UR": 11,
+        "SC": 9,
+        "ST": 1,
+        "OBC": 9,
+        "EWS": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "commerce"
+      ],
+      "qualification_text": "(1) Bachelor's degree in commerce with Accountancy from a University established by law in India or equivalent. (2) 'O' Level certificate in Computer Application from an Institute recognized by the Government. (3) Knowledge of Hindi written in Devnagari Script.",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "OBC": 5,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Manager / Care-Taker / Store Keeper (UPPSC)",
+      "vacancies": 3,
+      "vacancies_by_category": {
+        "UR": 3
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's Degree from a recognised University (preferential qualifications vary by post).",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "OBC": 5,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Receptionist (Swagati)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "history",
+        "geography",
+        "english literature",
+        "anthropology",
+        "architecture"
+      ],
+      "qualification_text": "(a) Bachelor's Degree or its equivalent from a recognised University in History, Geography, English Literature, Anthropology, Architecture as one of the subject at degree level. (b) Good knowledge of Hindi.",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "OBC": 5,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 501,
+  "slug": "uppsc-45b17a0feeb5ecfc",
+  "board": "UPPSC",
+  "source_url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+  "pdf_url": "https://uppsc.up.nic.in/OuterPages/View_Enclosure.aspx?ID=307&flag=E&FID=947",
+  "_local_pdf": "data/pdfs/45b17a0feeb5ecfc.pdf",
+  "is_sample": false,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "_labelled_by": "claude-draft"
+}

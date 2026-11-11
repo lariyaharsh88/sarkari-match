@@ -1,0 +1,77 @@
+{
+  "slug": "sbi-29148a48af20ed0c",
+  "board": "SBI",
+  "title": "Engagement of Specialist Cadre Officers on Contract Basis (SBIL Kolkata)",
+  "advt_no": "CRPD/SCO/2026-27/20",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/16092026_ADV_CRPD_SCO_2026-27_20_SBIL.pdf/72f2a326-b338-3ea8-84d9-2fb56c3253a2?t=1789538665520",
+  "published_on": null,
+  "apply_start": "2026-09-16",
+  "apply_end": "2026-10-06",
+  "fee_by_category": {
+    "UR": 750,
+    "EWS": 750,
+    "OBC": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "Dean, SBIL Kolkata",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "min_qualification": "postgraduate",
+      "qualification_text": "MBA / Executive MBA / PGDM / PGDBA or equivalent in any discipline with Minimum percentage of 55% marks. OR Ph. D. / M.Phil. from Indian university or Indian/ International 'B' school.",
+      "age": {
+        "min_age": 40,
+        "max_age": 55,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      }
+    },
+    {
+      "post_name": "Faculty, SBIL Kolkata",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "SC": 1
+      },
+      "min_qualification": "postgraduate",
+      "qualification_text": "Postgraduate in any discipline with Minimum percentage of 55% marks.",
+      "age": {
+        "min_age": 35,
+        "max_age": 55,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      }
+    },
+    {
+      "post_name": "Marketing Executive, SBIL Kolkata",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "min_qualification": "postgraduate",
+      "required_streams": [
+        "marketing"
+      ],
+      "qualification_text": "MBA or Equivalent in marketing. Minimum percentage of marks- 55%",
+      "age": {
+        "min_age": 28,
+        "max_age": 40,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      }
+    }
+  ],
+  "total_vacancies": 3,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/29148a48af20ed0c.pdf",
+  "_labelled_by": "claude-draft"
+}

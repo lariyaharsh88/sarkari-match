@@ -1,0 +1,51 @@
+{
+  "slug": "sbi-9076f2a846bbf336",
+  "board": "SBI",
+  "title": "Engagement of Specialist Cadre Officer on Contractual Basis - Group CISO",
+  "advt_no": "CRPD/SCO/2026-27/21",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/04092026_FINAL+ADVT+SCO+_21_+GROUP+CISO.pdf/92a8bf33-5351-6edc-ff5b-0bd27b3a61cf?t=1788521056853",
+  "published_on": null,
+  "apply_start": "2026-09-04",
+  "apply_end": "2026-09-24",
+  "fee_by_category": {
+    "UR": 750,
+    "OBC": 750,
+    "EWS": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "Group CISO (Chief Information Security Officer)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [
+        "engineering",
+        "computer science"
+      ],
+      "qualification_text": "B. Tech/ B.E. in Computer Science/ Computer Science & Engineering/ Software Engineering/ Information Technology/ Electronics/ Electronics & Communications Engineering/Cyber Security or Equivalent Degree in above specified disciplines with minimum 50% score Or MCA Or M. Tech/ M. Sc in Computer Science/ Computer Science & Engineering/ Information Technology/ Software Engineering/ Electronics/ Electronics & Communications Engineering/Cyber Security or Equivalent Degree in above specified disciplines.",
+      "age": {
+        "min_age": null,
+        "max_age": 57,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 1,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/9076f2a846bbf336.pdf",
+  "_labelled_by": "claude-draft"
+}

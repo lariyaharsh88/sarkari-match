@@ -1,0 +1,113 @@
+{
+  "slug": "sbi-9febcb6d0c46bfa3",
+  "board": "SBI",
+  "title": "Engagement of Specialist Cadre Officers on Fixed Term Employment Basis (AI posts)",
+  "advt_no": "CRPD/SCO/2026-27/30",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/17102026_Detail_ADV_CRPD_SCO_2026-27_30.pdf/226b6572-e6bd-2b73-f266-dc7db9b282bd?t=1792240760461",
+  "published_on": null,
+  "apply_start": "2026-10-19",
+  "apply_end": "2026-11-09",
+  "fee_by_category": {
+    "UR": 750,
+    "EWS": 750,
+    "OBC": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "GM & Chief AI Officer",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "min_qualification": "graduate",
+      "required_streams": [
+        "engineering",
+        "computer science",
+        "statistics"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": 40,
+        "max_age": 55,
+        "as_on": "2026-09-30",
+        "relaxation_years": {}
+      }
+    },
+    {
+      "post_name": "DGM (Risk and Operational Analytics) / DGM (AI Governance and Compliance) / DGM (Data Engineering, Model Application Dev and AI Ops)",
+      "vacancies": 3,
+      "vacancies_by_category": {
+        "UR": 3
+      },
+      "min_qualification": "graduate",
+      "required_streams": [
+        "engineering",
+        "computer science",
+        "statistics"
+      ],
+      "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication or equivalent / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution.",
+      "age": {
+        "min_age": 35,
+        "max_age": 50,
+        "as_on": "2026-09-30",
+        "relaxation_years": {}
+      }
+    },
+    {
+      "post_name": "AI Solution Architect",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer science",
+        "information technology",
+        "data science",
+        "ai",
+        "management"
+      ],
+      "qualification_text": "Bachelor's / Master's degree in computer science, Information Technology, Data Science, AI, Business Administration, Management or a related discipline from a recognized university/institution.",
+      "age": {
+        "min_age": 30,
+        "max_age": 45,
+        "as_on": "2026-09-30",
+        "relaxation_years": {}
+      }
+    },
+    {
+      "post_name": "Enterprise AI Architect",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer science",
+        "information technology",
+        "engineering",
+        "data science",
+        "ai"
+      ],
+      "qualification_text": "Bachelor's / Master's degree in computer science, Information Technology, Engineering, Data Science, AI or equivalent discipline from a recognized university/institution.",
+      "age": {
+        "min_age": 30,
+        "max_age": 45,
+        "as_on": "2026-09-30",
+        "relaxation_years": {}
+      }
+    }
+  ],
+  "total_vacancies": 6,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/9febcb6d0c46bfa3.pdf",
+  "_labelled_by": "claude-draft"
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis",
+  "advt_no": "CRPD/SCO/2026-27/26",
+  "published_on": null,
+  "apply_start": "2026-11-02",
+  "apply_end": "2026-11-23",
+  "fee_by_category": {
+    "UR": 750,
+    "EWS": 750,
+    "OBC": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "Chief Manager (Product & Research - Forex & Rupee Derivatives)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": "SMGS-IV (102300-120940)",
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "MBA/PGDBM/PGDM/PGDBA or equivalent degree from recognized institute. Preference will be given to candidates with specialization in Finance.",
+      "age": {
+        "min_age": 30,
+        "max_age": 40,
+        "as_on": "2026-09-30",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Manager (Product & Research Analyst)",
+      "vacancies": 6,
+      "vacancies_by_category": {
+        "SC": 1,
+        "OBC": 2,
+        "UR": 3
+      },
+      "pay_level": "MMGS-III (85920-105280)",
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "MBA/PGDBM/PGDM/PGDBA or equivalent degree from recognized institute. Preference will be given to candidates with specialization in Finance.",
+      "age": {
+        "min_age": 24,
+        "max_age": 36,
+        "as_on": "2026-09-30",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 7,
+  "slug": "sbi-1b05e75ae8fbd3d2",
+  "board": "SBI",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+CRPD+_SCO_2026-27_26_GMU.pdf/ade1acc4-609b-5c9a-ed89-670e70d0a82c?t=1793600742622",
+  "_local_pdf": "data/pdfs/1b05e75ae8fbd3d2.pdf",
+  "is_sample": false,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "_labelled_by": "claude-draft"
+}

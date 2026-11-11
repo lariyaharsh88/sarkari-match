@@ -1,0 +1,86 @@
+{
+  "slug": "sbi-c11e967a5b9e29c5",
+  "board": "SBI",
+  "title": "Engagement of Specialist Cadre Officer on Contract Basis for Digital Marketing Department",
+  "advt_no": "CRPD/SCO/2026-27/24",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+OF+2026-27_24.pdf/9cf5df5f-5ce2-976d-70d1-2dc8d49380cd?t=1790690953073",
+  "published_on": null,
+  "apply_start": "2026-09-30",
+  "apply_end": "2026-10-21",
+  "fee_by_category": {
+    "UR": 750,
+    "OBC": 750,
+    "EWS": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "Deputy Vice President (Analytical Marketing & Campaign)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree in Marketing / Business Administration / Statistics / Data Science / Computer Science, or a related field.",
+      "age": {
+        "min_age": 33,
+        "max_age": 45,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Deputy Vice President (Digital Marketing)",
+      "vacancies": 2,
+      "vacancies_by_category": {
+        "UR": 2
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree in Marketing /Business Administration / Mass Communication / Digital Marketing or related field.",
+      "age": {
+        "min_age": 33,
+        "max_age": 45,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Content Specialist",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree in Marketing / Communications /Journalism / Advertising or a related field.",
+      "age": {
+        "min_age": 25,
+        "max_age": 40,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 4,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/c11e967a5b9e29c5.pdf",
+  "_labelled_by": "claude-draft"
+}

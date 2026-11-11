@@ -1,0 +1,144 @@
+{
+  "title": "Sub-Inspector in Delhi Police and Central Armed Police Forces Examination, 2026",
+  "advt_no": "E/37/2026-C-2",
+  "published_on": "2026-09-10",
+  "apply_start": "2026-09-10",
+  "apply_end": "2026-09-30",
+  "fee_by_category": {
+    "UR": 100,
+    "OBC": 100,
+    "EWS": 100,
+    "SC": 0,
+    "ST": 0,
+    "WOMEN": 0
+  },
+  "posts": [
+    {
+      "post_name": "Sub-Inspector (Executive) in Delhi Police - Male",
+      "vacancies": 205,
+      "vacancies_by_category": {
+        "UR": 87,
+        "OBC": 54,
+        "SC": 30,
+        "ST": 14,
+        "EWS": 20
+      },
+      "pay_level": "Level-6 (Rs.35,400-1,12,400)",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree from a recognized university or equivalent.",
+      "age": {
+        "min_age": 20,
+        "max_age": 25,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": "male",
+      "states": []
+    },
+    {
+      "post_name": "Sub-Inspector (Executive) in Delhi Police - Female",
+      "vacancies": 112,
+      "vacancies_by_category": {
+        "UR": 47,
+        "OBC": 30,
+        "SC": 16,
+        "ST": 8,
+        "EWS": 11
+      },
+      "pay_level": "Level-6 (Rs.35,400-1,12,400)",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree from a recognized university or equivalent.",
+      "age": {
+        "min_age": 20,
+        "max_age": 25,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": "female",
+      "states": []
+    },
+    {
+      "post_name": "Sub-Inspector (GD) in CAPFs",
+      "vacancies": 1320,
+      "vacancies_by_category": {
+        "UR": 601,
+        "EWS": 138,
+        "OBC": 319,
+        "SC": 183,
+        "ST": 79
+      },
+      "pay_level": "Level-6 (Rs.35,400-1,12,400)",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Bachelor's degree from a recognized university or equivalent.",
+      "age": {
+        "min_age": 20,
+        "max_age": 25,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Sub-Inspector (Fire) in CISF - Male",
+      "vacancies": 234,
+      "vacancies_by_category": {
+        "UR": 74,
+        "OBC": 75,
+        "SC": 52,
+        "ST": 16,
+        "EWS": 17
+      },
+      "pay_level": "Level-6 (Rs.35,400-1,12,400)",
+      "min_qualification": "diploma",
+      "required_streams": [
+        "science",
+        "engineering"
+      ],
+      "qualification_text": "Bachelor's degree in science with Physics, Chemistry and Mathematics of a recognized University or equivalent; OR Matriculation or equivalent and three years diploma in Mechanical, Civil, Electrical, Automobiles, Chemical, Mining, Aeronautical, Telecommunication Engineering OR equivalent.",
+      "age": {
+        "min_age": 18,
+        "max_age": 30,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": "male",
+      "states": []
+    }
+  ],
+  "total_vacancies": 1871,
+  "slug": "ssc-40d9c2694fa9fae5",
+  "board": "SSC",
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf",
+  "_local_pdf": "data/pdfs/40d9c2694fa9fae5.pdf",
+  "is_sample": false,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "_labelled_by": "claude-draft"
+}

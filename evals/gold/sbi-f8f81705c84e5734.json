@@ -1,0 +1,85 @@
+{
+  "slug": "sbi-f8f81705c84e5734",
+  "board": "SBI",
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis - Trade Finance Officer (IBG)",
+  "advt_no": "CRPD/SCO/2026-27/15",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/29082026_FINAL+ADVT+TFO+IBG_SCO+15.pdf/222db64b-91da-cbe8-c439-9af6b1dd06b2?t=1787986916149",
+  "published_on": null,
+  "apply_start": "2026-08-29",
+  "apply_end": "2026-09-19",
+  "fee_by_category": {
+    "UR": 750,
+    "OBC": 750,
+    "EWS": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "Trade Finance Officer - IBG (TFO-IBG) JMGS-I",
+      "vacancies": 14,
+      "vacancies_by_category": {
+        "SC": 2,
+        "ST": 1,
+        "OBC": 3,
+        "EWS": 1,
+        "UR": 7
+      },
+      "pay_level": "JMGS-I",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate (any discipline) from Government recognized University or Institution & Certification in Forex Operations from IIBF",
+      "age": {
+        "min_age": 21,
+        "max_age": 30,
+        "as_on": "2026-07-31",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Trade Finance Officer - IBG (TFO-IBG) MMGS-II",
+      "vacancies": 21,
+      "vacancies_by_category": {
+        "SC": 3,
+        "ST": 1,
+        "OBC": 5,
+        "EWS": 2,
+        "UR": 10
+      },
+      "pay_level": "MMGS-II",
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduate (any discipline) from Government recognized University or Institution & Certification in Forex Operations from IIBF",
+      "age": {
+        "min_age": 23,
+        "max_age": 32,
+        "as_on": "2026-07-31",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 35,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/f8f81705c84e5734.pdf",
+  "_labelled_by": "claude-draft"
+}

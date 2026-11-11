@@ -1,0 +1,53 @@
+{
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis",
+  "advt_no": "CRPD/SCO/2026-27/27",
+  "published_on": null,
+  "apply_start": "2026-11-02",
+  "apply_end": "2026-11-23",
+  "fee_by_category": {
+    "UR": 750,
+    "EWS": 750,
+    "OBC": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "Risk Specialist",
+      "vacancies": 3,
+      "vacancies_by_category": {
+        "UR": 3
+      },
+      "pay_level": "MMGS-II (64820-93960)",
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "Mandatory: (i) CA or (ii) CFA or (iii) MBA / PGDM or equivalent degree in Finance / Data Analytics / Business Analytics from a recognized institute.",
+      "age": {
+        "min_age": 25,
+        "max_age": 35,
+        "as_on": "2026-10-31",
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5,
+          "PWD": 10
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 3,
+  "slug": "sbi-97eb544e1773b5a1",
+  "board": "SBI",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/DETAILED+ADV_RMD_SCO_2026-27_27.pdf/fff268f5-f55d-3ec8-b1ca-b7a51e705e0e?t=1793599952659",
+  "_local_pdf": "data/pdfs/97eb544e1773b5a1.pdf",
+  "is_sample": false,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "_labelled_by": "claude-draft"
+}

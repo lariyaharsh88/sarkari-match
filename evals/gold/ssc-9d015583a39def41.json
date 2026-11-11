@@ -1,0 +1,184 @@
+{
+  "slug": "ssc-9d015583a39def41",
+  "board": "SSC",
+  "title": "Junior Engineer Examination, 2026",
+  "advt_no": "HQ-C-3019/1/2026-C-3",
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_je_2026.pdf",
+  "published_on": "2026-09-02",
+  "apply_start": "2026-09-02",
+  "apply_end": "2026-09-22",
+  "fee_by_category": {
+    "UR": 100,
+    "OBC": 100,
+    "EWS": 100,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0,
+    "WOMEN": 0
+  },
+  "posts": [
+    {
+      "post_name": "Junior Engineer (Civil) - BRO, Brahmaputra Board, CWC, CWPRS, Farakka Barrage, MES, NTRO, Ministry of Fisheries",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Level-6 (Rs. 35400-112400/-)",
+      "min_qualification": "diploma",
+      "required_streams": [
+        "civil engineering"
+      ],
+      "qualification_text": "Degree in Civil Engineering; or Three-Year Diploma in Civil Engineering (some organisations additionally require two years experience)",
+      "age": {
+        "min_age": null,
+        "max_age": 30,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Junior Engineer (Civil) - CPWD, DG Lighthouses & Lightships",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Level-6 (Rs. 35400-112400/-)",
+      "min_qualification": "diploma",
+      "required_streams": [
+        "civil engineering"
+      ],
+      "qualification_text": "Diploma in Civil Engineering from a recognized University or Institute (DGLL: Degree, or Diploma with three years experience)",
+      "age": {
+        "min_age": null,
+        "max_age": 32,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Junior Engineer (Electrical / Mechanical / E&M) - BRO, CWC, CWPRS, DGQA-Naval, Farakka Barrage, MES",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Level-6 (Rs. 35400-112400/-)",
+      "min_qualification": "diploma",
+      "required_streams": [
+        "electrical engineering",
+        "mechanical engineering"
+      ],
+      "qualification_text": "Degree or Diploma in Electrical/Mechanical Engineering (some organisations additionally require two years experience)",
+      "age": {
+        "min_age": null,
+        "max_age": 30,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Junior Engineer (Electrical) - CPWD, DG Lighthouses & Lightships",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Level-6 (Rs. 35400-112400/-)",
+      "min_qualification": "diploma",
+      "required_streams": [
+        "electrical engineering",
+        "mechanical engineering"
+      ],
+      "qualification_text": "Diploma in Electrical or Mechanical Engineering (DGLL: Degree, or Diploma with three years experience)",
+      "age": {
+        "min_age": null,
+        "max_age": 32,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Junior Engineer (Telecom) - DoT",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Level-6 (Rs. 35400-112400/-)",
+      "min_qualification": "graduate",
+      "required_streams": [
+        "engineering"
+      ],
+      "qualification_text": "Bachelor's Degree in Engineering or Technology in Electrical or Electronics or Electrical Communications or Computer Science or Telecommunications or Information Technology or Instrumentation",
+      "age": {
+        "min_age": null,
+        "max_age": 30,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Scientific Assistant - IMD",
+      "vacancies": null,
+      "vacancies_by_category": {},
+      "pay_level": "Level-6 (Rs. 35400-112400/-)",
+      "min_qualification": "graduate",
+      "required_streams": [
+        "science",
+        "computer science",
+        "electronics"
+      ],
+      "qualification_text": "Bachelor's Degree in Science with Physics as one of the subjects; OR Bachelor's Degree in Computer Science/Computer Applications/Electronics/ECE/IT/Telecommunication etc.",
+      "age": {
+        "min_age": null,
+        "max_age": 30,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 1748,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/9d015583a39def41.pdf",
+  "_labelled_by": "claude-draft"
+}

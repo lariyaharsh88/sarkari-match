@@ -35,5 +35,6 @@
   "extracted_at": null,
   "is_sample": false,
   "_local_pdf": "data/pdfs/3e166c5a80f6aa8d.pdf",
-  "_skip_reason": null
+  "_skip_reason": "url suggests non-notification document (biodata)",
+  "_labelled_by": "auto-triage"
 }

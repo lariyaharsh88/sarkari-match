@@ -35,5 +35,6 @@
   "extracted_at": null,
   "is_sample": false,
   "_local_pdf": "data/pdfs/343a64d9f406675a.pdf",
-  "_skip_reason": null
+  "_skip_reason": "url suggests non-notification document (corrigendum)",
+  "_labelled_by": "auto-triage"
 }

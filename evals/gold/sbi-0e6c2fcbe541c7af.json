@@ -1,0 +1,182 @@
+{
+  "slug": "sbi-0e6c2fcbe541c7af",
+  "board": "SBI",
+  "title": "Engagement of Specialist Cadre Officers on Contract Basis (Wealth Management)",
+  "advt_no": "CRPD/SCO/2026-27/23",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/03092026_1_Advt+_Wealth+MGMT_04.09.2026.pdf/d2fd7bab-0791-b62b-61d3-8f46c2cb3ec6?t=1788439145915",
+  "published_on": null,
+  "apply_start": "2026-09-04",
+  "apply_end": "2026-09-25",
+  "fee_by_category": {
+    "UR": 750,
+    "OBC": 750,
+    "EWS": 750,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0
+  },
+  "posts": [
+    {
+      "post_name": "Zonal Head (Retail)",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "OBC": 1
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 35,
+        "max_age": 50,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Regional Head (RH)",
+      "vacancies": 5,
+      "vacancies_by_category": {
+        "SC": 1,
+        "ST": 1,
+        "OBC": 1,
+        "UR": 2
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 35,
+        "max_age": 50,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Relationship Manager-Team Lead",
+      "vacancies": 24,
+      "vacancies_by_category": {
+        "SC": 3,
+        "ST": 3,
+        "OBC": 3,
+        "EWS": 2,
+        "UR": 13
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 28,
+        "max_age": 42,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Investment Specialist (IS)",
+      "vacancies": 9,
+      "vacancies_by_category": {
+        "SC": 3,
+        "ST": 1,
+        "OBC": 2,
+        "UR": 3
+      },
+      "pay_level": null,
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "A Professional Qualification in PG Degree or PG Diploma in Finance / Accountancy / Business Management/ Commerce / Economics / Capital Markets /Banking/ Insurance / Actuarial Science from recognised College / University or CA /CFA",
+      "age": {
+        "min_age": 28,
+        "max_age": 42,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Investment Officer (IO)",
+      "vacancies": 4,
+      "vacancies_by_category": {
+        "ST": 1,
+        "OBC": 1,
+        "UR": 2
+      },
+      "pay_level": null,
+      "min_qualification": "postgraduate",
+      "required_streams": [],
+      "qualification_text": "A Professional Qualification in PG Degree or PG Diploma in Finance / Accountancy / Business Management/ Commerce / Economics / Capital Markets /Banking/ Insurance / Actuarial Science from recognised College / University or CA /CFA",
+      "age": {
+        "min_age": 28,
+        "max_age": 40,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "VP Wealth",
+      "vacancies": 91,
+      "vacancies_by_category": {
+        "SC": 18,
+        "ST": 19,
+        "OBC": 39,
+        "EWS": 2,
+        "UR": 13
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduation from Government recognised University or Institution.",
+      "age": {
+        "min_age": 26,
+        "max_age": 42,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "AVP Wealth",
+      "vacancies": 73,
+      "vacancies_by_category": {
+        "SC": 14,
+        "ST": 5,
+        "OBC": 18,
+        "EWS": 7,
+        "UR": 29
+      },
+      "pay_level": null,
+      "min_qualification": "graduate",
+      "required_streams": [],
+      "qualification_text": "Graduates from Government recognised University or Institution.",
+      "age": {
+        "min_age": 23,
+        "max_age": 35,
+        "as_on": "2026-08-31",
+        "relaxation_years": {}
+      },
+      "gender_restriction": null,
+      "states": []
+    }
+  ],
+  "total_vacancies": 207,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/0e6c2fcbe541c7af.pdf",
+  "_labelled_by": "claude-draft"
+}

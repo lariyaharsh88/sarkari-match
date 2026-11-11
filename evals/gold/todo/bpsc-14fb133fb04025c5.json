@@ -35,5 +35,6 @@
   "extracted_at": null,
   "is_sample": false,
   "_local_pdf": "data/pdfs/14fb133fb04025c5.pdf",
-  "_skip_reason": null
+  "_skip_reason": "too little text, probably a form or a scanned PDF",
+  "_labelled_by": "auto-triage"
 }

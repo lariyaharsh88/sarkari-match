@@ -1,0 +1,140 @@
+{
+  "slug": "ssc-487899bb8cc7bd35",
+  "board": "SSC",
+  "title": "Recruitment of Enrolled Persons in the Indian Coast Guard through CGEPT - Batches 01/2027 & 02/2027",
+  "advt_no": null,
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/advertisement_06102026.pdf",
+  "published_on": null,
+  "apply_start": "2026-10-06",
+  "apply_end": "2026-10-21",
+  "fee_by_category": {
+    "UR": 550,
+    "OBC": 550,
+    "EWS": 550,
+    "SC": 0,
+    "ST": 0
+  },
+  "posts": [
+    {
+      "post_name": "Navik (General Duty)",
+      "vacancies": 260,
+      "vacancies_by_category": {
+        "UR": 105,
+        "EWS": 24,
+        "OBC": 79,
+        "SC": 31,
+        "ST": 21
+      },
+      "pay_level": "Level 3",
+      "min_qualification": "12th",
+      "required_streams": [
+        "science"
+      ],
+      "qualification_text": "Class 12th passed with Maths and Physics from an education board recognized by Council of Boards for School Education (COBSE).",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5
+        }
+      },
+      "gender_restriction": null,
+      "states": []
+    },
+    {
+      "post_name": "Yantrik (Mechanical/Electrical/Electronics)",
+      "vacancies": 60,
+      "vacancies_by_category": {
+        "UR": 24,
+        "EWS": 4,
+        "OBC": 11,
+        "SC": 10,
+        "ST": 11
+      },
+      "pay_level": "Level 5",
+      "min_qualification": "diploma",
+      "required_streams": [
+        "engineering"
+      ],
+      "qualification_text": "Class 10th passed from an education board recognized by COBSE AND Diploma in Electrical/ Mechanical / Electronics/ Telecommunication (Radio/Power) Engineering of duration 03 or 04 years approved by AICTE. OR Class 10th & Class 12th passed AND Diploma in Electrical/ Mechanical / Electronics/ Telecommunication (Radio/Power) Engineering of duration 02 or 03 years approved by AICTE.",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5
+        }
+      },
+      "gender_restriction": "male",
+      "states": []
+    },
+    {
+      "post_name": "Navik (Domestic Branch)",
+      "vacancies": 25,
+      "vacancies_by_category": {
+        "UR": 11,
+        "EWS": 2,
+        "OBC": 7,
+        "SC": 5,
+        "ST": 0
+      },
+      "pay_level": "Level 3",
+      "min_qualification": "10th",
+      "required_streams": [],
+      "qualification_text": "Class 10th passed from an education board recognized by Council of Boards for School Education (COBSE).",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5
+        }
+      },
+      "gender_restriction": "male",
+      "states": []
+    },
+    {
+      "post_name": "Hygienist-I",
+      "vacancies": 20,
+      "vacancies_by_category": {
+        "UR": 9,
+        "EWS": 1,
+        "OBC": 5,
+        "SC": 5,
+        "ST": 0
+      },
+      "pay_level": "Level 3",
+      "min_qualification": "10th",
+      "required_streams": [],
+      "qualification_text": "Matriculation OR Industrial Training Institute (ITI) OR equivalent from Board of Education recognised by the Central/ State Government.",
+      "age": {
+        "min_age": null,
+        "max_age": null,
+        "as_on": null,
+        "relaxation_years": {
+          "OBC": 3,
+          "SC": 5,
+          "ST": 5
+        }
+      },
+      "gender_restriction": "male",
+      "states": []
+    }
+  ],
+  "total_vacancies": 365,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/487899bb8cc7bd35.pdf",
+  "_labelled_by": "claude-draft"
+}

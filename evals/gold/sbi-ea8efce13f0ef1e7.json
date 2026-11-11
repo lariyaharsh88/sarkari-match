@@ -1,0 +1,52 @@
+{
+  "slug": "sbi-ea8efce13f0ef1e7",
+  "board": "SBI",
+  "title": "Recruitment of Specialist Cadre Officer on Regular Basis - Assistant Manager (Engineer - Fire)",
+  "advt_no": "CRPD/SCO/2026-27/29",
+  "source_url": "https://sbi.co.in/web/careers/current-openings",
+  "pdf_url": "https://sbi.co.in/documents/77530/57941334/04112026_FINAL+DRAFT+ADVERTISEMENT+CRPD-SCO_29_ENGINEER.pdf/4d1be5a0-727d-61b5-1ea4-85570f437345?t=1793788834905",
+  "published_on": null,
+  "apply_start": "2026-11-04",
+  "apply_end": "2026-11-25",
+  "fee_by_category": {
+    "UR": 750,
+    "EWS": 750,
+    "OBC": 750,
+    "SC": 0,
+    "ST": 0
+  },
+  "posts": [
+    {
+      "post_name": "Assistant Manager - Engineer (Fire)",
+      "vacancies": 17,
+      "vacancies_by_category": {
+        "SC": 2,
+        "ST": 2,
+        "OBC": 1,
+        "EWS": 1,
+        "UR": 11
+      },
+      "pay_level": "JMGS-I",
+      "min_qualification": "graduate",
+      "required_streams": [
+        "engineering",
+        "fire safety"
+      ],
+      "qualification_text": "B.E. (Fire) from National Fire Service College (NFSC) Nagpur Or B.E / B. Tech (Safety & Fire Engineering) Or B.E / B. Tech (Fire Technology & Safety Engineering) Or Equivalent 4-year degree in Fire Safety from UGC recognized University / AICTE approved institution Or Graduate member of Institution of Fire Engineers (India / UK) Or Divisional Officers course from NFSC, Nagpur",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-10-31",
+        "relaxation_years": {}
+      }
+    }
+  ],
+  "total_vacancies": 17,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/ea8efce13f0ef1e7.pdf",
+  "_labelled_by": "claude-draft"
+}

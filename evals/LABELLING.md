@@ -19,4 +19,4 @@
 python scripts/predict_gold.py        # needs GEMINI_API_KEY
 python evals/run_extraction_eval.py
 ```
-Once you have 10 real gold files, delete the two `sample-*.json` files.
+Files with `"_labelled_by": "claude-draft"` were pre-filled by Claude from the PDF; spot-check them and delete that key once verified. Run the eval from GitHub Actions → "extraction eval".

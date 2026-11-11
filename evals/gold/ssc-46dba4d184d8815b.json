@@ -1,0 +1,70 @@
+{
+  "slug": "ssc-46dba4d184d8815b",
+  "board": "SSC",
+  "title": "Combined Higher Secondary (10+2) Level Examination, 2026",
+  "advt_no": "HQ-C1102/5/2026-C-1",
+  "source_url": "https://ssc.gov.in/home/notice-board",
+  "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_chsle_2026.pdf",
+  "published_on": "2026-09-07",
+  "apply_start": "2026-09-07",
+  "apply_end": "2026-10-07",
+  "fee_by_category": {
+    "UR": 100,
+    "OBC": 100,
+    "EWS": 100,
+    "SC": 0,
+    "ST": 0,
+    "PWD": 0,
+    "WOMEN": 0
+  },
+  "posts": [
+    {
+      "post_name": "Lower Division Clerk / Junior Secretariat Assistant; Data Entry Operator / DEO Grade 'A' (other than Para 8.1 departments)",
+      "pay_level": "Level 2 (LDC/JSA); Level 4/5 (DEO); Level 4 (DEO Grade A)",
+      "min_qualification": "12th",
+      "qualification_text": "Candidates must have passed 12th Standard or equivalent examination from a recognized Board or University.",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      }
+    },
+    {
+      "post_name": "Data Entry Operator / DEO Grade 'A' in Ministry of Consumer Affairs, Food & Public Distribution, Staff Selection Commission and Ministry of Culture",
+      "pay_level": "Level 4/5",
+      "min_qualification": "12th",
+      "required_streams": [
+        "science",
+        "mathematics"
+      ],
+      "qualification_text": "12th Standard pass in Science stream with Mathematics as a subject from a recognized Board or equivalent.",
+      "age": {
+        "min_age": 18,
+        "max_age": 27,
+        "as_on": "2026-08-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 3,
+          "PWD": 10,
+          "EX_SERVICEMAN": 3
+        }
+      }
+    }
+  ],
+  "total_vacancies": 2536,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/46dba4d184d8815b.pdf",
+  "_labelled_by": "claude-draft"
+}

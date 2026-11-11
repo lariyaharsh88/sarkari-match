@@ -1,0 +1,121 @@
+{
+  "slug": "uppsc-df2873a3ebeadc70",
+  "board": "UPPSC",
+  "title": "Assistant Architect Planner Examination-2026, Sports Officer Examination-2026, Programmer Grade-2 Examination-2026",
+  "advt_no": "A-5/E-1/2026",
+  "source_url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+  "pdf_url": "https://uppsc.up.nic.in/OuterPages/View_Enclosure.aspx?ID=751&flag=E&FID=950",
+  "published_on": "2026-11-04",
+  "apply_start": "2026-11-04",
+  "apply_end": "2026-12-04",
+  "fee_by_category": {
+    "UR": 225,
+    "EWS": 225,
+    "OBC": 225,
+    "SC": 105,
+    "ST": 105,
+    "PWD": 25
+  },
+  "posts": [
+    {
+      "post_name": "Assistant Architect Planner, U.P. Housing and Development Board",
+      "vacancies": 8,
+      "vacancies_by_category": {
+        "UR": 5,
+        "SC": 1,
+        "ST": 0,
+        "OBC": 2,
+        "EWS": 0
+      },
+      "pay_level": "Level-10 (15,600-39,100, Grade Pay 5,400)",
+      "min_qualification": "graduate",
+      "required_streams": [
+        "architecture"
+      ],
+      "qualification_text": "Degree in Architecture or equivalent qualification, and degree/diploma in Town and Country Planning/Housing or equivalent, or experience as specified (Appendix Q).",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "states": [
+        "Uttar Pradesh"
+      ]
+    },
+    {
+      "post_name": "Sports Officer, Directorate of Sports, Uttar Pradesh",
+      "vacancies": 16,
+      "vacancies_by_category": {
+        "UR": 7,
+        "SC": 4,
+        "ST": 0,
+        "OBC": 4,
+        "EWS": 1
+      },
+      "pay_level": "Level-8 (47600-151100)",
+      "min_qualification": "graduate",
+      "required_streams": [
+        "sports coaching"
+      ],
+      "qualification_text": "Graduate from a recognised university, and diploma in coaching in the relevant game from Netaji Subhas National Institute of Sports Patiala/Bangalore/Kolkata, LNIPE Thiruvananthapuram/Gwalior or equivalent institute.",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "states": [
+        "Uttar Pradesh"
+      ]
+    },
+    {
+      "post_name": "Programmer Grade-2, UPSSSC",
+      "vacancies": 1,
+      "vacancies_by_category": {
+        "UR": 1
+      },
+      "pay_level": "9300-34800, Grade Pay 4600",
+      "min_qualification": "graduate",
+      "required_streams": [
+        "computer science"
+      ],
+      "qualification_text": "(i) Bachelor's degree from a University established by law in India or a qualification recognised by the Government as equivalent thereto. (ii) Post graduate Diploma in Computer Science from a recognised Institute/ University; or 'A' level Certificate from the Department of Electronics (D.O.E.), Government of India. (iii) Good knowledge of Software development ...",
+      "age": {
+        "min_age": 21,
+        "max_age": 40,
+        "as_on": "2026-07-01",
+        "relaxation_years": {
+          "SC": 5,
+          "ST": 5,
+          "OBC": 5,
+          "PWD": 15,
+          "EX_SERVICEMAN": 3
+        }
+      },
+      "states": [
+        "Uttar Pradesh"
+      ]
+    }
+  ],
+  "total_vacancies": 25,
+  "confidence": {},
+  "needs_review": false,
+  "review_reasons": [],
+  "extracted_at": null,
+  "is_sample": false,
+  "_local_pdf": "data/pdfs/df2873a3ebeadc70.pdf",
+  "_labelled_by": "claude-draft"
+}

@@ -35,5 +35,6 @@
   "extracted_at": null,
   "is_sample": false,
   "_local_pdf": "data/pdfs/5ef77136ac683090.pdf",
-  "_skip_reason": null
+  "_skip_reason": "url suggests non-notification document (ctc)",
+  "_labelled_by": "auto-triage"
 }
