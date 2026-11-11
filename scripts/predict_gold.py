@@ -10,6 +10,7 @@ from pipeline.fetch import download_new, make_session  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 session = make_session()
+(ROOT / "evals" / "predictions").mkdir(parents=True, exist_ok=True)
 for gf in sorted((ROOT / "evals" / "gold").glob("*.json")):
     g = json.loads(gf.read_text())
     if g.get("is_sample"):
