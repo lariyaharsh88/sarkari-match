@@ -19,12 +19,6 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - run: python evals/run_matcher_eval.py || true
       - run: python scripts/metrics_snapshot.py
-      - name: dispatch alerts on the live site
-        if: ${{ secrets.ALERTS_DISPATCH_URL != '' }}
-        run: curl -fsS -X POST "$URL/api/alerts/dispatch" -H "Authorization: Bearer $SECRET" || echo "dispatch failed"
-        env:
-          URL: ${{ secrets.ALERTS_DISPATCH_URL }}
-          SECRET: ${{ secrets.ALERTS_CRON_SECRET }}
       - name: commit data
         run: |
           git config user.name "refresh-bot"
