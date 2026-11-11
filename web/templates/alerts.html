@@ -1,25 +1,31 @@
 {% extends "base.html" %}
+{% from "_form.html" import profile_fields %}
 {% block title %}Job alerts · {{ site }}{% endblock %}
 {% block desc %}Get an email the day a new government job notification you are eligible for is published.{% endblock %}
 {% block head %}<script src="https://checkout.razorpay.com/v1/checkout.js"></script>{% endblock %}
 {% block body %}
-<h1>Never miss a job you can apply for</h1>
-<p class="lead">We check every new official notification against your age, category, qualification and state, and email you only the ones you are eligible for. ₹{{ price }} for {{ days }} days, no spam, stop any time.</p>
-
-<form class="match" id="alerts-form">
-  <label>Email <input type="email" name="email" required placeholder="you@example.com" value="{{ prefill.email or '' }}"></label>
-  <label>Age <input type="number" name="age" min="15" max="70" required value="{{ prefill.age or '' }}"></label>
-  <label>Highest qualification <select name="qualification">{% for q in quals %}<option value="{{ q }}" {% if prefill.qualification == q %}selected{% endif %}>{{ qual_labels[q] }}</option>{% endfor %}</select></label>
-  <label>Category <select name="category">{% for c in categories %}<option {% if prefill.category == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select></label>
-  <label>Gender <select name="gender"><option value="">Prefer not to say</option><option value="male" {% if prefill.gender == 'male' %}selected{% endif %}>Male</option><option value="female" {% if prefill.gender == 'female' %}selected{% endif %}>Female</option></select></label>
-  <label>State of domicile <input name="state" placeholder="e.g. Uttar Pradesh" value="{{ prefill.state or '' }}"></label>
-  <label>Degree stream (if any) <select name="streams" multiple size="3">{% for s in streams %}<option value="{{ s }}" {% if s in prefill.streams %}selected{% endif %}>{{ s.replace('_',' ') }}</option>{% endfor %}</select></label>
-  <label class="check"><input type="checkbox" name="pwd" value="true" {% if prefill.pwd %}checked{% endif %}> Person with disability</label>
-  <label class="check"><input type="checkbox" name="ex_serviceman" value="true" {% if prefill.ex_serviceman %}checked{% endif %}> Ex-serviceman</label>
-  <button type="submit" id="pay-btn">{% if demo %}Start alerts (demo, free){% else %}Pay ₹{{ price }} and start alerts{% endif %}</button>
+<section class="hero" style="padding-bottom:0">
+  <div class="eyebrow"><b>₹{{ price }}</b> for {{ days }} days · stop anytime</div>
+  <h1 class="mega" style="font-size:clamp(2.8rem,8vw,6.6rem)">Never miss<br>a job you <em>can</em><br><span class="hl">apply for.</span></h1>
+  <p class="lead">We check every new official notification against your profile and email you only the ones you're eligible for. No spam, no "top 10 jobs" newsletters.</p>
+</section>
+<section class="bento" style="margin-top:44px">
+  <div class="tile acid t4"><div class="big">1</div><div class="lbl">email per new match, the day it drops</div></div>
+  <div class="tile t4"><div class="big">0</div><div class="lbl">jobs you can't apply for</div></div>
+  <div class="tile dark t4"><div class="big">₹{{ price }}</div><div class="lbl">once, for {{ days }} days. Less than one form fee.</div></div>
+</section>
+<form class="panel" id="alerts-form" style="margin-top:44px">
+  <div class="fgrid">
+    <div class="field full">
+      <div class="q"><span class="n">00</span> Where should we email you?</div>
+      <input class="inp" type="email" name="email" required placeholder="you@gmail.com" value="{{ prefill.email or '' }}">
+    </div>
+    {{ profile_fields(prefill, quals, categories, streams, qual_labels) }}
+    <div class="full"><button class="btn block" type="submit" id="pay-btn">{% if demo %}Start alerts (demo, free) ⚡{% else %}Pay ₹{{ price }} &amp; start alerts ⚡{% endif %}</button>
+    <p class="msg" id="alerts-msg" role="status"></p></div>
+  </div>
 </form>
-<p class="meta" id="alerts-msg"></p>
-<p class="meta">We store your email and the profile above so we can match notifications against it. <a href="/alerts/manage">Already subscribed? Manage alerts</a>.</p>
+<p class="meta" style="margin-top:18px">We store your email and the profile above only to match notifications. <a class="inline-link" href="/alerts/manage">Already subscribed? Manage alerts</a></p>
 
 <script>
 const form = document.getElementById('alerts-form'), msg = document.getElementById('alerts-msg'), btn = document.getElementById('pay-btn');
@@ -33,7 +39,7 @@ form.addEventListener('submit', async (e) => {
     if (o.mode === 'demo') { location.href = o.manage_url; return; }
     const rzp = new Razorpay({
       key: o.key_id, amount: o.amount, currency: o.currency, order_id: o.order_id,
-      name: {{ site | tojson }}, description: 'Government job alerts', prefill: { email: fd.get('email') }, theme: { color: '#1a56db' },
+      name: {{ site | tojson }}, description: 'Government job alerts', prefill: { email: fd.get('email') }, theme: { color: '#c6f432' },
       handler: async (r) => {
         const v = await (await fetch('/api/alerts/verify', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...r, sub_id: o.sub_id }) })).json();
         if (v.error) { msg.textContent = v.error; btn.disabled = false; return; }

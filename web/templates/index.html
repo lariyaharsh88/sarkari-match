@@ -1,37 +1,88 @@
 {% extends "base.html" %}
+{% from "_form.html" import profile_fields, days_left %}
 {% block body %}
-<h1>Which government jobs can you actually apply for?</h1>
-<p class="lead">Enter your details once. We check age limits, category relaxations, qualifications, gender and domicile rules against every open official notification, and show the exact rule behind every answer.</p>
-<form class="match" method="post" action="/match">
-  <label>Age <input type="number" name="age" min="15" max="70" required value="{{ profile.age if profile else '' }}"></label>
-  <label>Highest qualification <select name="qualification">{% for q in quals %}<option value="{{ q }}" {% if profile and profile.qualification == q %}selected{% endif %}>{{ qual_labels[q] }}</option>{% endfor %}</select></label>
-  <label>Category <select name="category">{% for c in categories %}<option {% if profile and profile.category == c %}selected{% endif %}>{{ c }}</option>{% endfor %}</select></label>
-  <label>Gender <select name="gender"><option value="">Prefer not to say</option><option value="male" {% if profile and profile.gender == 'male' %}selected{% endif %}>Male</option><option value="female" {% if profile and profile.gender == 'female' %}selected{% endif %}>Female</option></select></label>
-  <label>State of domicile <input name="state" placeholder="e.g. Uttar Pradesh" value="{{ profile.state or '' if profile else '' }}"></label>
-  <label>Degree stream (if any) <select name="streams" multiple size="3">{% for s in streams %}<option value="{{ s }}" {% if profile and s in profile.streams %}selected{% endif %}>{{ s.replace('_',' ') }}</option>{% endfor %}</select></label>
-  <label class="check"><input type="checkbox" name="pwd" value="true" {% if profile and profile.pwd %}checked{% endif %}> Person with disability</label>
-  <label class="check"><input type="checkbox" name="ex_serviceman" value="true" {% if profile and profile.ex_serviceman %}checked{% endif %}> Ex-serviceman</label>
-  <button type="submit">Show my eligible jobs</button>
-</form>
+{% set vac = open_items | map(attribute='total_vacancies') | select | sum %}
+<section class="hero">
+  <div class="eyebrow"><span class="dot"></span><b>live</b> {{ open_items | length }} notifications open right now</div>
+  <h1 class="mega">Which sarkari<br>jobs can <em>you</em><br><span class="hl">actually</span> get?</h1>
+  <p class="lead">Drop your details once. We check age limits, category relaxation, degree and domicile rules against every open official notification and show the exact rule behind every yes and no. No PDFs, no guesswork.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn" href="#match">Check my eligibility →</a><a class="btn ghost" href="/alerts">Get alerts</a></div>
+  <div class="sticker">free<br>no login<br>30 sec</div>
+</section>
+</main>
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+{% for _ in range(2) %}{% for b in boards %}<span>{{ b }}</span>{% endfor %}<span>official pdfs only</span><span>age relaxation auto-applied</span>{% endfor %}
+</div></div>
+<main class="wrap">
+
+<section class="bento">
+  <div class="tile acid t5 reveal"><div class="big">{{ '{:,}'.format(vac) if vac else '—' }}</div><div class="lbl">vacancies open across live notifications</div></div>
+  <div class="tile t4 reveal"><div class="big">{{ boards | length }}</div><div class="lbl">recruiting boards tracked daily</div></div>
+  <div class="tile dark t3 reveal"><div class="big">8am</div><div class="lbl">IST, fresh notifications every day</div></div>
+</section>
+
+<section id="match">
+  <h2 class="sec">Tell us about <em>you.</em></h2>
+  <form class="panel" method="post" action="/match#results">
+    <div class="fgrid">
+      {{ profile_fields(profile, quals, categories, streams, qual_labels) }}
+      <div class="full"><button class="btn block" type="submit">Show my eligible jobs ⚡</button></div>
+    </div>
+  </form>
+</section>
 
 {% if matches is not none %}
-  {% set eligible = matches | selectattr('eligible') | list %}
-  <h2>{{ eligible | length }} eligible post{{ '' if eligible|length == 1 else 's' }} out of {{ matches | length }} open</h2>
-  <div class="card"><strong>Get emailed when a new one opens.</strong> <span class="meta">We'll keep checking every new notification against this profile.</span> <a href="/alerts?age={{ profile.age }}&qualification={{ profile.qualification }}&category={{ profile.category }}&gender={{ profile.gender or '' }}&state={{ profile.state or '' }}{% for s in profile.streams %}&streams={{ s }}{% endfor %}{% if profile.pwd %}&pwd=true{% endif %}{% if profile.ex_serviceman %}&ex_serviceman=true{% endif %}" class="pill">Set up alerts →</a></div>
-  {% for m in matches %}
-  <div class="card">
-    <h3><a href="/jobs/{{ m.notification_slug }}">{{ m.post_name }}</a> <span class="pill">{{ m.board }}</span></h3>
-    <div class="meta">{{ m.title }}{% if m.apply_end %} · last date {{ m.apply_end }}{% endif %}</div>
-    <div class="{{ 'ok' if m.eligible else 'bad' }}">{{ 'Eligible' if m.eligible else 'Not eligible' }}</div>
-    <ul class="reasons">{% for r in m.reasons %}<li class="{{ '' if r.passed else 'bad' }}">{{ r.detail }}</li>{% endfor %}</ul>
+{% set eligible = matches | selectattr('eligible') | list %}
+{% set nope = matches | rejectattr('eligible') | list %}
+<section id="results">
+  <div class="result-head">
+    <div><div class="score">{{ eligible | length }}<sub>post{{ '' if eligible|length == 1 else 's' }} you can apply for</sub></div>
+    <div class="meta" style="margin-top:12px">out of {{ matches | length }} open posts we checked</div></div>
   </div>
-  {% endfor %}
+  {% if eligible %}<div class="grid two">
+  {% for m in eligible %}
+    <article class="job">
+      <div class="job-top"><span class="tag ok">✓ eligible</span>{{ days_left(m.apply_end, today) }}</div>
+      <h3><a href="/jobs/{{ m.notification_slug }}">{{ m.post_name }}</a></h3>
+      <div class="meta">{{ m.board }} · {{ m.title }}</div>
+      <details class="why"><summary>Why I qualify</summary><ul class="reasons">{% for r in m.reasons %}<li class="{{ '' if r.passed else 'bad' }}">{{ r.detail }}</li>{% endfor %}</ul></details>
+    </article>
+  {% endfor %}</div>
+  {% else %}<div class="empty">Nothing matches right now. New notifications land daily, so set up an alert below and we'll ping you.</div>{% endif %}
+
+  <div class="band">
+    <div><h3>Don't refresh. <em>Get pinged.</em></h3><p>We email you the day a new job you qualify for drops.</p></div>
+    <a class="btn" href="/alerts?age={{ profile.age }}&qualification={{ profile.qualification }}&category={{ profile.category }}&gender={{ profile.gender or '' }}&state={{ profile.state or '' }}{% for s in profile.streams %}&streams={{ s }}{% endfor %}{% if profile.pwd %}&pwd=true{% endif %}{% if profile.ex_serviceman %}&ex_serviceman=true{% endif %}">Set up alerts →</a>
+  </div>
+
+  {% if nope %}
+  <h2 class="sec" style="font-size:clamp(1.4rem,3vw,2rem)">Not this time <span class="meta" style="font-family:var(--body);letter-spacing:0">({{ nope | length }})</span></h2>
+  <div class="grid two">{% for m in nope %}
+    <article class="job no">
+      <div class="job-top"><span class="tag bad">✕ not eligible</span>{{ days_left(m.apply_end, today) }}</div>
+      <h3><a href="/jobs/{{ m.notification_slug }}">{{ m.post_name }}</a></h3>
+      <div class="meta">{{ m.board }} · {{ m.title }}</div>
+      <details class="why"><summary>What's blocking me</summary><ul class="reasons">{% for r in m.reasons %}<li class="{{ '' if r.passed else 'bad' }}">{{ r.detail }}</li>{% endfor %}</ul></details>
+    </article>
+  {% endfor %}</div>
+  {% endif %}
+</section>
 {% endif %}
 
-<h2>Open notifications</h2>
-{% for n in open_items %}
-<div class="card"><h3><a href="/jobs/{{ n.slug }}">{{ n.title }}</a> <span class="pill">{{ n.board }}</span></h3>
-<div class="meta">{{ n.total_vacancies or '?' }} vacancies · {{ n.posts|length }} post type{{ '' if n.posts|length == 1 else 's' }}{% if n.apply_end %} · apply by {{ n.apply_end }}{% endif %}</div></div>
-{% endfor %}
-<p class="meta">Boards covered: {% for b in boards %}<a href="/board/{{ b }}">{{ b }}</a>{{ ', ' if not loop.last }}{% endfor %}</p>
+<section>
+  <h2 class="sec">Open <em>right now.</em></h2>
+  <div class="rows">
+  {% for n in open_items %}
+    <a class="row reveal" href="/jobs/{{ n.slug }}">
+      <div><h3>{{ n.title }}</h3><div class="meta">{{ n.board }} · {{ n.total_vacancies or '?' }} vacancies · {{ n.posts|length }} post type{{ '' if n.posts|length == 1 else 's' }}</div></div>
+      <div class="right">{{ days_left(n.apply_end, today) }}<span class="arrow">→</span></div>
+    </a>
+  {% else %}<div class="empty">No open notifications right now.</div>{% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">Browse by <em>board.</em></h2>
+  <div class="boards">{% for b in boards %}<a href="/board/{{ b }}">{{ b }}</a>{% endfor %}</div>
+</section>
 {% endblock %}

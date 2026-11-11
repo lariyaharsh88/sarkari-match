@@ -3,21 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{% block title %}{{ site }}{% endblock %}</title>
+<title>{% block title %}{{ site }} · every sarkari job you can actually apply for{% endblock %}</title>
 <meta name="description" content="{% block desc %}Find every open Indian government job you are eligible for, from official notifications only.{% endblock %}">
+<meta name="theme-color" content="#c6f432">
 <link rel="canonical" href="{{ site_url }}{{ request.url.path }}">
-<link rel="stylesheet" href="/static/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="/static/style.css?v=2">
 {% block head %}{% endblock %}
 </head>
 <body>
-<header><div class="wrap"><a href="/">{{ site }}</a>
-<nav style="display:inline">
-<a href="/qualification/10th">10th pass</a><a href="/qualification/12th">12th pass</a><a href="/qualification/graduate">Graduate</a><a href="/board/SSC">SSC</a><a href="/board/UPSC">UPSC</a><a href="/alerts">Alerts</a>
-</nav></div></header>
+<header class="nav"><div class="nav-in">
+  <a class="logo" href="/"><i></i>{{ site | lower }}</a>
+  <nav class="nav-links">
+    <a href="/qualification/10th">10th</a><a href="/qualification/12th">12th</a><a href="/qualification/graduate">Graduate</a><a href="/board/SSC">SSC</a><a href="/board/SBI">SBI</a>
+    <a class="keep" href="/#match">Check</a><a class="cta" href="/alerts">Get alerts ↗</a>
+  </nav>
+</div></header>
 <main class="wrap">
-{% if has_samples %}<div class="banner">This instance is running on hand-written sample notifications so the product can be demonstrated. Run the refresh pipeline with a Gemini key to replace them with real extractions.</div>{% endif %}
+{% if has_samples %}<div class="banner"><b>beta</b><span>Some listings are still demo data while the pipeline fills up with real notifications. Always confirm on the official PDF.</span></div>{% endif %}
 {% block body %}{% endblock %}
 </main>
-<footer><div class="wrap">Data is extracted from official notification PDFs and validated before publishing. Always confirm details on the official notification before applying. Not affiliated with any government body.</div></footer>
+<footer><div class="wrap">
+  <div class="foot-big">sarkari match</div>
+  <div class="foot-row">
+    <p>Read straight from official notification PDFs and checked before publishing. Always confirm on the official notification before applying. Not affiliated with any government body.</p>
+    <div><a class="inline-link" href="/alerts">Alerts</a> · <a class="inline-link" href="/alerts/manage">Manage</a> · <a class="inline-link" href="/sitemap.xml">Sitemap</a></div>
+  </div>
+</div></footer>
+<script>
+(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
+</script>
 </body>
 </html>

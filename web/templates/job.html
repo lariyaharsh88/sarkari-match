@@ -1,20 +1,41 @@
 {% extends "base.html" %}
+{% from "_form.html" import days_left %}
 {% block title %}{{ n.title }} · vacancies, eligibility, last date · {{ site }}{% endblock %}
 {% block desc %}{{ n.board }} {{ n.title }}: {{ n.total_vacancies or '' }} vacancies, age limit, qualification, fee and last date {{ n.apply_end or '' }}.{% endblock %}
 {% block head %}<script type="application/ld+json">{{ jsonld | safe }}</script>{% endblock %}
 {% block body %}
-<h1>{{ n.title }}</h1>
-<p class="lead"><span class="pill">{{ n.board }}</span>{% if n.advt_no %}Advt. {{ n.advt_no }} · {% endif %}{% if n.apply_start %}Apply from {{ n.apply_start }} {% endif %}{% if n.apply_end %}to <strong>{{ n.apply_end }}</strong>{% endif %}</p>
-<p><a href="/#match">Check if you are eligible</a> · <a href="{{ n.pdf_url or n.source_url }}" rel="nofollow noopener">Official notification</a></p>
-<h2>Posts and eligibility</h2>
-<table><thead><tr><th>Post</th><th>Vacancies</th><th>Pay</th><th>Qualification</th><th>Age</th><th>Restrictions</th></tr></thead><tbody>
-{% for p in n.posts %}<tr>
-<td>{{ p.post_name }}</td><td>{{ p.vacancies if p.vacancies is not none else '–' }}</td><td>{{ p.pay_level or '–' }}</td>
-<td>{{ qual_labels.get(p.min_qualification, p.min_qualification) }}{% if p.required_streams %} in {{ p.required_streams | join(', ') }}{% endif %}<div class="meta">{{ p.qualification_text }}</div></td>
-<td>{{ p.age.min_age or '' }}–{{ p.age.max_age or '' }}{% if p.age.as_on %}<div class="meta">as on {{ p.age.as_on }}</div>{% endif %}{% if p.age.relaxation_years %}<div class="meta">{% for k, v in p.age.relaxation_years.items() %}{{ k }} +{{ v }}{{ ', ' if not loop.last }}{% endfor %}</div>{% endif %}</td>
-<td>{{ p.gender_restriction or '' }} {{ p.states | join(', ') }}</td>
-</tr>{% endfor %}
-</tbody></table>
-{% if n.fee_by_category %}<h2>Application fee</h2><p>{% for k, v in n.fee_by_category.items() %}<span class="pill">{{ k }}: ₹{{ v }}</span>{% endfor %}</p>{% endif %}
-<p class="meta">Extracted {{ n.extracted_at }} from the official PDF and validated. <a href="/board/{{ n.board }}">More {{ n.board }} notifications</a>.</p>
+<div class="crumbs"><a href="/">Home</a> / <a href="/board/{{ n.board }}">{{ n.board }}</a>{% if n.advt_no %} / Advt. {{ n.advt_no }}{% endif %}</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px"><span class="tag">{{ n.board }}</span>{{ days_left(n.apply_end, today) }}</div>
+<h1 class="h1">{{ n.title }}</h1>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
+  <a class="btn" href="/#match">Am I eligible? →</a>
+  <a class="btn ghost" href="{{ n.pdf_url or n.source_url }}" rel="nofollow noopener" target="_blank">Official notification ↗</a>
+</div>
+
+<div class="bento" style="margin-top:44px">
+  <div class="tile acid t4"><div class="big">{{ '{:,}'.format(n.total_vacancies) if n.total_vacancies else '—' }}</div><div class="lbl">total vacancies</div></div>
+  <div class="tile t4"><div class="big" style="font-size:clamp(1.8rem,4vw,2.6rem)">{{ n.apply_end.strftime('%d %b') if n.apply_end else '—' }}</div><div class="lbl">last date to apply{% if n.apply_start %} · opens {{ n.apply_start.strftime('%d %b %Y') }}{% endif %}</div></div>
+  <div class="tile dark t4"><div class="big">{{ n.posts | length }}</div><div class="lbl">post type{{ '' if n.posts|length == 1 else 's' }}</div></div>
+</div>
+
+<h2 class="sec">Posts &amp; <em>eligibility.</em></h2>
+{% for p in n.posts %}
+<div class="post reveal">
+  <div class="job-top"><h3>{{ p.post_name }}</h3>{% if p.vacancies is not none %}<span class="stat">{{ p.vacancies }}<small>seats</small></span>{% endif %}</div>
+  <dl>
+    <div><dt>Qualification</dt><dd>{{ qual_labels.get(p.min_qualification, p.min_qualification) }}{% if p.required_streams %} in {{ p.required_streams | join(', ') }}{% endif %}</dd></div>
+    <div><dt>Age</dt><dd>{{ p.age.min_age or '?' }}–{{ p.age.max_age or '?' }} yrs{% if p.age.as_on %} <span class="meta">as on {{ p.age.as_on }}</span>{% endif %}</dd></div>
+    <div><dt>Pay</dt><dd>{{ p.pay_level or '—' }}</dd></div>
+    {% if p.age.relaxation_years %}<div><dt>Age relaxation</dt><dd>{% for k, v in p.age.relaxation_years.items() %}{{ k }} +{{ v }}{{ ', ' if not loop.last }}{% endfor %}</dd></div>{% endif %}
+    {% if p.gender_restriction or p.states %}<div><dt>Restrictions</dt><dd>{{ p.gender_restriction or '' }} {{ p.states | join(', ') }}</dd></div>{% endif %}
+  </dl>
+  {% if p.qualification_text %}<p class="meta" style="margin:16px 0 0">“{{ p.qualification_text }}”</p>{% endif %}
+</div>
+{% endfor %}
+
+{% if n.fee_by_category %}<h2 class="sec">Application <em>fee.</em></h2>
+<div class="fees">{% for k, v in n.fee_by_category.items() %}<div class="fee"><b>{{ '₹' ~ v if v else 'Free' }}</b><span>{{ k }}</span></div>{% endfor %}</div>{% endif %}
+
+<div class="band"><div><h3>Want the next one <em>first?</em></h3><p>Get an email the day a {{ n.board }} job you qualify for drops.</p></div><a class="btn" href="/alerts">Get alerts →</a></div>
+<p class="meta" style="margin-top:22px">Extracted {{ n.extracted_at }} from the official PDF and validated. <a class="inline-link" href="/board/{{ n.board }}">More {{ n.board }} notifications</a></p>
 {% endblock %}

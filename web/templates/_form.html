@@ -1,0 +1,44 @@
+{% macro profile_fields(p, quals, categories, streams, qual_labels) %}
+{% set age = (p.age if p and p.age else 24) %}
+<div class="field">
+  <div class="q"><span class="n">01</span> How old are you?</div>
+  <div class="age-row">
+    <input type="range" min="15" max="60" value="{{ age }}" aria-label="Age slider" oninput="this.form.age.value=this.value;this.nextElementSibling.textContent=this.value">
+    <output class="age-out">{{ age }}</output>
+  </div>
+  <input type="hidden" name="age" value="{{ age }}">
+</div>
+<div class="field">
+  <div class="q"><span class="n">02</span> Category</div>
+  <div class="chips">{% for c in categories %}<label class="chip"><input type="radio" name="category" value="{{ c }}" {% if (p and p.category == c) or (not (p and p.category) and loop.first) %}checked{% endif %}><span>{{ c }}</span></label>{% endfor %}</div>
+</div>
+<div class="field full">
+  <div class="q"><span class="n">03</span> Highest qualification</div>
+  <div class="chips">{% for q in quals %}<label class="chip"><input type="radio" name="qualification" value="{{ q }}" {% if (p and p.qualification == q) or (not (p and p.qualification) and q == 'graduate') %}checked{% endif %}><span>{{ qual_labels[q] }}</span></label>{% endfor %}</div>
+</div>
+<div class="field full">
+  <div class="q"><span class="n">04</span> Degree stream <small>optional · pick any</small></div>
+  <div class="chips">{% for s in streams %}<label class="chip"><input type="checkbox" name="streams" value="{{ s }}" {% if p and p.streams and s in p.streams %}checked{% endif %}><span>{{ s.replace('_',' ') }}</span></label>{% endfor %}</div>
+</div>
+<div class="field">
+  <div class="q"><span class="n">05</span> Gender</div>
+  <div class="chips">
+    <label class="chip"><input type="radio" name="gender" value="" {% if not (p and p.gender) %}checked{% endif %}><span>Skip</span></label>
+    <label class="chip"><input type="radio" name="gender" value="female" {% if p and p.gender == 'female' %}checked{% endif %}><span>Female</span></label>
+    <label class="chip"><input type="radio" name="gender" value="male" {% if p and p.gender == 'male' %}checked{% endif %}><span>Male</span></label>
+  </div>
+</div>
+<div class="field">
+  <div class="q"><span class="n">06</span> Home state <small>optional</small></div>
+  <input class="inp" name="state" placeholder="Uttar Pradesh" value="{{ (p.state or '') if p else '' }}">
+</div>
+<div class="field full">
+  <div class="q"><span class="n">07</span> Anything else? <small>these unlock extra age relaxation</small></div>
+  <div class="chips">
+    <label class="chip"><input type="checkbox" name="pwd" value="true" {% if p and p.pwd %}checked{% endif %}><span>Person with disability</span></label>
+    <label class="chip"><input type="checkbox" name="ex_serviceman" value="true" {% if p and p.ex_serviceman %}checked{% endif %}><span>Ex-serviceman</span></label>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro days_left(d, today) %}{% if d %}{% set n = (d - today).days %}{% if n < 0 %}<span class="tag">closed</span>{% elif n == 0 %}<span class="tag hot">last day!</span>{% elif n <= 7 %}<span class="tag hot">{{ n }}d left</span>{% else %}<span class="tag">{{ n }}d left</span>{% endif %}{% endif %}{% endmacro %}

@@ -1,24 +1,33 @@
 {% extends "base.html" %}
+{% from "_form.html" import days_left %}
 {% block title %}Manage alerts · {{ site }}{% endblock %}
 {% block body %}
 {% if sub %}
-<h1>Your job alerts</h1>
-<div class="card">
-  <div class="meta">{{ sub.email }}</div>
-  <div class="{{ 'ok' if sub.active else 'bad' }}">{% if sub.active %}Active until {{ sub.paid_until }}{% elif sub.unsubscribed %}Stopped{% else %}Not active{% endif %}</div>
-  <div class="meta">Profile: age {{ sub.profile.age }}, {{ qual_labels[sub.profile.qualification] }}, {{ sub.profile.category }}{% if sub.profile.state %}, {{ sub.profile.state }}{% endif %}{% if sub.profile.streams %}, {{ sub.profile.streams | join(', ') }}{% endif %}</div>
-  <div class="meta">Notified about {{ sub.notified_slugs | length }} notification{{ '' if sub.notified_slugs|length == 1 else 's' }} so far.</div>
-</div>
+<section class="hero" style="padding-bottom:0">
+  <div class="eyebrow">{% if sub.active %}<span class="dot"></span><b>active</b> until {{ sub.paid_until.strftime('%d %b %Y') }}{% elif sub.unsubscribed %}<b>paused</b> alerts stopped{% else %}<b>expired</b> renew to keep getting alerts{% endif %}</div>
+  <h1 class="h1">Your <em>alerts.</em></h1>
+  <p class="lead">{{ sub.email }} · age {{ sub.profile.age }} · {{ qual_labels[sub.profile.qualification] }} · {{ sub.profile.category }}{% if sub.profile.state %} · {{ sub.profile.state }}{% endif %}{% if sub.profile.streams %} · {{ sub.profile.streams | join(', ') }}{% endif %}</p>
+</section>
+<section class="bento" style="margin-top:36px">
+  <div class="tile acid t6"><div class="big">{{ matches | length }}</div><div class="lbl">open posts you're eligible for right now</div></div>
+  <div class="tile t6"><div class="big">{{ sub.notified_slugs | length }}</div><div class="lbl">notifications emailed to you so far</div></div>
+</section>
 {% if matches %}
-<h2>{{ matches | length }} open post{{ '' if matches|length == 1 else 's' }} you are eligible for right now</h2>
-{% for m in matches %}<div class="card"><h3><a href="/jobs/{{ m.notification_slug }}">{{ m.post_name }}</a> <span class="pill">{{ m.board }}</span></h3><div class="meta">{{ m.title }}{% if m.apply_end %} · last date {{ m.apply_end }}{% endif %}</div></div>{% endfor %}
+<h2 class="sec">Eligible <em>right now.</em></h2>
+<div class="grid two">{% for m in matches %}
+  <article class="job"><div class="job-top"><span class="tag ok">✓ eligible</span>{{ days_left(m.apply_end, today) }}</div>
+  <h3><a href="/jobs/{{ m.notification_slug }}">{{ m.post_name }}</a></h3><div class="meta">{{ m.board }} · {{ m.title }}</div></article>
+{% endfor %}</div>
 {% endif %}
-<form method="post" action="/alerts/manage/{{ token }}/{{ 'resume' if sub.unsubscribed else 'stop' }}" style="margin-top:16px">
-  <button type="submit" class="pill" style="cursor:pointer">{{ 'Resume alerts' if sub.unsubscribed else 'Stop alerts' }}</button>
-  {% if not sub.active and not sub.unsubscribed %}<a href="/alerts" style="margin-left:12px">Renew</a>{% endif %}
+<form method="post" action="/alerts/manage/{{ token }}/{{ 'resume' if sub.unsubscribed else 'stop' }}" style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap">
+  <button type="submit" class="btn ghost">{{ 'Resume alerts' if sub.unsubscribed else 'Pause alerts' }}</button>
+  {% if not sub.active and not sub.unsubscribed %}<a class="btn" href="/alerts">Renew →</a>{% endif %}
 </form>
 {% else %}
-<h1>Manage alerts</h1>
-<p class="lead">Use the link at the bottom of any alert email to open this page. Haven't subscribed yet? <a href="/alerts">Start alerts</a>.</p>
+<section class="hero">
+  <h1 class="h1">Manage <em>alerts.</em></h1>
+  <p class="lead">Open this page from the link at the bottom of any alert email. Not subscribed yet?</p>
+  <div style="margin-top:28px"><a class="btn" href="/alerts">Start alerts →</a></div>
+</section>
 {% endif %}
 {% endblock %}
