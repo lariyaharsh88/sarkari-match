@@ -36,6 +36,20 @@ def discover(session: requests.Session) -> List[Dict[str, str]]:
     return found
 
 
+def interleave(items: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """Round-robin by board so one site with hundreds of links cannot take every download slot."""
+    by_board: Dict[str, List[Dict[str, str]]] = {}
+    for it in items:
+        by_board.setdefault(it["board"], []).append(it)
+    out: List[Dict[str, str]] = []
+    queues = list(by_board.values())
+    while any(queues):
+        for q in queues:
+            if q:
+                out.append(q.pop(0))
+    return out
+
+
 def pdf_path_for(url: str) -> Path:
     digest = hashlib.sha1(url.encode()).hexdigest()[:16]
     return PDF_DIR / f"{digest}.pdf"

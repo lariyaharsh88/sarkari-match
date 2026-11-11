@@ -35,7 +35,7 @@ def main(limit: int, dry_run: bool) -> int:
     found = fetch.discover(session)
     print(f"[refresh] discovered {len(found)} candidate PDFs across boards")
     url_by_path = {str(fetch.pdf_path_for(i["pdf_url"])): i for i in found}
-    new = fetch.download_new(session, found, limit=limit)
+    new = fetch.download_new(session, fetch.interleave(found), limit=limit)
     print(f"[refresh] downloaded {len(new)} new PDFs")
     if dry_run:
         return 0
