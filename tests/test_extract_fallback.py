@@ -29,3 +29,17 @@ def test_no_fallback_without_key_or_for_scans(monkeypatch):
     monkeypatch.setenv("GROQ_API_KEY", "k")
     with pytest.raises(RuntimeError, match="429"):
         ex.extract("", "SSC", "u", pdf_bytes=b"%PDF")
+
+
+def test_fallback_output_goes_to_review(monkeypatch):
+    from pipeline.validate import apply_gate
+    monkeypatch.setenv("GROQ_API_KEY", "k")
+    monkeypatch.setattr(ex, "_gemini_json", quota)
+    monkeypatch.setattr(ex, "_groq_json", lambda p, s: GOOD)
+    n = ex.extract("text", "SSC", "u")
+    assert n.needs_review
+    try:
+        n = apply_gate(n)
+    except ValueError:
+        return  # hard-rejected is fine too; it never reaches the site either way
+    assert n.needs_review and any("fallback" in r for r in n.review_reasons)

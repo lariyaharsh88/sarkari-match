@@ -106,7 +106,15 @@ def extract(text: str, board: str, source_url: str, pdf_url: Optional[str] = Non
             raise
         print(f"[extract] Gemini quota hit, using Groq for {pdf_url}")
         raw = _groq_json(head + text[:GROQ_MAX_CHARS], schema)
+        via_fallback = True
+    else:
+        via_fallback = False
     data = json.loads(raw)
+    if via_fallback:
+        # The fallback scored ~45% field accuracy vs ~73% for Gemini on the gold set (11 Nov 2026),
+        # so its output goes to the review queue instead of straight onto the site.
+        data["needs_review"] = True
+        data["review_reasons"] = list(data.get("review_reasons") or []) + ["extracted by Groq fallback; check before publishing"]
     data["board"] = board
     data["source_url"] = source_url
     data["pdf_url"] = pdf_url

@@ -54,6 +54,6 @@ def apply_gate(n: Notification, today: date = None) -> Notification:
     ok, hard, soft = validate(n, today)
     if not ok:
         raise ValueError("; ".join(hard))
-    n.needs_review = bool(soft)
-    n.review_reasons = soft
+    n.review_reasons = [r for r in n.review_reasons if "fallback" in r] + soft  # keep the extractor's own flag
+    n.needs_review = bool(n.review_reasons)
     return n
