@@ -678,6 +678,59 @@
     "is_sample": false
   },
   {
+    "slug": "sbi-specialist-cadre-officer-2026",
+    "board": "SBI",
+    "title": "Recruitment of Specialist Cadre Officer (Engineer Fire)",
+    "advt_no": null,
+    "source_url": "https://sbi.co.in/web/careers/current-openings",
+    "pdf_url": "https://sbi.co.in/documents/77530/57941334/04112026_FINAL+DRAFT+ADVERTISEMENT+CRPD-SCO_29_ENGINEER.pdf/4d1be5a0-727d-61b5-1ea4-85570f437345?t=1793788834905",
+    "published_on": null,
+    "apply_start": "2026-11-04",
+    "apply_end": "2026-11-25",
+    "fee_by_category": {},
+    "posts": [
+      {
+        "post_name": "Assistant Manager JMGS-I Regular - Engineer (Fire)",
+        "vacancies": null,
+        "vacancies_by_category": {
+          "SC": 2,
+          "ST": 1,
+          "OBC": 1,
+          "EWS": 1,
+          "UR": 11
+        },
+        "pay_level": null,
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "B.E. (Fire) from National Fire Service College (NFSC) Nagpur or B.E./B.Tech. (Safety & Fire Engineering) or B.E./B.Tech (Fire Technology) or equivalent 4 years degree in Fire Safety from UGC recognized University / AICTE approved institution",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": null,
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 17,
+    "confidence": {
+      "title": 0.99,
+      "apply_end": 0.99,
+      "posts": 0.95,
+      "fee_by_category": 0.5
+    },
+    "needs_review": true,
+    "review_reasons": [
+      "extracted by Groq fallback; check before publishing",
+      "low confidence on fee_by_category: 0.50"
+    ],
+    "extracted_at": "2026-11-12",
+    "is_sample": false
+  },
+  {
     "slug": "sbi-specialist-cadre-officers-security-2026",
     "board": "SBI",
     "title": "Recruitment of Specialist Cadre Officer on Regular Basis (Manager / Deputy Manager Security)",
@@ -729,6 +782,123 @@
     "needs_review": false,
     "review_reasons": [],
     "extracted_at": "2026-11-11",
+    "is_sample": false
+  },
+  {
+    "slug": "uppsc-assistant-architect-planner-sports-officer-programmer-2026",
+    "board": "UPPSC",
+    "title": "Assistant Architect Planner, Sports Officer and Programmer Grade-2 Examination-2026",
+    "advt_no": "A-5/E-1/2026",
+    "source_url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+    "pdf_url": "https://uppsc.up.nic.in/OuterPages/View_Enclosure.aspx?ID=751&flag=E&FID=950",
+    "published_on": "2026-11-04",
+    "apply_start": "2026-11-04",
+    "apply_end": "2026-12-04",
+    "fee_by_category": {
+      "UR": 225,
+      "OBC": 225,
+      "EWS": 225,
+      "SC": 105,
+      "ST": 105,
+      "PWD": 25,
+      "EX_SERVICEMAN": 105
+    },
+    "posts": [
+      {
+        "post_name": "Assistant Architect Planner",
+        "vacancies": 8,
+        "vacancies_by_category": {
+          "UR": 5,
+          "SC": 1,
+          "ST": 0,
+          "OBC": 2,
+          "EWS": 0
+        },
+        "pay_level": "Level-10",
+        "min_qualification": "diploma",
+        "required_streams": [],
+        "qualification_text": "Degree in Architecture or equivalent qualification (as per Appendix Q(ii)), and Degree/Diploma in Town and Country Planning/Housing or equivalent (as per Appendix Q(i)); OR 3 years experience in Architecture, Town Planning or Housing; OR 1-year PG Diploma in Housing and 1 year experience.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "OBC": 5,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Sports Officer",
+        "vacancies": 16,
+        "vacancies_by_category": {
+          "UR": 7,
+          "SC": 4,
+          "ST": 0,
+          "OBC": 4,
+          "EWS": 1
+        },
+        "pay_level": "Level-8",
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "1. Graduation from a recognised University. 2. Diploma in coaching in relevant sport from Netaji Subhash National Institute of Sports (NSNIS) or equivalent. 3. Two years experience in coaching.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "OBC": 5,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Programmer Grade-2",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1,
+          "SC": 0,
+          "ST": 0,
+          "OBC": 0,
+          "EWS": 0
+        },
+        "pay_level": "9300-34800 GP 4600",
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "(i) Bachelor's degree from a University established by law in India or a qualification recognised by the Government as equivalent thereto. (ii) Post graduate Diploma in Computer Science from a recognised Institute/University; or 'A' level Certificate from the Department of Electronics (D.O.E.), Government of India. (iii) Good knowledge of Software development like C/C- Fox Pro, RDVMS as Oracle/Ingress/Sybase, DB/Z etc. in DOS/Unix/Windows environment. (iv) Exposure to environment of any Networking Operative System. (v) Complete knowledge of Office Automation Packages and Internet.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "OBC": 5,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 25,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 1.0,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-12",
     "is_sample": false
   }
 ]

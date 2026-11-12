@@ -89,5 +89,63 @@
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/dc2601eab58cef86.pdf"
     },
     "needs_review": false
+  },
+  "14fb133fb04025c5": {
+    "status": "skipped",
+    "note": "scanned PDF, not a recruitment notification",
+    "date": "2026-11-12",
+    "meta": {
+      "board": "BPSC",
+      "pdf_url": "https://bpsc.bihar.gov.in/wp-content/uploads/2025/04/NB-2024-04-29-01.pdf",
+      "source_url": "https://bpsc.bihar.gov.in/",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/14fb133fb04025c5.pdf"
+    }
+  },
+  "482bc30b1ec9bbc2": {
+    "status": "skipped",
+    "note": "too little text, probably a form or a scanned PDF",
+    "date": "2026-11-12",
+    "meta": {
+      "board": "BPSC",
+      "pdf_url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Regarding_postpone_72nd_BPSC_BPSC-20260720-u768lx.pdf",
+      "source_url": "https://bpsc.bihar.gov.in/",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/482bc30b1ec9bbc2.pdf"
+    }
+  },
+  "487899bb8cc7bd35": {
+    "status": "rejected",
+    "note": "LLM output failed schema validation: 1 validation error for Notification\nposts.1.min_qualification\n  Field required [type=missing, input_value={'post_name': 'Navik (Gen...': 7, 'SC': 3, 'ST': 1}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing",
+    "date": "2026-11-12",
+    "meta": {
+      "board": "SSC",
+      "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/advertisement_06102026.pdf",
+      "source_url": "https://ssc.gov.in/home/notice-board",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/487899bb8cc7bd35.pdf"
+    }
+  },
+  "df2873a3ebeadc70": {
+    "status": "stored",
+    "note": "uppsc-assistant-architect-planner-sports-officer-programmer-2026",
+    "date": "2026-11-12",
+    "meta": {
+      "board": "UPPSC",
+      "pdf_url": "https://uppsc.up.nic.in/OuterPages/View_Enclosure.aspx?ID=751&flag=E&FID=950",
+      "source_url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+      "referer": "https://uppsc.up.nic.in/OuterPages/View_Advertisement.aspx?ID=751&flag=E",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/df2873a3ebeadc70.pdf"
+    },
+    "needs_review": false
+  },
+  "ea8efce13f0ef1e7": {
+    "status": "stored",
+    "note": "sbi-specialist-cadre-officer-2026",
+    "date": "2026-11-12",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/04112026_FINAL+DRAFT+ADVERTISEMENT+CRPD-SCO_29_ENGINEER.pdf/4d1be5a0-727d-61b5-1ea4-85570f437345?t=1793788834905",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/ea8efce13f0ef1e7.pdf"
+    },
+    "needs_review": true
   }
 }
