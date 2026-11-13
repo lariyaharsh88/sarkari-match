@@ -147,5 +147,17 @@
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/ea8efce13f0ef1e7.pdf"
     },
     "needs_review": true
+  },
+  "40d9c2694fa9fae5": {
+    "status": "stored",
+    "note": "ssc-sub-inspector-delhi-police-capf-2026",
+    "date": "2026-11-13",
+    "meta": {
+      "board": "SSC",
+      "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_capf_2026.pdf",
+      "source_url": "https://ssc.gov.in/home/notice-board",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/40d9c2694fa9fae5.pdf"
+    },
+    "needs_review": false
   }
 }
