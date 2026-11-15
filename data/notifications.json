@@ -1,5 +1,561 @@
 [
   {
+    "slug": "ssc-junior-engineer-examination-2026",
+    "board": "SSC",
+    "title": "Junior Engineer Examination, 2026",
+    "advt_no": "HQ-C-3019/1/2026-C-3",
+    "source_url": "https://ssc.gov.in/home/notice-board",
+    "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/notice_16092026.pdf",
+    "published_on": "2026-09-02",
+    "apply_start": "2026-09-02",
+    "apply_end": "2026-09-22",
+    "fee_by_category": {
+      "UR": 100,
+      "OBC": 100,
+      "EWS": 100,
+      "SC": 0,
+      "ST": 0,
+      "PWD": 0,
+      "WOMEN": 0
+    },
+    "posts": [
+      {
+        "post_name": "Junior Engineer (Civil) - Border Roads Organization",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Civil Engineering from a recognized University/Institute; Or (a) Three-Year Diploma in Civil Engineering from a recognized University/ Institute/ Board; and (b) Two years of working experience in Planning/ Execution/ Maintenance of Civil Engineering works",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": "male",
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Electrical & Mechanical) - Border Roads Organization",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Electrical or Mechanical Engineering from a recognized University/Institute; Or (a) Three-year Diploma in Electrical/ Automobile/ Mechanical Engineering from a recognized University/ Institute/ Board; and (b) Two-Year experience in Planning/ Execution/ Maintenance of Electrical or Mechanical Engineering works",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": "male",
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - Brahmaputra Board, Ministry of Jal Shakti",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Three-Year Diploma in Civil Engineering from a recognized University or Institution.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Mechanical) - Central Water Commission",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Bachelor’s Degree or Diploma in Mechanical Engineering from a recognized University or Institution",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - Central Water Commission",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Bachelor’s Degree or Diploma in Civil Engineering from a recognized University or Institution.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Electrical) - CPWD",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Diploma in Electrical or Mechanical Engineering from a recognized University or Institute.",
+        "age": {
+          "min_age": 18,
+          "max_age": 32,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - CPWD",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Diploma in Civil Engineering from a recognized University or Institute.",
+        "age": {
+          "min_age": 18,
+          "max_age": 32,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Electrical) - Central Water and Power Research Station",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Diploma in Electrical Engineering from a recognized Institute.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - Central Water and Power Research Station",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Diploma in Civil Engineering from a recognized Institute.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Mechanical) - DGQA-NAVAL, Ministry of Defence",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Mechanical Engineering from a recognized Institute; or (a) Three-Year Diploma in Mechanical Engineering from a recognized University or Institution plus (b) Two-Year experience in the respective field",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Electrical) - DGQA-NAVAL, Ministry of Defence",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Electrical Engineering from a recognized University; or (a) Three-year Diploma in Electrical Engineering from a recognized University or Institution plus (b) Two-Year experience in the respective field",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Electrical) - Farakka Barrage Project, Ministry of Jal Shakti",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Diploma in Electrical Engineering from a recognized University, Institute, or Board.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - Farakka Barrage Project, Ministry of Jal Shakti",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Diploma in Civil Engineering from a recognized University, Institute, or Board.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - Military Engineer Services (MES)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Civil Engineering from a recognized University; Or (a) Three-year Diploma in Civil Engineering from a recognized Institute, University, or Board; and (b) Two years’ experience in Planning, Execution, and Maintenance of Civil Engineering works.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Electrical & Mechanical) - Military Engineer Services (MES)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Electrical or Mechanical Engineering from a recognized University; Or (a) Three-Year diploma in Electrical or Mechanical Engineering from a recognized Institute or University or Board; and (b) Two-Year experience in Planning, Execution, and Maintenance of Electrical or Mechanical Engineering Works",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - National Technical Research Organization (NTRO)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Diploma in Civil Engineering from a recognized University/Institution.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - Director General of Lighthouses & Lightships",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Civil Engineering Or Diploma in Civil Engineering with three years' experience Or Equivalent qualification",
+        "age": {
+          "min_age": 18,
+          "max_age": 32,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Electrical) - Director General of Lighthouses & Lightships",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree in Electrical Engineering Or Diploma in Electrical Engineering with three years' experience Or Equivalent qualification",
+        "age": {
+          "min_age": 18,
+          "max_age": 32,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Telecom) - Department of Telecommunication (DoT)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Bachelor's Degree in Engineering or Technology in Electrical or Electronics or Electrical Communications or Computer Science or Telecommunications or Information Technology or Instrumentation from a recognized University or Institute.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Scientific Assistant - India Meteorological Department",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "Bachelor’s Degree in Science with Physics as one of the subjects from a recognised institution or university; OR Bachelor’s Degree in Computer Science or Computer Applications or Electronics or Electronics and Communication Engineering or Electronics Telecommunication Engineering or Instrumentation or Information Technology or Telecommunication Engineering or Communication Engineering from a recognised institution or university",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Junior Engineer (Civil) - Ministry of Fisheries, Animal Husbandry and Dairying",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "Level-6",
+        "min_qualification": "diploma",
+        "required_streams": [
+          "engineering"
+        ],
+        "qualification_text": "Degree or three-year diploma in Civil Engineering from a recognised University or Institute.",
+        "age": {
+          "min_age": 18,
+          "max_age": 30,
+          "as_on": "2026-08-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 3
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 1748,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 0.95,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-15",
+    "is_sample": false
+  },
+  {
     "slug": "ssc-sub-inspector-delhi-police-capf-2026",
     "board": "SSC",
     "title": "Sub-Inspector in Delhi Police and Central Armed Police Forces Examination, 2026",
