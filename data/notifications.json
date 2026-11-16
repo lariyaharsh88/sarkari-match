@@ -1,5 +1,182 @@
 [
   {
+    "slug": "ibps-crp-spl-xvi-2026",
+    "board": "IBPS",
+    "title": "CRP SPL-XVI Common Recruitment Process for Recruitment of Specialist Officers in Participating Banks",
+    "advt_no": "CRP SPL-XVI",
+    "source_url": "https://www.ibps.in/",
+    "pdf_url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification-CRP-SPL-XVI_Final_V1_30.06.2026.pdf",
+    "published_on": null,
+    "apply_start": "2026-07-01",
+    "apply_end": "2026-07-21",
+    "fee_by_category": {
+      "UR": 850,
+      "OBC": 850,
+      "EWS": 850,
+      "SC": 175,
+      "ST": 175,
+      "PWD": 175
+    },
+    "posts": [
+      {
+        "post_name": "IT Officer (Scale I)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "48480-2000/7-62480-2340/2-67160-2680/7-85920",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "a) 4 year Engineering/ Technology Degree in Computer Science/ Computer Applications/ Information Technology/ Electronics/ Electronics & Telecommunications/ Electronics & Communication/ Electronics & Instrumentation OR b) Post Graduate Degree in Electronics/ Electronics & Tele Communication/ Electronics & Communication/ Electronics & Instrumentation/ Computer Science/ Information Technology/ Computer Applications OR Graduate having passed DOEACC ‘B’ level",
+        "age": {
+          "min_age": 20,
+          "max_age": 30,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 5
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Agricultural Field Officer (Scale I)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "48480-2000/7-62480-2340/2-67160-2680/7-85920",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "agriculture"
+        ],
+        "qualification_text": "4 year Degree (graduation) in Agriculture/ Horticulture/Animal Husbandry/ Veterinary Science/ Dairy Science/ Fishery Science/ Pisciculture/ Agri. Marketing & Cooperation/ Co-operation & Banking/ Agro-Forestry/Forestry/ Agricultural Biotechnology/ B.Tech Biotechnology/ Food Science/ Agriculture Business Management/ Food Technology/ Dairy Technology/ Agricultural Engineering/ Sericulture / Fisheries Engineering",
+        "age": {
+          "min_age": 20,
+          "max_age": 30,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 5
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Rajbhasha Adhikari (Scale I)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "48480-2000/7-62480-2340/2-67160-2680/7-85920",
+        "min_qualification": "postgraduate",
+        "required_streams": [],
+        "qualification_text": "Post Graduate Degree in Hindi with English as a subject at the degree (graduation) level OR Post graduate degree in Sanskrit with English and Hindi as subjects at the degree (graduation) level.",
+        "age": {
+          "min_age": 20,
+          "max_age": 30,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 5
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Law Officer (Scale I)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "48480-2000/7-62480-2340/2-67160-2680/7-85920",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "law"
+        ],
+        "qualification_text": "A Bachelor Degree in Law (LL.B) and enrolled as an advocate with Bar Council",
+        "age": {
+          "min_age": 20,
+          "max_age": 30,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 5
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "HR/Personnel Officer (Scale I)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "48480-2000/7-62480-2340/2-67160-2680/7-85920",
+        "min_qualification": "postgraduate",
+        "required_streams": [],
+        "qualification_text": "Graduate and Two Years Full time Post Graduate degree or Two Years Full time Post Graduate diploma in Personnel Management / Industrial Relations/ HR / HRD/ Social Work / Labour Law.",
+        "age": {
+          "min_age": 20,
+          "max_age": 30,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 5
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Marketing Officer (Scale I)",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "48480-2000/7-62480-2340/2-67160-2680/7-85920",
+        "min_qualification": "postgraduate",
+        "required_streams": [],
+        "qualification_text": "Graduate and Two Years Full time MMS (Marketing)/ Two Years Full time MBA (Marketing)/ Two Years Full time PGDBA / PGDBM/ PGPM/ PGDM with specialization in Marketing",
+        "age": {
+          "min_age": 20,
+          "max_age": 30,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 5
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": null,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 1.0,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-16",
+    "is_sample": false
+  },
+  {
     "slug": "ssc-junior-engineer-examination-2026",
     "board": "SSC",
     "title": "Junior Engineer Examination, 2026",
@@ -1486,6 +1663,267 @@
     "needs_review": false,
     "review_reasons": [],
     "extracted_at": "2026-11-11",
+    "is_sample": false
+  },
+  {
+    "slug": "uppsc-samiksha-adhikari-sahayak-samiksha-adhikari-2026",
+    "board": "UPPSC",
+    "title": "Samiksha Adhikari/Sahayak Samiksha Adhikari Etc. (General / Special Recruitment) Examination-2026",
+    "advt_no": "A-4/E-1/2026",
+    "source_url": "https://uppsc.up.nic.in/CandidatePages/Notifications.aspx",
+    "pdf_url": "https://uppsc.up.nic.in/OuterPages/View_Enclosure.aspx?ID=307&flag=E&FID=947",
+    "published_on": "2026-10-26",
+    "apply_start": "2026-10-26",
+    "apply_end": "2026-11-26",
+    "fee_by_category": {
+      "UR": 125,
+      "EWS": 125,
+      "OBC": 125,
+      "SC": 65,
+      "ST": 65,
+      "PWD": 25,
+      "EX_SERVICEMAN": 65
+    },
+    "posts": [
+      {
+        "post_name": "Samiksha Adhikari",
+        "vacancies": 131,
+        "vacancies_by_category": {
+          "UR": 45,
+          "SC": 59,
+          "ST": 3,
+          "OBC": 12,
+          "EWS": 12
+        },
+        "pay_level": "Level 8",
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "Bachelor's Degree from a University established by law in India or a qualification recognised by the Government as equivalent thereto upto the last date for receipt of On-Line application.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Samiksha Adhikari (Account)",
+        "vacancies": 31,
+        "vacancies_by_category": {
+          "UR": 11,
+          "SC": 9,
+          "ST": 1,
+          "OBC": 9,
+          "EWS": 1
+        },
+        "pay_level": "Level 8",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "commerce"
+        ],
+        "qualification_text": "(1) Bachelor's degree in commerce with Accountancy from a University established by law in India or a qualification recognized by the Government as equivalent thereto. (2) 'O' Level certificate in Computer Application from an Institute recognized by the Government. (3) Knowledge of Hindi written in Devnagari Script.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Sahayak Samiksha Adhikari",
+        "vacancies": 329,
+        "vacancies_by_category": {
+          "UR": 186,
+          "SC": 37,
+          "ST": 2,
+          "OBC": 73,
+          "EWS": 31
+        },
+        "pay_level": "Level 7",
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "(1) Bachelor's degree from a University established by law in India or a qualification recognized by the Government as equivalent thereto. (2) 'O' Level certificate awarded by the DOEACC Society or a qualification equivalent thereto (or Diploma in Computer Science for UPPSC). (3) Must possess a minimum speed of twenty five words per minute in Hindi typewriting.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Sahayak Samiksha Adhikari (Account)",
+        "vacancies": 6,
+        "vacancies_by_category": {
+          "UR": 0,
+          "SC": 3,
+          "ST": 0,
+          "OBC": 3,
+          "EWS": 0
+        },
+        "pay_level": "Level 7",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "commerce"
+        ],
+        "qualification_text": "(1) Bachelor's degree in commerce with Accountancy from a University established by law in India or a qualification recognized by the Government as equivalent thereto. (2) 'O' Level certificate in Computer Application from an Institute recognized by the Government. (3) Knowledge of Hindi written in Devnagari Script.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Manager",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1,
+          "SC": 0,
+          "ST": 0,
+          "OBC": 0,
+          "EWS": 0
+        },
+        "pay_level": null,
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "Bachelor's Degree from a University established by Law in India or a qualification recognised by the Government as equivalent thereto.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Care-Taker",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1,
+          "SC": 0,
+          "ST": 0,
+          "OBC": 0,
+          "EWS": 0
+        },
+        "pay_level": null,
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "Bachelor's Degree from a recognised University.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Receptionist (Swagati)",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1,
+          "SC": 0,
+          "ST": 0,
+          "OBC": 0,
+          "EWS": 0
+        },
+        "pay_level": null,
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "(a) Bachelor's Degree or its equivalent from a recognised University in History, Geography, English Literature, Anthropology, Architecture as one of the subject at degree level. (b) Good knowledge of Hindi.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Store Keeper",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1,
+          "SC": 0,
+          "ST": 0,
+          "OBC": 0,
+          "EWS": 0
+        },
+        "pay_level": null,
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "Bachelor's Degree from a recognised University.",
+        "age": {
+          "min_age": 21,
+          "max_age": 40,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 5,
+            "PWD": 15
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 501,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 0.95,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-16",
     "is_sample": false
   },
   {
