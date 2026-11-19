@@ -1,5 +1,60 @@
 [
   {
+    "slug": "ibps-crp-po-mt-xvi-2026",
+    "board": "IBPS",
+    "title": "Common Recruitment Process for Recruitment of Probationary Officers / Management Trainees (CRP PO/MT-XVI)",
+    "advt_no": "CRP PO/MT -XVI",
+    "source_url": "https://www.ibps.in/",
+    "pdf_url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf",
+    "published_on": null,
+    "apply_start": "2026-07-01",
+    "apply_end": "2026-07-21",
+    "fee_by_category": {
+      "SC": 175,
+      "ST": 175,
+      "PWD": 175,
+      "UR": 850,
+      "OBC": 850,
+      "EWS": 850
+    },
+    "posts": [
+      {
+        "post_name": "Probationary Officer / Management Trainee",
+        "vacancies": null,
+        "vacancies_by_category": {},
+        "pay_level": "48480-2000/7-62480-2340/2-67160-2680/7-85920",
+        "min_qualification": "graduate",
+        "required_streams": [],
+        "qualification_text": "A Degree (Graduation) in any discipline from a University recognised by the Govt. Of India or any equivalent qualification recognized as such by the Central Government.",
+        "age": {
+          "min_age": 20,
+          "max_age": 30,
+          "as_on": "2026-07-01",
+          "relaxation_years": {
+            "SC": 5,
+            "ST": 5,
+            "OBC": 3,
+            "PWD": 10,
+            "EX_SERVICEMAN": 5
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": null,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 0.95,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-19",
+    "is_sample": false
+  },
+  {
     "slug": "ibps-crp-spl-xvi-2026",
     "board": "IBPS",
     "title": "CRP SPL-XVI Common Recruitment Process for Recruitment of Specialist Officers in Participating Banks",
@@ -1927,6 +1982,60 @@
     "is_sample": false
   },
   {
+    "slug": "sbi-specialist-cadre-officers-cstra-2026",
+    "board": "SBI",
+    "title": "Recruitment of Specialist Cadre Officer on Fixed Term Employment Basis - GM & Head – CSTRA (Cybersecurity & Tech Risk Assurance)",
+    "advt_no": "CRPD/SCO/2026-27/36",
+    "source_url": "https://sbi.co.in/web/careers/current-openings",
+    "pdf_url": "https://sbi.co.in/documents/77530/57941334/19112026_Detailed+Adv.-SCO-36.pdf/c8a2a1f1-9ee6-cd83-bac8-bdff3d856374?t=1795068909785",
+    "published_on": "2026-11-19",
+    "apply_start": "2026-11-19",
+    "apply_end": "2026-12-03",
+    "fee_by_category": {
+      "UR": 750,
+      "EWS": 750,
+      "OBC": 750,
+      "SC": 0,
+      "ST": 0,
+      "PWD": 0
+    },
+    "posts": [
+      {
+        "post_name": "GM & Head – CSTRA (Cybersecurity & Tech Risk Assurance)",
+        "vacancies": 1,
+        "vacancies_by_category": {
+          "UR": 1
+        },
+        "pay_level": null,
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B. Tech/ B.E. in Computer Science/ Computer Science & Engineering/ Software Engineering/ Information Technology/ Electronics/ Electronics & Communications Engineering/Cyber Security or Equivalent Degree in above specified disciplines with minimum 50% score. or MCA or M. Tech/ M. Sc in Computer Science/ Computer Science & Engineering/ Information Technology/ Software Engineering/ Electronics/ Electronics & Communications Engineering/Cyber Security or Equivalent Degree in above specified disciplines. (From a University/ Institution/ Board recognized by Govt. Of India/ approved by Govt. Regulatory Bodies).",
+        "age": {
+          "min_age": null,
+          "max_age": 50,
+          "as_on": "2026-10-31",
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 1,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 1.0,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-19",
+    "is_sample": false
+  },
+  {
     "slug": "uppsc-assistant-architect-planner-sports-officer-programmer-2026",
     "board": "UPPSC",
     "title": "Assistant Architect Planner, Sports Officer and Programmer Grade-2 Examination-2026",
@@ -2041,6 +2150,52 @@
     "needs_review": false,
     "review_reasons": [],
     "extracted_at": "2026-11-12",
+    "is_sample": false
+  },
+  {
+    "slug": "ssc-grade-c-stenographers-ldce-2026",
+    "board": "SSC",
+    "title": "Grade 'C' Stenographers Limited Departmental Competitive Examination, 2026",
+    "advt_no": "4/12/2026-CONF-5",
+    "source_url": "https://ssc.gov.in/home/notice-board",
+    "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_STENO-LDC_2026.pdf",
+    "published_on": "2026-11-17",
+    "apply_start": "2026-11-17",
+    "apply_end": "2026-12-08",
+    "fee_by_category": {},
+    "posts": [
+      {
+        "post_name": "Grade 'C' Stenographer",
+        "vacancies": 320,
+        "vacancies_by_category": {
+          "UR": 231,
+          "SC": 69,
+          "ST": 20
+        },
+        "pay_level": null,
+        "min_qualification": "10th",
+        "required_streams": [],
+        "qualification_text": "Regularly appointed Stenographer Grade 'D' of the participating Services/Cadres with required length of approved service (ranging from 3 to 6 years depending on cadre). Standard of the Computer Based Examination is approximately that of the matriculation examination.",
+        "age": {
+          "min_age": null,
+          "max_age": null,
+          "as_on": null,
+          "relaxation_years": {}
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 320,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 0.9,
+      "fee_by_category": 0.8
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-19",
     "is_sample": false
   }
 ]

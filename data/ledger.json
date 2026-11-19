@@ -196,5 +196,41 @@
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/a94d0d0edd5ce593.pdf"
     },
     "needs_review": false
+  },
+  "3c0bd0f340dbadab": {
+    "status": "stored",
+    "note": "sbi-specialist-cadre-officers-cstra-2026",
+    "date": "2026-11-19",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/19112026_Detailed+Adv.-SCO-36.pdf/c8a2a1f1-9ee6-cd83-bac8-bdff3d856374?t=1795068909785",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/3c0bd0f340dbadab.pdf"
+    },
+    "needs_review": false
+  },
+  "c03eb0a37a9de480": {
+    "status": "stored",
+    "note": "ibps-crp-po-mt-xvi-2026",
+    "date": "2026-11-19",
+    "meta": {
+      "board": "IBPS",
+      "pdf_url": "https://www.ibps.in/wp-content/uploads/Detailed-Notification_CRP-PO-XVI_Final_V1_30.06.2026.pdf",
+      "source_url": "https://www.ibps.in/",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/c03eb0a37a9de480.pdf"
+    },
+    "needs_review": false
+  },
+  "dd13684b84b418ec": {
+    "status": "stored",
+    "note": "ssc-grade-c-stenographers-ldce-2026",
+    "date": "2026-11-19",
+    "meta": {
+      "board": "SSC",
+      "pdf_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_STENO-LDC_2026.pdf",
+      "source_url": "https://ssc.gov.in/home/notice-board",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/dd13684b84b418ec.pdf"
+    },
+    "needs_review": false
   }
 }
