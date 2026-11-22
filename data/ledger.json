@@ -232,5 +232,16 @@
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/dd13684b84b418ec.pdf"
     },
     "needs_review": false
+  },
+  "9fd1e6a061694bac": {
+    "status": "skipped",
+    "note": "url suggests non-notification document (biodata)",
+    "date": "2026-11-22",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/20112026_BIODATA_SCO-31.pdf/da5cc047-7e2c-431d-20f3-f0dab6c9b039?t=1795161813609",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/9fd1e6a061694bac.pdf"
+    }
   }
 }
