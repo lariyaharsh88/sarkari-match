@@ -1532,88 +1532,6 @@
     "is_sample": true
   },
   {
-    "slug": "sbi-specialist-cadre-officers-2026",
-    "board": "SBI",
-    "title": "Recruitment of Specialist Cadre Officer on Regular Basis",
-    "advt_no": "CRPD/SCO/2026-27/26",
-    "source_url": "https://sbi.co.in/web/careers/current-openings",
-    "pdf_url": "https://sbi.co.in/documents/77530/57941334/FINAL+ADVT+CRPD+_SCO_2026-27_26_GMU.pdf/ade1acc4-609b-5c9a-ed89-670e70d0a82c?t=1793600742622",
-    "published_on": "2026-11-02",
-    "apply_start": "2026-11-02",
-    "apply_end": "2026-11-23",
-    "fee_by_category": {
-      "UR": 750,
-      "EWS": 750,
-      "OBC": 750,
-      "SC": 0,
-      "ST": 0,
-      "PWD": 0
-    },
-    "posts": [
-      {
-        "post_name": "Chief Manager (Product & Research - Forex & Rupee Derivatives)",
-        "vacancies": 1,
-        "vacancies_by_category": {
-          "UR": 1
-        },
-        "pay_level": "102300-2980/4-114220-3360/2-120940",
-        "min_qualification": "postgraduate",
-        "required_streams": [],
-        "qualification_text": "Mandatory: MBA/ PGDM /PGDBM/PGDBA or its equivalent degree from institutions recognised by Government Bodies/ AICTE/ UGC. Preference will be given to candidates With specialization in Finance. Preferred: CFA/FRM/CA/Cost Accountants (CMA erstwhile ICWA)",
-        "age": {
-          "min_age": 30,
-          "max_age": 40,
-          "as_on": "2026-09-30",
-          "relaxation_years": {
-            "OBC": 3,
-            "SC": 5,
-            "ST": 5,
-            "PWD": 10
-          }
-        },
-        "gender_restriction": null,
-        "states": []
-      },
-      {
-        "post_name": "Manager (Product & Research Analyst)",
-        "vacancies": 6,
-        "vacancies_by_category": {
-          "UR": 3,
-          "OBC": 2,
-          "SC": 1
-        },
-        "pay_level": "85920-2680/5-99320-2980/2-105280",
-        "min_qualification": "postgraduate",
-        "required_streams": [],
-        "qualification_text": "Mandatory: MBA/ PGDM /PGDBM/PGDBA or its equivalent degree from institutions recognised by Government Bodies/ AICTE/ UGC. Preference will be given to candidates With specialization in Finance. Preferred: CFA/FRM/CA/Cost Accountants (CMA erstwhile ICWA)",
-        "age": {
-          "min_age": 24,
-          "max_age": 36,
-          "as_on": "2026-09-30",
-          "relaxation_years": {
-            "OBC": 3,
-            "SC": 5,
-            "ST": 5,
-            "PWD": 10
-          }
-        },
-        "gender_restriction": null,
-        "states": []
-      }
-    ],
-    "total_vacancies": 7,
-    "confidence": {
-      "title": 1.0,
-      "apply_end": 1.0,
-      "posts": 1.0,
-      "fee_by_category": 1.0
-    },
-    "needs_review": false,
-    "review_reasons": [],
-    "extracted_at": "2026-11-11",
-    "is_sample": false
-  },
-  {
     "slug": "sbi-specialist-cadre-officer-2026",
     "board": "SBI",
     "title": "Recruitment of Specialist Cadre Officer (Engineer Fire)",
@@ -2196,6 +2114,125 @@
     "needs_review": false,
     "review_reasons": [],
     "extracted_at": "2026-11-19",
+    "is_sample": false
+  },
+  {
+    "slug": "sbi-specialist-cadre-officers-2026",
+    "board": "SBI",
+    "title": "Recruitment of Specialist Cadre Officers on Regular Basis (Data Scientist)",
+    "advt_no": "CRPD/SCO/2026-27/31",
+    "source_url": "https://sbi.co.in/web/careers/current-openings",
+    "pdf_url": "https://sbi.co.in/documents/77530/57941334/20112026_Final_ADV_CRPD_SCO_2026-27_31.pdf/30ed8874-9669-c1eb-17bd-e8e4dfe534bb?t=1795161793708",
+    "published_on": "2026-11-20",
+    "apply_start": "2026-11-20",
+    "apply_end": "2026-12-10",
+    "fee_by_category": {
+      "UR": 750,
+      "EWS": 750,
+      "OBC": 750,
+      "SC": 0,
+      "ST": 0,
+      "PWD": 0
+    },
+    "posts": [
+      {
+        "post_name": "Chief Manager (Data Scientist)",
+        "vacancies": 2,
+        "vacancies_by_category": {
+          "UR": 2
+        },
+        "pay_level": "102300-2980/4-114220-3360/2-120940",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication/Data Science/ AI & ML or equivalent degree in above disciplines/ M Sc Data Science / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution. - Minimum 60% marks or equivalent grade in both Graduation / Post Graduation.",
+        "age": {
+          "min_age": 27,
+          "max_age": 37,
+          "as_on": "2026-10-31",
+          "relaxation_years": {
+            "OBC": 3,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 10
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Manager (Data Scientist)",
+        "vacancies": 14,
+        "vacancies_by_category": {
+          "UR": 9,
+          "SC": 2,
+          "ST": 1,
+          "OBC": 1,
+          "EWS": 1
+        },
+        "pay_level": "85920-2680/5-99320-2980/2-105280",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication/Data Science/ AI & ML or equivalent degree in above disciplines/ M Sc Data Science / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution. - Minimum 60% marks or equivalent grade in both Graduation / Post Graduation.",
+        "age": {
+          "min_age": 26,
+          "max_age": 36,
+          "as_on": "2026-10-31",
+          "relaxation_years": {
+            "OBC": 3,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 10
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      },
+      {
+        "post_name": "Deputy Manager (Data Scientist)",
+        "vacancies": 4,
+        "vacancies_by_category": {
+          "UR": 2,
+          "SC": 1,
+          "OBC": 1
+        },
+        "pay_level": "64820-2340/1-67160-2680/10-93960",
+        "min_qualification": "graduate",
+        "required_streams": [
+          "engineering",
+          "computer_science"
+        ],
+        "qualification_text": "B.E. / B.Tech / M.Tech in Computer Science / IT /Electronics / Electrical & Electronics / Electronics & Communication/Data Science/ AI & ML or equivalent degree in above disciplines/ M Sc Data Science / M Sc (Statistics/Computer Science)/MA (Statistics)/M Stat /MCA from recognized University/ Institution. - Minimum 60% marks or equivalent grade in both Graduation / Post Graduation.",
+        "age": {
+          "min_age": 24,
+          "max_age": 32,
+          "as_on": "2026-10-31",
+          "relaxation_years": {
+            "OBC": 3,
+            "SC": 5,
+            "ST": 5,
+            "PWD": 10
+          }
+        },
+        "gender_restriction": null,
+        "states": []
+      }
+    ],
+    "total_vacancies": 20,
+    "confidence": {
+      "title": 1.0,
+      "apply_end": 1.0,
+      "posts": 1.0,
+      "fee_by_category": 1.0
+    },
+    "needs_review": false,
+    "review_reasons": [],
+    "extracted_at": "2026-11-23",
     "is_sample": false
   }
 ]
