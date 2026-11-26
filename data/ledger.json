@@ -255,5 +255,27 @@
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/be15dc3de704d753.pdf"
     },
     "needs_review": false
+  },
+  "2473dc56bc9348ff": {
+    "status": "skipped",
+    "note": "url suggests non-notification document (notice-)",
+    "date": "2026-11-26",
+    "meta": {
+      "board": "IBPS",
+      "pdf_url": "https://www.ibps.in/wp-content/uploads/NOTICE-FOR-PERSONALITY-TEST_CRP-PO-XVI.pdf",
+      "source_url": "https://www.ibps.in/",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/2473dc56bc9348ff.pdf"
+    }
+  },
+  "e5e10d7adde1e2ce": {
+    "status": "skipped",
+    "note": "url suggests non-notification document (hindi)",
+    "date": "2026-11-26",
+    "meta": {
+      "board": "SBI",
+      "pdf_url": "https://sbi.co.in/documents/77530/57941334/25112026_SBI+-+CRPD-SCO-2026-27_36+-+Hindi.pdf/d9edb6e7-2193-abbe-b93a-f96f79b0d2fc?t=1795586806942",
+      "source_url": "https://sbi.co.in/web/careers/current-openings",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/e5e10d7adde1e2ce.pdf"
+    }
   }
 }
