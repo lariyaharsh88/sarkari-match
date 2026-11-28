@@ -277,5 +277,16 @@
       "source_url": "https://sbi.co.in/web/careers/current-openings",
       "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/e5e10d7adde1e2ce.pdf"
     }
+  },
+  "f365235b7dcf376f": {
+    "status": "skipped",
+    "note": "scanned PDF, not a recruitment notification",
+    "date": "2026-11-28",
+    "meta": {
+      "board": "BPSC",
+      "pdf_url": "https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/DV-Program-Integrated-71st-CCE_BPSC-20261118-vwk9rz.pdf",
+      "source_url": "https://bpsc.bihar.gov.in/",
+      "path": "/home/runner/work/sarkari-match/sarkari-match/data/pdfs/f365235b7dcf376f.pdf"
+    }
   }
 }
